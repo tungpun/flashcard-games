@@ -107,6 +107,27 @@ export class FlashcardService {
     // { id: '95', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/tshirt.PNG', caption: 'T-shirt' },
     // { id: '96', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bag.PNG', caption: 'Bag' },
     // { id: '97', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bottle.PNG', caption: 'Bottle' }
+
+    // 1 Consonant pattern: KN - kneel, knot, knead, knee
+    { id: '98', imageUrl: 'https://www.shutterstock.com/image-vector/little-kid-show-praying-pose-600nw-2318772437.jpg', caption: 'Kneel' },
+    { id: '99', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShHZsJsN1P5sJEaPnyiV5P9ldq5ARB02WjRg&s', caption: 'Knot' },
+    { id: '100', imageUrl: 'https://media.istockphoto.com/id/525107259/vector/hands-kneading-dough.jpg?s=612x612&w=0&k=20&c=mWKl5mVQ8XbaLxv-wrZs8NoC1sPmbey1LSFZV7PBxmw=', caption: 'Knead' },
+    { id: '101', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G-vFf9vw-F6wOplM7zGYFw0jBSky_benJg&s', caption: 'Knee' },
+    // 2 Consonant pattern: TCH - catch, pitch, crutch, match
+    { id: '102', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX5PCi0Tcg10gBn4pEqxj1NzpqZWAOTAxooQ&s', caption: 'Catch' },
+    { id: '103', imageUrl: 'https://media.istockphoto.com/id/1445646363/vector/a-baseball-player-now-pitching-a-ball.jpg?s=612x612&w=0&k=20&c=49s2swKltrbEWe7n24TxrbSuYiVT3NWc45QfI9itUVs=', caption: 'Pitch' },
+    { id: '104', imageUrl: 'https://www.shutterstock.com/image-vector/injured-man-walking-crutches-illustration-600nw-2643702771.jpg', caption: 'Crutch' },
+    { id: '105', imageUrl: 'https://img.freepik.com/premium-vector/cartoon-isolated-vector-object-matches-fire_311865-9412.jpg', caption: 'Match' },
+    // 3 Consonant pattern: MB - lamb, limb, crumb, thumb
+    { id: '106', imageUrl: 'https://t3.ftcdn.net/jpg/05/90/17/26/360_F_590172680_mL0VBYGjt979JSmyNDpa1GKwz6ftViTF.jpg', caption: 'Lamb' },
+    { id: '107', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Af6gbUozTQOa8U4k2PcmVhZJTleIMLPxig&s', caption: 'Limb' },
+    { id: '108', imageUrl: 'https://media.istockphoto.com/id/1292898075/vector/bitten-chocolate-chip-cookie-crunch-homemade-brown-biscuits-broken-with-crumbs-cartoon-baked.jpg?s=612x612&w=0&k=20&c=eSX6FiWDrPfj2qC4Kj9JgHlxUGocMS3pSrFGI_mJu5w=', caption: 'Crumb' },
+    { id: '109', imageUrl: 'https://img.pikbest.com/png-images/qiantu/cartoon-thumb-up-gesture-illustration_2601767.png!sw800', caption: 'Thumb' },
+    // 4 Consonant pattern: WR - wrap, unwrap, write, wreath
+    { id: '110', imageUrl: 'https://i.pinimg.com/736x/dc/2d/84/dc2d84a46859e7b565ea1f630d0f08a8.jpg', caption: 'Wrap' },
+    { id: '111', imageUrl: 'https://thumbs.dreamstime.com/b/girl-unwrapping-present-12052067.jpg', caption: 'Unwrap' },
+    { id: '112', imageUrl: 'https://www.shutterstock.com/image-vector/animated-cute-boy-writing-book-600nw-2615213357.jpg', caption: 'Write' },
+    { id: '113', imageUrl: 'https://t4.ftcdn.net/jpg/00/74/79/29/360_F_74792937_UfhWnXDF7ZCX9C34N6RAFr20Y4ADN6oh.jpg', caption: 'Wreath' }
   ];
 
   private flashcardSets: FlashcardSet[] = [
@@ -182,8 +203,32 @@ export class FlashcardService {
       description: 'Handicraft materials and items',
       flashcardIds: ['77', '78', '79', '80', '81', '82', '83', '84']
     },
+    {
+      id: 'set14',
+      name: 'Consonant pattern: KN',
+      description: 'Words with KN consonant pattern',
+      flashcardIds: ['98', '99', '100', '101']
+    },
+    {
+      id: 'set15',
+      name: 'Consonant pattern: TCH',
+      description: 'Words with TCH consonant pattern',
+      flashcardIds: ['102', '103', '104', '105']
+    },
+    {
+      id: 'set16',
+      name: 'Consonant pattern: MB',
+      description: 'Words with MB consonant pattern',
+      flashcardIds: ['106', '107', '108', '109']
+    },
+    {
+      id: 'set17',
+      name: 'Consonant pattern: WR',
+      description: 'Words with WR consonant pattern',
+      flashcardIds: ['110', '111', '112', '113']
+    },
     // {
-    //   id: 'set14',
+    //   id: 'set18',
     //   name: 'Handicrafts II',
     //   description: 'Handicraft items and products',
     //   flashcardIds: ['85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97']
