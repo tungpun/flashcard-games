@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Flashcard, FlashcardSet } from '../models';
 
+const PLACEHOLDER_IMAGE_URL = 'https://via.placeholder.com/512x512?text=Flashcard';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -127,7 +129,27 @@ export class FlashcardService {
     { id: '110', imageUrl: 'https://i.pinimg.com/736x/dc/2d/84/dc2d84a46859e7b565ea1f630d0f08a8.jpg', caption: 'Wrap' },
     { id: '111', imageUrl: 'https://thumbs.dreamstime.com/b/girl-unwrapping-present-12052067.jpg', caption: 'Unwrap' },
     { id: '112', imageUrl: 'https://www.shutterstock.com/image-vector/animated-cute-boy-writing-book-600nw-2615213357.jpg', caption: 'Write' },
-    { id: '113', imageUrl: 'https://t4.ftcdn.net/jpg/00/74/79/29/360_F_74792937_UfhWnXDF7ZCX9C34N6RAFr20Y4ADN6oh.jpg', caption: 'Wreath' }
+    { id: '113', imageUrl: 'https://t4.ftcdn.net/jpg/00/74/79/29/360_F_74792937_UfhWnXDF7ZCX9C34N6RAFr20Y4ADN6oh.jpg', caption: 'Wreath' },
+
+    // Long Vowel A (ai / ay)
+    { id: '114', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Snail' },
+    { id: '115', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Paint' },
+    { id: '116', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Tail' },
+    { id: '117', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Rail' },
+    { id: '118', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Play' },
+    { id: '119', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Tray' },
+    { id: '120', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Hay' },
+    { id: '121', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Clay' },
+
+    // Long Vowel A (a_e)
+    { id: '122', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Bake' },
+    { id: '123', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Cake' },
+    { id: '124', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Late' },
+    { id: '125', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Take' },
+    { id: '126', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Lake' },
+    { id: '127', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Wave' },
+    { id: '128', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Same' },
+    { id: '129', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Name' }
   ];
 
   private flashcardSets: FlashcardSet[] = [
@@ -226,6 +248,18 @@ export class FlashcardService {
       name: 'Consonant pattern: WR',
       description: 'Words with WR consonant pattern',
       flashcardIds: ['110', '111', '112', '113']
+    },
+    {
+      id: 'set18',
+      name: 'Long Vowel A (ai / ay)',
+      description: 'Words with long vowel A sound spelled ai or ay',
+      flashcardIds: ['114', '115', '116', '117', '118', '119', '120', '121']
+    },
+    {
+      id: 'set19',
+      name: 'Long Vowel A (a_e)',
+      description: 'Words with long vowel A sound spelled a_e (magic e)',
+      flashcardIds: ['122', '123', '124', '125', '126', '127', '128', '129']
     },
     // {
     //   id: 'set18',
