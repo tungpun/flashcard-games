@@ -8,148 +8,664 @@ const PLACEHOLDER_IMAGE_URL = 'https://via.placeholder.com/512x512?text=Flashcar
 })
 export class FlashcardService {
   private flashcards: Flashcard[] = [
-    { id: '1', imageUrl: 'https://img.freepik.com/premium-vector/tree-cute-drawing-school-flash-card_213861-1457.jpg', caption: 'Tree' },
-    { id: '2', imageUrl: 'https://study.com/cimages/multimages/16/sun-157126_1280.png', caption: 'Sun' },
-    { id: '3', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/cat.PNG', caption: 'Cat' },
-    { id: '4', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/03/1/202403130229419046373.jpg', caption: 'Dog' },
-    { id: '5', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2023/09/1/202309191315544202107.jpg', caption: 'House' },
-    { id: '6', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThs8Hniu6PyqzsrAKBhSsGPEtiPbjFAGZm4g&s', caption: 'Car' },
-    { id: '7', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ8rq-QLt8FM__yuswJjIc5l7no4KmIRZy8w&s', caption: 'Ball' },
-    { id: '8', imageUrl: 'https://www.flashcards.com.sg/wp-content/uploads/2017/10/Slide363.jpg', caption: 'Apple' },
-    { id: '9', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9KPb1Gdjwdl9hDx2arKKRcyJbiuNFjt_sXw&s', caption: 'Book' },
-    { id: '10', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/weather-flashcards-2/rainy.PNG', caption: 'Rain' },
-    { id: '11', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/get-ready-for-movers-unit-12-2/lorry.PNG', caption: 'Truck' },
-    { id: '12', imageUrl: 'https://o.quizlet.com/FwXCaAQmOmJzvBiXBuBTBQ.png', caption: 'Clock' },
-    { id: '13', imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-girl-sun-hat-picking-flowers-garden-illustration-cheerful-orange-striped-dress-380021630.jpg', caption: 'Pick' },
-    { id: '14', imageUrl: 'https://thumbs.dreamstime.com/b/comic-fast-running-superhero-25331787.jpg', caption: 'Quick' },
-    { id: '15', imageUrl: 'https://i.pinimg.com/736x/fd/b5/e9/fdb5e92095e956b781b5046b569a25a0.jpg', caption: 'Snack' },
-    { id: '16', imageUrl: 'https://i.pinimg.com/564x/71/98/d9/7198d94e74a561dca6576916547b5cec.jpg', caption: 'Duck' },
-    { id: '17', imageUrl: 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid&w=740&q=80', caption: 'Lock' },
-    { id: '18', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBxOzAPnbxIGpLeAd9ebitWVCBzgaVaP6xaw&s', caption: 'Neck' },
-    { id: '19', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/fingerprints-2-unit-1-lesson-4/run.PNG', caption: 'Jog' },
-    { id: '20', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/10/0/202410060935391271841.jpg', caption: 'Cop' },
-    { id: '21', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2023/09/1/202309130901199337990.jpg', caption: 'Hop' },
-    { id: '22', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/sgk-tieng-anh-2-i-learn-smart-start-unit-5-2/top.PNG', caption: 'Top' },
-    { id: '23', imageUrl: 'https://yourhomework.net/yhw/bfc/images/vocabulary/english/oxford-phonics-world-2-unit-6-op/pop.jpg', caption: 'Pop' },
-    { id: '24', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/04/2/202404201426231378483.jpg', caption: 'Pot' },
-    { id: '25', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/07/1/202407120853336547315.jpg', caption: 'Stop' },
-    { id: '26', imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/04/2/202404201426373654125.jpg', caption: 'Mop' },
-    { id: '27', imageUrl: 'https://media.baamboozle.com/uploads/images/22651/1572868650_13691', caption: 'Fog' },
-    { id: '28', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-6-o/rod.PNG', caption: 'Rod' },
-    { id: '29', imageUrl: 'https://media.istockphoto.com/id/164315913/vector/thief.jpg?s=612x612&w=0&k=20&c=Qs-dP2z9D-xBy4eGfSwrY6uUS0pllBURN5QyiyJC_aw=', caption: 'Rob' },
-    { id: '30', imageUrl: 'https://img.freepik.com/premium-vector/cute-little-boy-with-crying-tantrum-expression_97632-4413.jpg', caption: 'Sob' },
-    { id: '31', imageUrl: 'https://img.freepik.com/premium-vector/laptop-vector-mockup-647546_982290-58.jpg?semt=ais_hybrid&w=740&q=80', caption: 'Computer' },
-    { id: '32', imageUrl: 'https://www.apple.com/v/ipad-air/ae/images/overview/two-sizes/gallery-toggle/spin_reverse_static__ehmkt90jzu6a_large.png', caption: 'Tablet' },
-    { id: '33', imageUrl: 'https://i.pinimg.com/736x/6e/9b/6a/6e9b6a49294825a43e6f11a3fdb36ef4.jpg', caption: 'Smart Speaker' },
-    { id: '34', imageUrl: 'https://cdn.manomano.com/images/images_products/32961599/P/111006397_1.jpg', caption: 'Vacuum Cleaner' },
-    { id: '35', imageUrl: 'https://www.ismartrecruit.com/upload/blog/main_image/recruitment_chatbot_definition_features_and_benefits.webp', caption: 'Voice assistant' },
-    { id: '36', imageUrl: 'https://thumbs.dreamstime.com/b/hand-holding-mobile-navigation-city-map-mobile-app-map-gps-navigation-smartphone-mobile-navigator-205618297.jpg', caption: 'Google Map' },
-    { id: '37', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg', caption: 'Robot' },
-    { id: '38', imageUrl: 'https://images-cdn.ubuy.co.in/634d031dba8fe623b47893cc-smart-phone-android-8-1-smartphone-hd.jpg', caption: 'Smartphone' },
-    { id: '39', imageUrl: 'https://fsa2-assets.imgix.net/assets/UNIV/USU/cyber/iStock-1332378618.jpg?auto=compress%2Cformat&crop=focalpoint&domain=fsa2-assets.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=800&ixlib=php-3.3.0&w=1200', caption: 'Coding' },
-    { id: '40', imageUrl: 'https://servodynamics.com.vn/wp-content/uploads/2024/11/SD_Series_Photoelectric_Smoke_Detectors.jpg', caption: 'Sensor' },
-    { id: '41', imageUrl: 'https://static.vecteezy.com/system/resources/previews/015/841/071/non_2x/cute-funny-red-arrow-icon-hand-drawn-cartoon-kawaii-character-illustration-icon-isolated-on-white-background-red-arrow-up-direction-vector.jpg', caption: 'Move Forward' },
-    { id: '42', imageUrl: 'https://media.istockphoto.com/id/1448780430/nl/vector/cute-funny-red-arrow-icon-vector-hand-drawn-cartoon-kawaii-character-illustration-icon.jpg?s=612x612&w=0&k=20&c=SDTcbATxAj0CxgEypE1VYPPi33z29wy1a2qu0l0WQ-o=', caption: 'Move Backward' },
-    { id: '43', imageUrl: 'https://static.vecteezy.com/system/resources/previews/015/841/066/non_2x/cute-funny-red-arrow-icon-hand-drawn-cartoon-kawaii-character-illustration-icon-isolated-on-white-background-red-arrow-left-direction-vector.jpg', caption: 'Turn Left' },
-    { id: '44', imageUrl: 'https://static.vecteezy.com/system/resources/previews/015/841/068/non_2x/cute-funny-red-arrow-icon-hand-drawn-cartoon-kawaii-character-illustration-icon-isolated-on-white-background-red-arrow-right-direction-vector.jpg', caption: 'Turn Right' },
-    { id: '45', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXP3FVr-YQNSXMnXo8X2DiI2SE_61t6j8z8WG7EMnWsJ5x2jRG2p6wTtZb1qD2S-_wdg&usqp=CAU', caption: 'Step' },
-    { id: '46', imageUrl: 'https://www.publicdomainpictures.net/pictures/200000/nahled/footprints-logo-circle.jpg', caption: 'Loop' },
-    { id: '47', imageUrl: 'https://media.istockphoto.com/id/689997052/vector/human-footprint-vector-icon.jpg?s=612x612&w=0&k=20&c=IXT6i7ZVz6Yo82ylJYHz-nMYY8tU8nZmorsliFheNgQ=', caption: 'Sequence' },
-    { id: '48', imageUrl: 'https://img.freepik.com/free-vector/flat-spring-illustration_23-2149282337.jpg', caption: 'Spring' },
-    { id: '49', imageUrl: 'https://t3.ftcdn.net/jpg/09/38/74/26/360_F_938742621_7VaKGUxoUqFOlSc48O8hXxJoFx6D5Xmu.jpg', caption: 'King' },
-    { id: '50', imageUrl: 'https://img.freepik.com/premium-vector/courier-brings-packages-customer-illustration_338371-67.jpg', caption: 'Bring' },
-    { id: '51', imageUrl: 'https://t3.ftcdn.net/jpg/02/79/95/98/360_F_279959867_EufPXDNyxENxhDxAah2qC6GtPffQ4IV9.jpg', caption: 'Song' },
-    { id: '56', imageUrl: 'https://media.istockphoto.com/id/148772039/vector/diamond-ring.jpg?s=612x612&w=0&k=20&c=kcYwxLJIgAp05waeZsfa7eYYua6xfKXBMgDW_Yfv97g=', caption: 'Ring' },
-    { id: '57', imageUrl: 'https://t3.ftcdn.net/jpg/17/14/31/00/360_F_1714310015_fg03gYNdzTiu1oUFsiJrDU3I9NY7PlLp.jpg', caption: 'Ping Pong' },
-    { id: '58', imageUrl: 'https://img.freepik.com/premium-vector/illustration-wing_757131-683.jpg', caption: 'Wing' },
-    { id: '59', imageUrl: 'https://media.istockphoto.com/id/908578348/vector/business-building-illustration.jpg?s=612x612&w=0&k=20&c=thg6Bom79dCRo8pMV3fo7p-8b7m1p-EdLZZPKYpXYvg=', caption: 'Building' },
-    { id: '52', imageUrl: 'https://img.freepik.com/premium-vector/cute-mink-vector-cartoon-illustration-white-background_1025757-25149.jpg', caption: 'Mink' },
-    { id: '53', imageUrl: 'https://img.freepik.com/premium-vector/bank-building-building-landmark-icon-illustration-vector_679085-55.jpg?semt=ais_hybrid&w=740&q=80', caption: 'Bank' },
-    { id: '54', imageUrl: 'https://freedesignfile.com/upload/2016/12/Cartoon-school-children-with-blank-paper-vector-05.jpg', caption: 'Blank' },
-    { id: '55', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp_21Ko3jKTRkemD7g-RpLl1k5BSEXuib6FQ&s', caption: 'Wink' },
-    { id: '60', imageUrl: 'https://img.freepik.com/premium-vector/colorful-cartoon-sink-illustration-white-background_1120554-60648.jpg', caption: 'Sink' },
-    { id: '61', imageUrl: 'https://www.clker.com/cliparts/H/n/Z/W/5/r/ink-splash-pink.svg.hi.png', caption: 'Pink' },
-    { id: '62', imageUrl: 'https://thumbs.dreamstime.com/b/drinking-milk-cute-boy-red-shirt-holding-glass-kid-thumbs-up-emotionally-healthy-concepts-growth-child-nutrition-vector-109127904.jpg', caption: 'Drink' },
-    { id: '63', imageUrl: 'https://media.istockphoto.com/id/1355408523/vector/kid-cartoon-character_32.jpg?s=612x612&w=0&k=20&c=YbMpwjbtIZXCKJufk6rrFIf3x89nI8Qc0PVyZpQyH-M=', caption: 'Think' },
-    { id: '64', imageUrl: 'https://png.pngtree.com/png-vector/20220701/ourmid/pngtree-group-selfie-on-smartphone-png-image_5677466.png', caption: 'Photo' },
-    { id: '65', imageUrl: 'https://media.istockphoto.com/id/968475622/vector/cartoon-dolphin.jpg?s=612x612&w=0&k=20&c=d5u0Xm_jcBh-1aFnWfeavX79u75Z-yECb8vy9iHz5Gk=', caption: 'Dolphin' },
-    { id: '66', imageUrl: 'https://www.shutterstock.com/image-vector/cute-baby-elephant-outline-coloring-600nw-2490295647.jpg', caption: 'Elephant' },
-    { id: '67', imageUrl: 'https://static.vecteezy.com/system/resources/previews/060/826/787/non_2x/cartoon-green-bug-illustration-cheerful-insect-character-graphics-vector.jpg', caption: 'Bug' },
-    { id: '68', imageUrl: 'https://media.istockphoto.com/id/831537350/vector/cute-children-playing-tug-of-war.jpg?s=612x612&w=0&k=20&c=ETTLHkCqiN5Vu243CKmVKx2KkkpGl6FqvQR6SeCd9Ac=', caption: 'Tug' },
-    { id: '69', imageUrl: 'https://img.freepik.com/free-vector/acorn-sticker-white-background_1308-70248.jpg?semt=ais_hybrid&w=740&q=80', caption: 'Nut' },
-    { id: '70', imageUrl: 'https://media.istockphoto.com/id/866875396/vector/little-boy-playing-in-the-mud.jpg?s=612x612&w=0&k=20&c=AZ_6nP987J3lf8z0c3Oyv632fHxHW9bw7F_NZxDR2zg=', caption: 'Mud' },
-    { id: '71', imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/015/014/906/small_2x/hut-icon-cartoon-style-vector.jpg', caption: 'Hut' },
-    { id: '72', imageUrl: 'https://static.vecteezy.com/system/resources/previews/006/096/479/non_2x/scissor-cutting-paper-cartoon-icon-illustration-education-object-icon-concept-isolated-premium-flat-cartoon-style-free-vector.jpg', caption: 'Cut' },
-    { id: '73', imageUrl: 'https://img.freepik.com/premium-vector/bathtub-clipart-cartoon-illustration-drawing_871209-12277.jpg', caption: 'Tub' },
-    { id: '74', imageUrl: 'https://static.vecteezy.com/system/resources/previews/012/576/575/non_2x/children-laugh-at-the-fun-funny-cartoon-character-illustration-isolated-on-white-background-free-vector.jpg', caption: 'Fun' },
-    { id: '75', imageUrl: 'https://thumbs.dreamstime.com/b/illustration-cartoon-happy-mother-hugging-her-son-cartoon-happy-mother-hugging-her-son-144238202.jpg', caption: 'Hug' },
-    { id: '76', imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-rug-isolated-white-background-illustration-cute-style-clean-404296006.jpg', caption: 'Rug' },
+    {
+      id: '1',
+      caption: 'Tree',
+      imageUrl: 'https://img.freepik.com/premium-vector/tree-cute-drawing-school-flash-card_213861-1457.jpg'
+    },
+    {
+      id: '2',
+      caption: 'Sun',
+      imageUrl: 'https://study.com/cimages/multimages/16/sun-157126_1280.png'
+    },
+    {
+      id: '3',
+      caption: 'Cat',
+      imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/cat.PNG'
+    },
+    {
+      id: '4',
+      caption: 'Dog',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/03/1/202403130229419046373.jpg'
+    },
+    {
+      id: '5',
+      caption: 'House',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2023/09/1/202309191315544202107.jpg'
+    },
+    {
+      id: '6',
+      caption: 'Car',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThs8Hniu6PyqzsrAKBhSsGPEtiPbjFAGZm4g&s'
+    },
+    {
+      id: '7',
+      caption: 'Ball',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ8rq-QLt8FM__yuswJjIc5l7no4KmIRZy8w&s'
+    },
+    {
+      id: '8',
+      caption: 'Apple',
+      imageUrl: 'https://www.flashcards.com.sg/wp-content/uploads/2017/10/Slide363.jpg'
+    },
+    {
+      id: '9',
+      caption: 'Book',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9KPb1Gdjwdl9hDx2arKKRcyJbiuNFjt_sXw&s'
+    },
+    {
+      id: '10',
+      caption: 'Rain',
+      imageUrl: 'https://bestflashcard.com/images/vocabulary/english/weather-flashcards-2/rainy.PNG'
+    },
+    {
+      id: '11',
+      caption: 'Truck',
+      imageUrl: 'https://bestflashcard.com/images/vocabulary/english/get-ready-for-movers-unit-12-2/lorry.PNG'
+    },
+    {
+      id: '12',
+      caption: 'Clock',
+      imageUrl: 'https://o.quizlet.com/FwXCaAQmOmJzvBiXBuBTBQ.png'
+    },
+    {
+      id: '13',
+      caption: 'Pick',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-girl-sun-hat-picking-flowers-garden-illustration-cheerful-orange-striped-dress-380021630.jpg'
+    },
+    {
+      id: '14',
+      caption: 'Quick',
+      imageUrl: 'https://thumbs.dreamstime.com/b/comic-fast-running-superhero-25331787.jpg'
+    },
+    {
+      id: '15',
+      caption: 'Snack',
+      imageUrl: 'https://i.pinimg.com/736x/fd/b5/e9/fdb5e92095e956b781b5046b569a25a0.jpg'
+    },
+    {
+      id: '16',
+      caption: 'Duck',
+      imageUrl: 'https://i.pinimg.com/564x/71/98/d9/7198d94e74a561dca6576916547b5cec.jpg'
+    },
+    {
+      id: '17',
+      caption: 'Lock',
+      imageUrl: 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '18',
+      caption: 'Neck',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBxOzAPnbxIGpLeAd9ebitWVCBzgaVaP6xaw&s'
+    },
+    {
+      id: '19',
+      caption: 'Jog',
+      imageUrl: 'https://bestflashcard.com/images/vocabulary/english/fingerprints-2-unit-1-lesson-4/run.PNG'
+    },
+    {
+      id: '20',
+      caption: 'Cop',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/10/0/202410060935391271841.jpg'
+    },
+    {
+      id: '21',
+      caption: 'Hop',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2023/09/1/202309130901199337990.jpg'
+    },
+    {
+      id: '22',
+      caption: 'Top',
+      imageUrl: 'https://bestflashcard.com/images/vocabulary/english/sgk-tieng-anh-2-i-learn-smart-start-unit-5-2/top.PNG'
+    },
+    {
+      id: '23',
+      caption: 'Pop',
+      imageUrl: 'https://yourhomework.net/yhw/bfc/images/vocabulary/english/oxford-phonics-world-2-unit-6-op/pop.jpg'
+    },
+    {
+      id: '24',
+      caption: 'Pot',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/04/2/202404201426231378483.jpg'
+    },
+    {
+      id: '25',
+      caption: 'Stop',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/07/1/202407120853336547315.jpg'
+    },
+    {
+      id: '26',
+      caption: 'Mop',
+      imageUrl: 'https://yourhomework.net/yhw/f/yhw-voca/2024/04/2/202404201426373654125.jpg'
+    },
+    {
+      id: '27',
+      caption: 'Fog',
+      imageUrl: 'https://media.baamboozle.com/uploads/images/22651/1572868650_13691'
+    },
+    {
+      id: '28',
+      caption: 'Rod',
+      imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-6-o/rod.PNG'
+    },
+    {
+      id: '29',
+      caption: 'Rob',
+      imageUrl: 'https://media.istockphoto.com/id/164315913/vector/thief.jpg?s=612x612&w=0&k=20&c=Qs-dP2z9D-xBy4eGfSwrY6uUS0pllBURN5QyiyJC_aw='
+    },
+    {
+      id: '30',
+      caption: 'Sob',
+      imageUrl: 'https://img.freepik.com/premium-vector/cute-little-boy-with-crying-tantrum-expression_97632-4413.jpg'
+    },
+    {
+      id: '31',
+      caption: 'Computer',
+      imageUrl: 'https://img.freepik.com/premium-vector/laptop-vector-mockup-647546_982290-58.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '32',
+      caption: 'Tablet',
+      imageUrl: 'https://www.apple.com/v/ipad-air/ae/images/overview/two-sizes/gallery-toggle/spin_reverse_static__ehmkt90jzu6a_large.png'
+    },
+    {
+      id: '33',
+      caption: 'Smart Speaker',
+      imageUrl: 'https://i.pinimg.com/736x/6e/9b/6a/6e9b6a49294825a43e6f11a3fdb36ef4.jpg'
+    },
+    {
+      id: '34',
+      caption: 'Vacuum Cleaner',
+      imageUrl: 'https://cdn.manomano.com/images/images_products/32961599/P/111006397_1.jpg'
+    },
+    {
+      id: '35',
+      caption: 'Voice assistant',
+      imageUrl: 'https://www.ismartrecruit.com/upload/blog/main_image/recruitment_chatbot_definition_features_and_benefits.webp'
+    },
+    {
+      id: '36',
+      caption: 'Google Map',
+      imageUrl: 'https://thumbs.dreamstime.com/b/hand-holding-mobile-navigation-city-map-mobile-app-map-gps-navigation-smartphone-mobile-navigator-205618297.jpg'
+    },
+    {
+      id: '37',
+      caption: 'Robot',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/05/HONDA_ASIMO.jpg'
+    },
+    {
+      id: '38',
+      caption: 'Smartphone',
+      imageUrl: 'https://images-cdn.ubuy.co.in/634d031dba8fe623b47893cc-smart-phone-android-8-1-smartphone-hd.jpg'
+    },
+    {
+      id: '39',
+      caption: 'Coding',
+      imageUrl: 'https://fsa2-assets.imgix.net/assets/UNIV/USU/cyber/iStock-1332378618.jpg?auto=compress%2Cformat&crop=focalpoint&domain=fsa2-assets.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=800&ixlib=php-3.3.0&w=1200'
+    },
+    {
+      id: '40',
+      caption: 'Sensor',
+      imageUrl: 'https://servodynamics.com.vn/wp-content/uploads/2024/11/SD_Series_Photoelectric_Smoke_Detectors.jpg'
+    },
+    {
+      id: '41',
+      caption: 'Move Forward',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/015/841/071/non_2x/cute-funny-red-arrow-icon-hand-drawn-cartoon-kawaii-character-illustration-icon-isolated-on-white-background-red-arrow-up-direction-vector.jpg'
+    },
+    {
+      id: '42',
+      caption: 'Move Backward',
+      imageUrl: 'https://media.istockphoto.com/id/1448780430/nl/vector/cute-funny-red-arrow-icon-vector-hand-drawn-cartoon-kawaii-character-illustration-icon.jpg?s=612x612&w=0&k=20&c=SDTcbATxAj0CxgEypE1VYPPi33z29wy1a2qu0l0WQ-o='
+    },
+    {
+      id: '43',
+      caption: 'Turn Left',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/015/841/066/non_2x/cute-funny-red-arrow-icon-hand-drawn-cartoon-kawaii-character-illustration-icon-isolated-on-white-background-red-arrow-left-direction-vector.jpg'
+    },
+    {
+      id: '44',
+      caption: 'Turn Right',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/015/841/068/non_2x/cute-funny-red-arrow-icon-hand-drawn-cartoon-kawaii-character-illustration-icon-isolated-on-white-background-red-arrow-right-direction-vector.jpg'
+    },
+    {
+      id: '45',
+      caption: 'Step',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXP3FVr-YQNSXMnXo8X2DiI2SE_61t6j8z8WG7EMnWsJ5x2jRG2p6wTtZb1qD2S-_wdg&usqp=CAU'
+    },
+    {
+      id: '46',
+      caption: 'Loop',
+      imageUrl: 'https://www.publicdomainpictures.net/pictures/200000/nahled/footprints-logo-circle.jpg'
+    },
+    {
+      id: '47',
+      caption: 'Sequence',
+      imageUrl: 'https://media.istockphoto.com/id/689997052/vector/human-footprint-vector-icon.jpg?s=612x612&w=0&k=20&c=IXT6i7ZVz6Yo82ylJYHz-nMYY8tU8nZmorsliFheNgQ='
+    },
+    {
+      id: '48',
+      caption: 'Spring',
+      imageUrl: 'https://img.freepik.com/free-vector/flat-spring-illustration_23-2149282337.jpg'
+    },
+    {
+      id: '49',
+      caption: 'King',
+      imageUrl: 'https://t3.ftcdn.net/jpg/09/38/74/26/360_F_938742621_7VaKGUxoUqFOlSc48O8hXxJoFx6D5Xmu.jpg'
+    },
+    {
+      id: '50',
+      caption: 'Bring',
+      imageUrl: 'https://img.freepik.com/premium-vector/courier-brings-packages-customer-illustration_338371-67.jpg'
+    },
+    {
+      id: '51',
+      caption: 'Song',
+      imageUrl: 'https://t3.ftcdn.net/jpg/02/79/95/98/360_F_279959867_EufPXDNyxENxhDxAah2qC6GtPffQ4IV9.jpg'
+    },
+    {
+      id: '56',
+      caption: 'Ring',
+      imageUrl: 'https://media.istockphoto.com/id/148772039/vector/diamond-ring.jpg?s=612x612&w=0&k=20&c=kcYwxLJIgAp05waeZsfa7eYYua6xfKXBMgDW_Yfv97g='
+    },
+    {
+      id: '57',
+      caption: 'Ping Pong',
+      imageUrl: 'https://t3.ftcdn.net/jpg/17/14/31/00/360_F_1714310015_fg03gYNdzTiu1oUFsiJrDU3I9NY7PlLp.jpg'
+    },
+    {
+      id: '58',
+      caption: 'Wing',
+      imageUrl: 'https://img.freepik.com/premium-vector/illustration-wing_757131-683.jpg'
+    },
+    {
+      id: '59',
+      caption: 'Building',
+      imageUrl: 'https://media.istockphoto.com/id/908578348/vector/business-building-illustration.jpg?s=612x612&w=0&k=20&c=thg6Bom79dCRo8pMV3fo7p-8b7m1p-EdLZZPKYpXYvg='
+    },
+    {
+      id: '52',
+      caption: 'Mink',
+      imageUrl: 'https://img.freepik.com/premium-vector/cute-mink-vector-cartoon-illustration-white-background_1025757-25149.jpg'
+    },
+    {
+      id: '53',
+      caption: 'Bank',
+      imageUrl: 'https://img.freepik.com/premium-vector/bank-building-building-landmark-icon-illustration-vector_679085-55.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '54',
+      caption: 'Blank',
+      imageUrl: 'https://freedesignfile.com/upload/2016/12/Cartoon-school-children-with-blank-paper-vector-05.jpg'
+    },
+    {
+      id: '55',
+      caption: 'Wink',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp_21Ko3jKTRkemD7g-RpLl1k5BSEXuib6FQ&s'
+    },
+    {
+      id: '60',
+      caption: 'Sink',
+      imageUrl: 'https://img.freepik.com/premium-vector/colorful-cartoon-sink-illustration-white-background_1120554-60648.jpg'
+    },
+    {
+      id: '61',
+      caption: 'Pink',
+      imageUrl: 'https://www.clker.com/cliparts/H/n/Z/W/5/r/ink-splash-pink.svg.hi.png'
+    },
+    {
+      id: '62',
+      caption: 'Drink',
+      imageUrl: 'https://thumbs.dreamstime.com/b/drinking-milk-cute-boy-red-shirt-holding-glass-kid-thumbs-up-emotionally-healthy-concepts-growth-child-nutrition-vector-109127904.jpg'
+    },
+    {
+      id: '63',
+      caption: 'Think',
+      imageUrl: 'https://media.istockphoto.com/id/1355408523/vector/kid-cartoon-character_32.jpg?s=612x612&w=0&k=20&c=YbMpwjbtIZXCKJufk6rrFIf3x89nI8Qc0PVyZpQyH-M='
+    },
+    {
+      id: '64',
+      caption: 'Photo',
+      imageUrl: 'https://png.pngtree.com/png-vector/20220701/ourmid/pngtree-group-selfie-on-smartphone-png-image_5677466.png'
+    },
+    {
+      id: '65',
+      caption: 'Dolphin',
+      imageUrl: 'https://media.istockphoto.com/id/968475622/vector/cartoon-dolphin.jpg?s=612x612&w=0&k=20&c=d5u0Xm_jcBh-1aFnWfeavX79u75Z-yECb8vy9iHz5Gk='
+    },
+    {
+      id: '66',
+      caption: 'Elephant',
+      imageUrl: 'https://www.shutterstock.com/image-vector/cute-baby-elephant-outline-coloring-600nw-2490295647.jpg'
+    },
+    {
+      id: '67',
+      caption: 'Bug',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/060/826/787/non_2x/cartoon-green-bug-illustration-cheerful-insect-character-graphics-vector.jpg'
+    },
+    {
+      id: '68',
+      caption: 'Tug',
+      imageUrl: 'https://media.istockphoto.com/id/831537350/vector/cute-children-playing-tug-of-war.jpg?s=612x612&w=0&k=20&c=ETTLHkCqiN5Vu243CKmVKx2KkkpGl6FqvQR6SeCd9Ac='
+    },
+    {
+      id: '69',
+      caption: 'Nut',
+      imageUrl: 'https://img.freepik.com/free-vector/acorn-sticker-white-background_1308-70248.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '70',
+      caption: 'Mud',
+      imageUrl: 'https://media.istockphoto.com/id/866875396/vector/little-boy-playing-in-the-mud.jpg?s=612x612&w=0&k=20&c=AZ_6nP987J3lf8z0c3Oyv632fHxHW9bw7F_NZxDR2zg='
+    },
+    {
+      id: '71',
+      caption: 'Hut',
+      imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/015/014/906/small_2x/hut-icon-cartoon-style-vector.jpg'
+    },
+    {
+      id: '72',
+      caption: 'Cut',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/006/096/479/non_2x/scissor-cutting-paper-cartoon-icon-illustration-education-object-icon-concept-isolated-premium-flat-cartoon-style-free-vector.jpg'
+    },
+    {
+      id: '73',
+      caption: 'Tub',
+      imageUrl: 'https://img.freepik.com/premium-vector/bathtub-clipart-cartoon-illustration-drawing_871209-12277.jpg'
+    },
+    {
+      id: '74',
+      caption: 'Fun',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/012/576/575/non_2x/children-laugh-at-the-fun-funny-cartoon-character-illustration-isolated-on-white-background-free-vector.jpg'
+    },
+    {
+      id: '75',
+      caption: 'Hug',
+      imageUrl: 'https://thumbs.dreamstime.com/b/illustration-cartoon-happy-mother-hugging-her-son-cartoon-happy-mother-hugging-her-son-144238202.jpg'
+    },
+    {
+      id: '76',
+      caption: 'Rug',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-rug-isolated-white-background-illustration-cute-style-clean-404296006.jpg'
+    },
 
     // Handicrafts I
-    { id: '77', imageUrl: 'https://shop.vitcas.com/media/amasty/blog/cache/P/o/1000/690/Pottery-craft-ceramics.jpg', caption: 'Pottery/Ceramic' },
-    { id: '78', imageUrl: 'https://image.vietnamlawmagazine.vn/uploadvietnamlaw/2022/6/13/trang-37-tradition-a1jpg113327806.jpg', caption: 'Bamboo/Rattan' },
-    { id: '79', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Various_products_made_from_paper.JPG/1200px-Various_products_made_from_paper.JPG', caption: 'Paper' },
-    { id: '80', imageUrl: 'https://noithatzear.vn/wp-content/uploads/2024/07/Plastic-la-gi.jpg', caption: 'Plastic' },
-    { id: '81', imageUrl: 'https://vico.com.hk/be/uploads/blogs/image_pFONUQ1fk.png', caption: 'Fabric' },
-    { id: '82', imageUrl: 'https://m.media-amazon.com/images/I/81Ry4Zp9S8L._AC_SL1500_.jpg', caption: 'Yarn/Wool' },
-    { id: '83', imageUrl: 'https://hwestequipment.com/wp-content/uploads/2019/02/Things-Made-from-Recycled-Glass.jpg', caption: 'Glass' },
-    { id: '84', imageUrl: 'https://zetarmoulding.com/wp-content/webp-express/webp-images/uploads/2022/10/natural-rubber-products.jpg.webp', caption: 'Rubber' },
+    {
+      id: '77',
+      caption: 'Pottery/Ceramic',
+      imageUrl: 'https://shop.vitcas.com/media/amasty/blog/cache/P/o/1000/690/Pottery-craft-ceramics.jpg'
+    },
+    {
+      id: '78',
+      caption: 'Bamboo/Rattan',
+      imageUrl: 'https://image.vietnamlawmagazine.vn/uploadvietnamlaw/2022/6/13/trang-37-tradition-a1jpg113327806.jpg'
+    },
+    {
+      id: '79',
+      caption: 'Paper',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Various_products_made_from_paper.JPG/1200px-Various_products_made_from_paper.JPG'
+    },
+    {
+      id: '80',
+      caption: 'Plastic',
+      imageUrl: 'https://noithatzear.vn/wp-content/uploads/2024/07/Plastic-la-gi.jpg'
+    },
+    {
+      id: '81',
+      caption: 'Fabric',
+      imageUrl: 'https://vico.com.hk/be/uploads/blogs/image_pFONUQ1fk.png'
+    },
+    {
+      id: '82',
+      caption: 'Yarn/Wool',
+      imageUrl: 'https://m.media-amazon.com/images/I/81Ry4Zp9S8L._AC_SL1500_.jpg'
+    },
+    {
+      id: '83',
+      caption: 'Glass',
+      imageUrl: 'https://hwestequipment.com/wp-content/uploads/2019/02/Things-Made-from-Recycled-Glass.jpg'
+    },
+    {
+      id: '84',
+      caption: 'Rubber',
+      imageUrl: 'https://zetarmoulding.com/wp-content/webp-express/webp-images/uploads/2022/10/natural-rubber-products.jpg.webp'
+    },
 
     // Handicrafts II
-    // { id: '85', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bowl.PNG', caption: 'Bowl' },
-    // { id: '86', imageUrl: 'https://img.freepik.com/premium-vector/suitcase-travel-case-vector-illustration_97632-4413.jpg', caption: 'Case' },
-    // { id: '87', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/chair.PNG', caption: 'Chair' },
-    // { id: '88', imageUrl: 'https://img.freepik.com/premium-vector/basket-wicker-basket-vector-illustration_97632-4413.jpg', caption: 'Basket' },
-    // { id: '89', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/picture.PNG', caption: 'Picture' },
-    // { id: '90', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/cup.PNG', caption: 'Cup' },
-    // { id: '91', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/spoon.PNG', caption: 'Spoon' },
-    // { id: '92', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/toy.PNG', caption: 'Toy' },
-    // { id: '93', imageUrl: 'https://img.freepik.com/premium-vector/scarf-winter-scarf-vector-illustration_97632-4413.jpg', caption: 'Scarf' },
-    // { id: '94', imageUrl: 'https://img.freepik.com/premium-vector/sweater-knit-sweater-vector-illustration_97632-4413.jpg', caption: 'Sweater' },
-    // { id: '95', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/tshirt.PNG', caption: 'T-shirt' },
-    // { id: '96', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bag.PNG', caption: 'Bag' },
-    // { id: '97', imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bottle.PNG', caption: 'Bottle' }
+    // {
+    //   id: '85',
+    //   caption: 'Bowl',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bowl.PNG'
+    // },
+    // {
+    //   id: '86',
+    //   caption: 'Case',
+    //   imageUrl: 'https://img.freepik.com/premium-vector/suitcase-travel-case-vector-illustration_97632-4413.jpg'
+    // },
+    // {
+    //   id: '87',
+    //   caption: 'Chair',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/chair.PNG'
+    // },
+    // {
+    //   id: '88',
+    //   caption: 'Basket',
+    //   imageUrl: 'https://img.freepik.com/premium-vector/basket-wicker-basket-vector-illustration_97632-4413.jpg'
+    // },
+    // {
+    //   id: '89',
+    //   caption: 'Picture',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/picture.PNG'
+    // },
+    // {
+    //   id: '90',
+    //   caption: 'Cup',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/cup.PNG'
+    // },
+    // {
+    //   id: '91',
+    //   caption: 'Spoon',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/spoon.PNG'
+    // },
+    // {
+    //   id: '92',
+    //   caption: 'Toy',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/toy.PNG'
+    // },
+    // {
+    //   id: '93',
+    //   caption: 'Scarf',
+    //   imageUrl: 'https://img.freepik.com/premium-vector/scarf-winter-scarf-vector-illustration_97632-4413.jpg'
+    // },
+    // {
+    //   id: '94',
+    //   caption: 'Sweater',
+    //   imageUrl: 'https://img.freepik.com/premium-vector/sweater-knit-sweater-vector-illustration_97632-4413.jpg'
+    // },
+    // {
+    //   id: '95',
+    //   caption: 'T-shirt',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/tshirt.PNG'
+    // },
+    // {
+    //   id: '96',
+    //   caption: 'Bag',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bag.PNG'
+    // },
+    // {
+    //   id: '97',
+    //   caption: 'Bottle',
+    //   imageUrl: 'https://bestflashcard.com/images/vocabulary/english/oxford-phonics-world-2-unit-1-a/bottle.PNG'
+    // }
 
     // 1 Consonant pattern: KN - kneel, knot, knead, knee
-    { id: '98', imageUrl: 'https://www.shutterstock.com/image-vector/little-kid-show-praying-pose-600nw-2318772437.jpg', caption: 'Kneel' },
-    { id: '99', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShHZsJsN1P5sJEaPnyiV5P9ldq5ARB02WjRg&s', caption: 'Knot' },
-    { id: '100', imageUrl: 'https://media.istockphoto.com/id/525107259/vector/hands-kneading-dough.jpg?s=612x612&w=0&k=20&c=mWKl5mVQ8XbaLxv-wrZs8NoC1sPmbey1LSFZV7PBxmw=', caption: 'Knead' },
-    { id: '101', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G-vFf9vw-F6wOplM7zGYFw0jBSky_benJg&s', caption: 'Knee' },
+    {
+      id: '98',
+      caption: 'Kneel',
+      imageUrl: 'https://www.shutterstock.com/image-vector/little-kid-show-praying-pose-600nw-2318772437.jpg'
+    },
+    {
+      id: '99',
+      caption: 'Knot',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShHZsJsN1P5sJEaPnyiV5P9ldq5ARB02WjRg&s'
+    },
+    {
+      id: '100',
+      caption: 'Knead',
+      imageUrl: 'https://media.istockphoto.com/id/525107259/vector/hands-kneading-dough.jpg?s=612x612&w=0&k=20&c=mWKl5mVQ8XbaLxv-wrZs8NoC1sPmbey1LSFZV7PBxmw='
+    },
+    {
+      id: '101',
+      caption: 'Knee',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G-vFf9vw-F6wOplM7zGYFw0jBSky_benJg&s'
+    },
     // 2 Consonant pattern: TCH - catch, pitch, crutch, match
-    { id: '102', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX5PCi0Tcg10gBn4pEqxj1NzpqZWAOTAxooQ&s', caption: 'Catch' },
-    { id: '103', imageUrl: 'https://media.istockphoto.com/id/1445646363/vector/a-baseball-player-now-pitching-a-ball.jpg?s=612x612&w=0&k=20&c=49s2swKltrbEWe7n24TxrbSuYiVT3NWc45QfI9itUVs=', caption: 'Pitch' },
-    { id: '104', imageUrl: 'https://www.shutterstock.com/image-vector/injured-man-walking-crutches-illustration-600nw-2643702771.jpg', caption: 'Crutch' },
-    { id: '105', imageUrl: 'https://img.freepik.com/premium-vector/cartoon-isolated-vector-object-matches-fire_311865-9412.jpg', caption: 'Match' },
+    {
+      id: '102',
+      caption: 'Catch',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX5PCi0Tcg10gBn4pEqxj1NzpqZWAOTAxooQ&s'
+    },
+    {
+      id: '103',
+      caption: 'Pitch',
+      imageUrl: 'https://media.istockphoto.com/id/1445646363/vector/a-baseball-player-now-pitching-a-ball.jpg?s=612x612&w=0&k=20&c=49s2swKltrbEWe7n24TxrbSuYiVT3NWc45QfI9itUVs='
+    },
+    {
+      id: '104',
+      caption: 'Crutch',
+      imageUrl: 'https://www.shutterstock.com/image-vector/injured-man-walking-crutches-illustration-600nw-2643702771.jpg'
+    },
+    {
+      id: '105',
+      caption: 'Match',
+      imageUrl: 'https://img.freepik.com/premium-vector/cartoon-isolated-vector-object-matches-fire_311865-9412.jpg'
+    },
     // 3 Consonant pattern: MB - lamb, limb, crumb, thumb
-    { id: '106', imageUrl: 'https://t3.ftcdn.net/jpg/05/90/17/26/360_F_590172680_mL0VBYGjt979JSmyNDpa1GKwz6ftViTF.jpg', caption: 'Lamb' },
-    { id: '107', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Af6gbUozTQOa8U4k2PcmVhZJTleIMLPxig&s', caption: 'Limb' },
-    { id: '108', imageUrl: 'https://media.istockphoto.com/id/1292898075/vector/bitten-chocolate-chip-cookie-crunch-homemade-brown-biscuits-broken-with-crumbs-cartoon-baked.jpg?s=612x612&w=0&k=20&c=eSX6FiWDrPfj2qC4Kj9JgHlxUGocMS3pSrFGI_mJu5w=', caption: 'Crumb' },
-    { id: '109', imageUrl: 'https://img.pikbest.com/png-images/qiantu/cartoon-thumb-up-gesture-illustration_2601767.png!sw800', caption: 'Thumb' },
+    {
+      id: '106',
+      caption: 'Lamb',
+      imageUrl: 'https://t3.ftcdn.net/jpg/05/90/17/26/360_F_590172680_mL0VBYGjt979JSmyNDpa1GKwz6ftViTF.jpg'
+    },
+    {
+      id: '107',
+      caption: 'Limb',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Af6gbUozTQOa8U4k2PcmVhZJTleIMLPxig&s'
+    },
+    {
+      id: '108',
+      caption: 'Crumb',
+      imageUrl: 'https://media.istockphoto.com/id/1292898075/vector/bitten-chocolate-chip-cookie-crunch-homemade-brown-biscuits-broken-with-crumbs-cartoon-baked.jpg?s=612x612&w=0&k=20&c=eSX6FiWDrPfj2qC4Kj9JgHlxUGocMS3pSrFGI_mJu5w='
+    },
+    {
+      id: '109',
+      caption: 'Thumb',
+      imageUrl: 'https://img.pikbest.com/png-images/qiantu/cartoon-thumb-up-gesture-illustration_2601767.png!sw800'
+    },
     // 4 Consonant pattern: WR - wrap, unwrap, write, wreath
-    { id: '110', imageUrl: 'https://i.pinimg.com/736x/dc/2d/84/dc2d84a46859e7b565ea1f630d0f08a8.jpg', caption: 'Wrap' },
-    { id: '111', imageUrl: 'https://thumbs.dreamstime.com/b/girl-unwrapping-present-12052067.jpg', caption: 'Unwrap' },
-    { id: '112', imageUrl: 'https://www.shutterstock.com/image-vector/animated-cute-boy-writing-book-600nw-2615213357.jpg', caption: 'Write' },
-    { id: '113', imageUrl: 'https://t4.ftcdn.net/jpg/00/74/79/29/360_F_74792937_UfhWnXDF7ZCX9C34N6RAFr20Y4ADN6oh.jpg', caption: 'Wreath' },
+    {
+      id: '110',
+      caption: 'Wrap',
+      imageUrl: 'https://i.pinimg.com/736x/dc/2d/84/dc2d84a46859e7b565ea1f630d0f08a8.jpg'
+    },
+    {
+      id: '111',
+      caption: 'Unwrap',
+      imageUrl: 'https://thumbs.dreamstime.com/b/girl-unwrapping-present-12052067.jpg'
+    },
+    {
+      id: '112',
+      caption: 'Write',
+      imageUrl: 'https://www.shutterstock.com/image-vector/animated-cute-boy-writing-book-600nw-2615213357.jpg'
+    },
+    {
+      id: '113',
+      caption: 'Wreath',
+      imageUrl: 'https://t4.ftcdn.net/jpg/00/74/79/29/360_F_74792937_UfhWnXDF7ZCX9C34N6RAFr20Y4ADN6oh.jpg'
+    },
 
     // Long Vowel A (ai / ay)
-    { id: '114', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Snail' },
-    { id: '115', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Paint' },
-    { id: '116', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Tail' },
-    { id: '117', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Rail' },
-    { id: '118', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Play' },
-    { id: '119', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Tray' },
-    { id: '120', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Hay' },
-    { id: '121', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Clay' },
+    {
+      id: '114',
+      caption: 'Snail',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cute-cartoon-snail-heart-funny-insect-hand-drawing-isolated-objects-white-background-vector-illustration-78263165.jpg'
+    },
+    {
+      id: '115',
+      caption: 'Paint',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGUcXu8ch7dVcUwToVLNvO5eoQ-GzCuZCYKw&s'
+    },
+    {
+      id: '116',
+      caption: 'Tail',
+      imageUrl: 'https://media.istockphoto.com/id/1193261146/vector/mermaid-tail.jpg?s=612x612&w=0&k=20&c=lUaB3DveILYflWwICFcWuzrM4R31D1jfaYsUg1I_oM0='
+    },
+    {
+      id: '117',
+      caption: 'Rail',
+      imageUrl: 'https://www.shutterstock.com/image-vector/cute-toy-train-locomotive-kid-600nw-2362636429.jpg'
+    },
+    {
+      id: '118',
+      caption: 'Play',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/026/234/984/non_2x/happy-cute-kids-play-slide-vector.jpg'
+    },
+    {
+      id: '119',
+      caption: 'Tray',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/066/318/408/non_2x/illustration-art-cute-mochi-on-the-wooden-tray-sticker-design-free-vector.jpg'
+    },
+    {
+      id: '120',
+      caption: 'Hay',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/047/852/834/non_2x/cute-kawaii-haystack-clipart-illustration-free-vector.jpg'
+    },
+    {
+      id: '121',
+      caption: 'Clay',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8U8yYbdDlG77vIoRXnkcJw1u72sSEHckzg&s'
+    },
 
     // Long Vowel A (a_e)
-    { id: '122', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Bake' },
-    { id: '123', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Cake' },
-    { id: '124', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Late' },
-    { id: '125', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Take' },
-    { id: '126', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Lake' },
-    { id: '127', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Wave' },
-    { id: '128', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Same' },
-    { id: '129', imageUrl: PLACEHOLDER_IMAGE_URL, caption: 'Name' }
+    {
+      id: '122',
+      caption: 'Bake',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVe9305w8Ud0nnDG10BTmZubbkIrn7vDu6ow&s'
+    },
+    {
+      id: '123',
+      caption: 'Cake',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/047/852/819/non_2x/cute-kawaii-cake-cartoon-illustration-free-vector.jpg'
+    },
+    {
+      id: '124',
+      caption: 'Late',
+      imageUrl: 'https://media.istockphoto.com/id/519039810/vector/running-late-to-school.jpg?s=612x612&w=0&k=20&c=pXa3NyhzzgYUj9HaET1UolOSmTIiJt7BHXIMqcx6kuc='
+    },
+    {
+      id: '125',
+      caption: 'Take',
+      imageUrl: 'https://thumbs.dreamstime.com/b/opposite-give-take-vector-opposite-give-take-vector-illustration-115565007.jpg'
+    },
+    {
+      id: '126',
+      caption: 'Lake',
+      imageUrl: 'https://vcdn1-english.vnecdn.net/2025/01/04/ho-gu-o-m-5852-1730994042-1735-6840-3701-1735962280.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=MaibxImQb3K0y1GWmorNJw'
+    },
+    {
+      id: '127',
+      caption: 'Wave',
+      imageUrl: 'https://img.freepik.com/premium-vector/stylized-blue-ocean-wave-illustration_815570-13125.jpg'
+    },
+    {
+      id: '128',
+      caption: 'Same',
+      imageUrl: 'https://media.istockphoto.com/id/2147666918/vector/cute-little-smiling-boys-twins-in-flat-design-on-white-background.jpg?s=612x612&w=0&k=20&c=uSTuKGOPDb8_x1JfxDVTnUWu6AYAqG203B4ipQzMxZc='
+    },
+    {
+      id: '129',
+      caption: 'Name',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/014/448/315/non_2x/plastic-name-badge-with-neck-strap-icon-flat-style-vector.jpg'
+    }
   ];
 
   private flashcardSets: FlashcardSet[] = [
@@ -251,14 +767,14 @@ export class FlashcardService {
     },
     {
       id: 'set18',
-      name: 'Long Vowel A (ai / ay)',
+      name: 'Long Vowel AI / AY',
       description: 'Words with long vowel A sound spelled ai or ay',
       flashcardIds: ['114', '115', '116', '117', '118', '119', '120', '121']
     },
     {
       id: 'set19',
-      name: 'Long Vowel A (a_e)',
-      description: 'Words with long vowel A sound spelled a_e (magic e)',
+      name: 'Long Vowel A_E',
+      description: 'Words with long vowel A sound',
       flashcardIds: ['122', '123', '124', '125', '126', '127', '128', '129']
     },
     // {
