@@ -665,6 +665,243 @@ export class FlashcardService {
       id: '129',
       caption: 'Name',
       imageUrl: 'https://static.vecteezy.com/system/resources/previews/014/448/315/non_2x/plastic-name-badge-with-neck-strap-icon-flat-style-vector.jpg'
+    },
+
+    // Letter Dd words
+    {
+      id: '130',
+      caption: 'Dive',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-scuba-diver-exploring-vibrant-underwater-world-surrounded-coral-bubbles-illustration-discovering-colorful-352701380.jpg'
+    },
+    {
+      id: '131',
+      caption: 'Dig',
+      imageUrl: 'https://static.vecteezy.com/system/resources/thumbnails/001/307/915/small/cute-little-boy-digging-hole-cartoon.jpg'
+    },
+    {
+      id: '132',
+      caption: 'Dad',
+      imageUrl: 'https://www.shutterstock.com/image-vector/dad-my-superhero-fathers-day-600nw-2459864421.jpg'
+    },
+    {
+      id: '133',
+      caption: 'Panda',
+      imageUrl: 'https://t4.ftcdn.net/jpg/06/62/75/19/360_F_662751973_USPJ5vrdRjgvNZGUUMTY1uLViCcc6SSG.jpg'
+    },
+    {
+      id: '134',
+      caption: 'Windy',
+      imageUrl: 'https://thumbs.dreamstime.com/b/image-windy-day-trees-cloud-blowing-wind-cartoon-windy-day-trees-cloud-blowing-wind-110475663.jpg'
+    },
+    {
+      id: '135',
+      caption: 'Candy',
+      imageUrl: 'https://thumbs.dreamstime.com/b/bright-pink-cartoon-candy-wrapped-exaggerated-ends-features-purple-stripes-glossy-sheen-suggesting-shiny-surface-390789149.jpg'
+    },
+    {
+      id: '136',
+      caption: 'Lid',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/005/390/257/non_2x/lid-icon-hand-drawn-color-illustration-isolated-on-white-background-kitchen-tool-cover-for-frying-pan-saucepan-pot-dishes-flat-cartoon-clipart-glass-object-with-plastic-handle-vector.jpg'
+    },
+    {
+      id: '137',
+      caption: 'Sled',
+      imageUrl: 'https://t3.ftcdn.net/jpg/00/75/07/70/360_F_75077016_bESBy1flPXCkew6U7RWzQV9PXr42s0SJ.jpg'
+    },
+    {
+      id: '138',
+      caption: 'Bed',
+      imageUrl: 'https://img.freepik.com/free-vector/cozy-wooden-single-bed-illustration_1308-169624.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+
+    // Letter Gg words
+    {
+      id: '139',
+      caption: 'Garden',
+      imageUrl: 'https://img.freepik.com/premium-vector/cartoon-illustration-garden-with-fence-flowers_730620-949943.jpg'
+    },
+    {
+      id: '140',
+      caption: 'Grab',
+      imageUrl: 'https://st2.depositphotos.com/1221766/5492/v/950/depositphotos_54928237-stock-illustration-grab-hand-elemment.jpg'
+    },
+    {
+      id: '141',
+      caption: 'Goat',
+      imageUrl: 'https://www.shutterstock.com/image-vector/goat-vector-drawing-cartoon-fourlegged-600nw-2291378547.jpg'
+    },
+    {
+      id: '142',
+      caption: 'Sugar',
+      imageUrl: 'https://img.freepik.com/premium-vector/jar-sugar-with-spoon_642458-971.jpg'
+    },
+    {
+      id: '143',
+      caption: 'Yogurt',
+      imageUrl: 'https://thumbs.dreamstime.com/b/yogurt-clip-art-cartoon-illustration-fresh-fruit-spoon-32879220.jpg'
+    },
+    {
+      id: '144',
+      caption: 'Dragon',
+      imageUrl: 'https://media.istockphoto.com/id/636949046/vector/angry-dragon-cartoon.jpg?s=612x612&w=0&k=20&c=Tk2D3kCK7JSmCZyFm0yz20TZR7U0Oe2pvaJsSI72_7Y='
+    },
+    {
+      id: '145',
+      caption: 'Frog',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/034/994/463/non_2x/adorable-cartoon-frog-sitting-on-water-lilly-leaf-vector.jpg'
+    },
+
+    // Letter Oo words
+    {
+      id: '146',
+      caption: 'Ostrich',
+      imageUrl: 'https://classroomclipart.com/image/static7/preview2/cartoon-ostrich-with-a-pink-neck-and-black-feathers-is-running-55848.jpg'
+    },
+    {
+      id: '147',
+      caption: 'Otter',
+      imageUrl: 'https://t3.ftcdn.net/jpg/09/66/68/92/360_F_966689259_FUffErSpMFlCpIRwFyyrJ1I4eFgI0XnC.jpg'
+    },
+    {
+      id: '148',
+      caption: 'Orange',
+      imageUrl: 'https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-single-fruit-orange-cartoon-png-image_10706676.png'
+    },
+    {
+      id: '149',
+      caption: 'Sock',
+      imageUrl: 'https://media.istockphoto.com/id/1401842987/vector/cute-cotton-and-woolen-socks-vector-illustration-of-stylish-hosiery-collection-cartoon.jpg?s=612x612&w=0&k=20&c=sr1fKl4qdZtggMIVK3Ldfc94hqU1BOrgoxbJjS4uVRg='
+    },
+    {
+      id: '150',
+      caption: 'Rock',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-rock-illustration-design-automotive-fans-white-background-cartoon-illustration-featuring-large-rock-322723360.jpg'
+    },
+
+    // Consonant pattern: G
+    {
+      id: '151',
+      caption: 'Game',
+      imageUrl: 'https://thumbs.dreamstime.com/b/kids-playing-board-game-sitting-floor-vector-illustration-103460442.jpg'
+    },
+    {
+      id: '152',
+      caption: 'Glide',
+      imageUrl: 'https://img.freepik.com/free-vector/hang-glider_1308-29195.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '153',
+      caption: 'Gap',
+      imageUrl: 'https://www.shutterstock.com/image-vector/ledge-chasm-empty-template-cliff-600nw-1777547960.jpg'
+    },
+    {
+      id: '154',
+      caption: 'Goal',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-soccer-football-goalie-keeper-saving-goal-illustration-50840009.jpg'
+    },
+    {
+      id: '155',
+      caption: 'Gem',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMvZI3hmuf98NPfPs-gXXGNDsLQKIU7YYYhQ&s'
+    },
+    {
+      id: '156',
+      caption: 'Magic',
+      imageUrl: 'https://thumbs.dreamstime.com/b/magic-hat-isolated-show-cartoon-concept-illustrations-60822015.jpg'
+    },
+    {
+      id: '157',
+      caption: 'Stage',
+      imageUrl: 'https://img.freepik.com/free-vector/retro-theater-stage-with-curtains-spotlights_107791-13864.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '158',
+      caption: 'Huge',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/003/253/121/non_2x/big-and-small-elephants-cartoon-on-white-background-free-vector.jpg'
+    },
+
+    // Consonant pattern: C
+    {
+      id: '159',
+      caption: 'Cape',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-superhero-girl-stick-figure-red-cape-cute-94998506.jpg'
+    },
+    {
+      id: '160',
+      caption: 'Cane',
+      imageUrl: 'https://thumbs.dreamstime.com/b/wooden-walking-stick-cane-wooden-walking-stick-cane-symbol-wooden-walking-stick-cane-sign-114114670.jpg'
+    },
+    {
+      id: '161',
+      caption: 'Cab',
+      imageUrl: 'https://png.pngtree.com/png-clipart/20230330/ourmid/pngtree-taxi-yellow-taxi-cartoon-png-image_6673884.png'
+    },
+    {
+      id: '162',
+      caption: 'Cone',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOoCIkJXjUbzRtV-JBv7c3EKG_gvuWhlXCwA&s'
+    },
+    {
+      id: '163',
+      caption: 'Mice',
+      imageUrl: 'https://www.publicdomainpictures.net/pictures/620000/nahled/cheeky-cartoon-mouse-with-cheese.png'
+    },
+    {
+      id: '164',
+      caption: 'City',
+      imageUrl: 'https://img.freepik.com/free-vector/scene-beautiful-cityscape-with-hight-building-shop-street-with-park_1150-48972.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '165',
+      caption: 'Fancy',
+      imageUrl: 'https://thumbs.dreamstime.com/b/beautiful-blonde-cartoon-girl-7128502.jpg'
+    },
+    {
+      id: '166',
+      caption: 'Lacy',
+      imageUrl: 'https://img.kwcdn.com/product/fancy/8afc25ad-4fdf-41e3-8e71-6891b68d65df.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp'
+    },
+
+    // Musical Instruments
+    {
+      id: '167',
+      caption: 'Guitar',
+      imageUrl: 'https://img.freepik.com/premium-vector/guitar-clipart-vector-icon-sticker-illustration_761413-9146.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '168',
+      caption: 'Tambourine',
+      imageUrl: 'https://thumbs.dreamstime.com/b/simple-wooden-tambourine-hand-drawing-classic-81124960.jpg'
+    },
+    {
+      id: '169',
+      caption: 'Drum',
+      imageUrl: 'https://img.freepik.com/free-vector/yellow-drum-illustration_24908-81974.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '170',
+      caption: 'Piano',
+      imageUrl: 'https://freedesignfile.com/image/preview/7100/keyboard-piano-cartoon-drawing-clipart.png'
+    },
+    {
+      id: '171',
+      caption: 'Maracas',
+      imageUrl: 'https://png.pngtree.com/png-vector/20191028/ourlarge/pngtree-maracas-icon-cartoon-style-png-image_1889975.jpg'
+    },
+    {
+      id: '174',
+      caption: 'Violin',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTShd_JoQbY1uDaHt3jNVAg7nRIcxiu-DqzKQ&s'
+    },
+    {
+      id: '175',
+      caption: 'Xylophone',
+      imageUrl: 'https://thumbs.dreamstime.com/b/xylophone-illustration-colorful-isolated-white-background-50726946.jpg'
+    },
+    {
+      id: '176',
+      caption: 'Handbell',
+      imageUrl: 'https://media.istockphoto.com/id/502526048/vector/school-bell.jpg?s=612x612&w=0&k=20&c=-ZgcPs5_ITyo7X0p53m-Xi89D0udE3-D_PBXOWz6xdg='
     }
   ];
 
@@ -679,7 +916,7 @@ export class FlashcardService {
       id: 'set2',
       name: 'Animals',
       description: 'Animal vocabulary',
-      flashcardIds: ['3', '4', '16']
+      flashcardIds: ['3', '4', '16', '133', '141', '144', '145', '146', '147', '66']
     },
     {
       id: 'set3',
@@ -776,6 +1013,42 @@ export class FlashcardService {
       name: 'Long Vowel A_E',
       description: 'Words with long vowel A sound',
       flashcardIds: ['122', '123', '124', '125', '126', '127', '128', '129']
+    },
+    {
+      id: 'set20',
+      name: 'Letter Dd',
+      description: 'Words with Dd sound (beginning, middle, and ending)',
+      flashcardIds: ['130', '131', '132', '4', '16', '133', '134', '135', '136', '137', '138']
+    },
+    {
+      id: 'set21',
+      name: 'Letter Gg',
+      description: 'Words with Gg sound (beginning, middle, and ending)',
+      flashcardIds: ['139', '140', '141', '142', '143', '144', '145', '68', '4']
+    },
+    {
+      id: 'set22',
+      name: 'Letter Oo',
+      description: 'Words with Oo sound (beginning and middle)',
+      flashcardIds: ['146', '147', '148', '149', '12', '150']
+    },
+    {
+      id: 'set23',
+      name: 'Consonant pattern: G',
+      description: 'Words with G consonant pattern (hard and soft G)',
+      flashcardIds: ['151', '152', '153', '154', '155', '156', '157', '158']
+    },
+    {
+      id: 'set24',
+      name: 'Consonant pattern: C',
+      description: 'Words with C consonant pattern (hard and soft C)',
+      flashcardIds: ['159', '160', '161', '162', '163', '164', '165', '166']
+    },
+    {
+      id: 'set25',
+      name: 'Musical Instruments',
+      description: 'Musical instruments vocabulary',
+      flashcardIds: ['167', '168', '169', '170', '171', '174', '175', '176']
     },
     // {
     //   id: 'set18',
