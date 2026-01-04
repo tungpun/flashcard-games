@@ -3,8 +3,10 @@
     ← Back to Game Selection
   </button>
 
-  <div *ngIf="selectedSet && !gameComplete" class="game-header">
-    <h2 class="game-title">{{ selectedSet.name }}</h2>
+  <div *ngIf="selectedSets.length > 0 && !gameComplete" class="game-header">
+    <h2 class="game-title">
+      {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length + ' Sets') }}
+    </h2>
     <div class="game-stats">
       <span class="stat">Question {{ currentQuestionIndex + 1 }}/{{ questions.length }}</span>
       <span class="stat">Score: {{ score }}/{{ questions.length }}</span>
@@ -18,7 +20,7 @@
     (restart)="restartGame()">
   </fg-game-completion>
 
-  <div *ngIf="selectedSet && !gameComplete && getCurrentQuestion()" class="game-content">
+  <div *ngIf="selectedSets.length > 0 && !gameComplete && getCurrentQuestion()" class="game-content">
     <div class="word-image">
       <img [src]="getCurrentQuestion()!.flashcard.imageUrl" [alt]="getCurrentQuestion()!.flashcard.caption" />
     </div>

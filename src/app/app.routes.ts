@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { GameSelectorComponent } from './components/game-selector/game-selector.component';
 import { FlashcardSetSelectorComponent } from './components/flashcard-set-selector/flashcard-set-selector.component';
 import { PrizesListComponent } from './components/prizes-list/prizes-list.component';
+import { FlashcardListComponent } from './components/flashcard-list/flashcard-list.component';
 import { MatchingGameComponent } from './games/matching-game/matching-game.component';
 import { MemoryGameComponent } from './games/memory-game/memory-game.component';
 import { QuizGameComponent } from './games/quiz-game/quiz-game.component';
@@ -14,46 +15,50 @@ import { WordChoiceComponent } from './games/word-choice/word-choice.component';
 export const routes: Routes = [
   {
     path: '',
-    component: FlashcardSetSelectorComponent
+    component: GameSelectorComponent
   },
   {
     path: 'prizes',
     component: PrizesListComponent
   },
   {
-    path: 'sets/:setId/select',
-    component: GameSelectorComponent
+    path: 'flashcards',
+    component: FlashcardListComponent
   },
   {
-    path: 'games/matching/:setId',
+    path: 'sets/:gameId/select',
+    component: FlashcardSetSelectorComponent
+  },
+  {
+    path: 'games/matching',
     component: MatchingGameComponent
   },
   {
-    path: 'games/memory/:setId',
+    path: 'games/memory',
     component: MemoryGameComponent
   },
   {
-    path: 'games/quiz/:setId',
+    path: 'games/quiz',
     component: QuizGameComponent
   },
   {
-    path: 'games/word-scramble/:setId',
+    path: 'games/word-scramble',
     component: WordScrambleComponent
   },
   {
-    path: 'games/fill-blank/:setId',
+    path: 'games/fill-blank',
     component: FillBlankComponent
   },
   {
-    path: 'games/true-false/:setId',
+    path: 'games/true-false',
     component: TrueFalseComponent
   },
   {
-    path: 'games/word-search/:setId',
+    path: 'games/word-search',
     component: WordSearchComponent
   },
   {
-    path: 'games/word-choice/:setId',
+    path: 'games/word-choice',
     component: WordChoiceComponent
   },
   {

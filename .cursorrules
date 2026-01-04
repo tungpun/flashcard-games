@@ -1,0 +1,250 @@
+# Flashcard Games Project - Cursor Rules
+
+## Project Overview
+This is an Angular 18 educational flashcard game application. It uses standalone components, TypeScript strict mode, and SCSS for styling. The app allows users to select flashcard sets and play various educational games with them.
+
+## Project Structure
+
+### Key Directories
+- `src/app/components/` - Reusable UI components (game-selector, flashcard-list, game-completion, etc.)
+- `src/app/games/` - Game components (quiz-game, memory-game, matching-game, word-scramble, etc.)
+- `src/app/models/` - TypeScript interfaces (Flashcard, FlashcardSet, Prize)
+- `src/app/services/` - Injectable services (FlashcardService, PrizeService)
+- `src/app/app.routes.ts` - Route configuration
+
+### Key Files
+- `src/app/services/flashcard.service.ts` - Manages flashcards and flashcard sets (hardcoded data)
+- `src/app/models/index.ts` - Barrel export for all models
+- `src/app/app.routes.ts` - All route definitions
+
+## Architecture Patterns
+
+### Components
+- All components are **standalone** (no NgModules)
+- Component selectors use `fg-` prefix (e.g., `fg-quiz-game`)
+- Components implement `OnInit` when initialization logic is needed
+- Use constructor injection for dependencies
+- Import `CommonModule` for `*ngIf`, `*ngFor`, etc.
+
+### Services
+- Services use `providedIn: 'root'`
+- Services contain hardcoded data arrays (no backend)
+- Methods return copies of arrays (spread operator) to prevent mutation
+
+### Models
+- Models are TypeScript interfaces
+- Exported from `src/app/models/index.ts` using barrel exports
+- Key models: `Flashcard`, `FlashcardSet`, `Prize`
+
+### Routing
+- Routes follow pattern: `/games/{gameId}/{setId}`
+- Game selector route: `/sets/{setId}/select`
+- Games get `setId` from route params via `ActivatedRoute`
+
+## Common Scenarios
+
+### Scenario 1: Adding a New Flashcard
+
+**Steps:**
+1. Open `src/app/services/flashcard.service.ts`
+2. Add new flashcard object to the `flashcards` array:
+   ```typescript
+   {
+     id: 'unique-id', // Use next sequential number or descriptive ID
+     caption: 'Word or phrase',
+     imageUrl: 'https://...' // Full URL to image
+   }
+   ```
+3. If adding to a new set, create a new `FlashcardSet` in `flashcardSets` array
+4. If adding to existing set, add the flashcard ID to that set's `flashcardIds` array
+5. Ensure the "All" set (id: 'set5') includes all flashcard IDs (it uses `this.flashcards.map(flashcard => flashcard.id)`)
+
+**Important:** The "All" set should always be last in the `flashcardSets` array.
+
+### Scenario 2: Adding a New Flashcard Set
+
+**Steps:**
+1. Open `src/app/services/flashcard.service.ts`
+2. Add new `FlashcardSet` to `flashcardSets` array (before the "All" set):
+   ```typescript
+   {
+     id: 'setX', // Use descriptive ID like 'set20'
+     name: 'Set Name',
+     description: 'Description of the set',
+     flashcardIds: ['id1', 'id2', 'id3'] // Array of flashcard IDs
+   }
+   ```
+3. Ensure flashcard IDs exist in the `flashcards` array
+4. Keep the "All" set as the last item
+
+### Scenario 3: Adding a New Game
+
+**Steps:**
+1. **Create component files:**
+   - `src/app/games/{game-name}/{game-name}.component.ts`
+   - `src/app/games/{game-name}/{game-name}.component.html`
+   - `src/app/games/{game-name}/{game-name}.component.scss`
+   - `src/app/games/{game-name}/{game-name}.component.spec.ts`
+
+2. **Component structure (TypeScript):**
+   ```typescript
+   import { Component, OnInit } from '@angular/core';
+   import { FlashcardSet, Flashcard } from '../../models';
+   import { FlashcardService } from '../../services/flashcard.service';
+   import { CommonModule } from '@angular/common';
+   import { ActivatedRoute, Router } from '@angular/router';
+   import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
+
+   @Component({
+     selector: 'fg-{game-name}',
+     standalone: true,
+     imports: [CommonModule, GameCompletionComponent],
+     templateUrl: './{game-name}.component.html',
+     styleUrl: './{game-name}.component.scss'
+   })
+   export class {GameName}Component implements OnInit {
+     selectedSet: FlashcardSet | null = null;
+     // Add game-specific properties
+     gameComplete: boolean = false;
+
+     constructor(
+       private flashcardService: FlashcardService,
+       private route: ActivatedRoute,
+       private router: Router
+     ) {}
+
+     ngOnInit(): void {
+       const setId = this.route.snapshot.params['setId'];
+       if (setId) {
+         const allSets = this.flashcardService.getAllSets();
+         this.selectedSet = allSets.find(s => s.id === setId) || null;
+         if (this.selectedSet) {
+           this.initializeGame();
+         } else {
+           this.router.navigate(['/']);
+         }
+       } else {
+         this.router.navigate(['/']);
+       }
+     }
+
+     initializeGame(): void {
+       if (!this.selectedSet) return;
+       const flashcards = this.flashcardService.getFlashcardsBySetId(this.selectedSet.id);
+       // Initialize game logic here
+     }
+
+     goBack(): void {
+       const setId = this.route.snapshot.params['setId'];
+       if (setId) {
+         this.router.navigate(['/sets', setId, 'select']);
+       } else {
+         this.router.navigate(['/']);
+       }
+     }
+   }
+   ```
+
+3. **Add route** in `src/app/app.routes.ts`:
+   ```typescript
+   {
+     path: 'games/{game-id}/{setId}',
+     component: {GameName}Component
+   }
+   ```
+
+4. **Add game to game selector** in `src/app/components/game-selector/game-selector.component.ts`:
+   ```typescript
+   {
+     id: '{game-id}',
+     name: 'Game Name',
+     description: 'Game description',
+     imagePath: 'images/games/{game-image}.png'
+   }
+   ```
+
+5. **Add game image** to `public/images/games/` directory
+
+### Scenario 4: Using GameCompletionComponent
+
+**Pattern:**
+- Import `GameCompletionComponent` in game component
+- Add to component's `imports` array
+- Use in template:
+   ```html
+   <fg-game-completion
+     *ngIf="gameComplete"
+     [title]="'🎉 Congratulations! 🎉'"
+     [message]="getCompletionMessage()"
+     [showRestart]="true"
+     (restart)="restartGame()">
+   </fg-game-completion>
+   ```
+
+### Scenario 5: Navigation Patterns
+
+**From game back to game selector:**
+```typescript
+goBack(): void {
+  const setId = this.route.snapshot.params['setId'];
+  if (setId) {
+    this.router.navigate(['/sets', setId, 'select']);
+  } else {
+    this.router.navigate(['/']);
+  }
+}
+```
+
+**From game selector to game:**
+```typescript
+selectGame(game: Game): void {
+  if (this.setId) {
+    this.router.navigate(['/games', game.id, this.setId]);
+  }
+}
+```
+
+## Code Conventions
+
+### Naming
+- Component selectors: `fg-{kebab-case}`
+- Component classes: `{PascalCase}Component`
+- Services: `{PascalCase}Service`
+- Interfaces: `{PascalCase}` (no "I" prefix)
+- Methods: `camelCase`
+- Properties: `camelCase`
+
+### Imports Order
+1. Angular core imports (`@angular/core`, `@angular/common`, etc.)
+2. Router imports (`@angular/router`)
+3. Model imports (`../../models`)
+4. Service imports (`../../services/...`)
+5. Component imports (`../../components/...`)
+
+### Common Utilities
+- `shuffleArray<T>(array: T[]): void` - Fisher-Yates shuffle implementation
+- Games typically shuffle flashcards for randomness
+
+### Styling
+- Use SCSS for component styles
+- Global styles in `src/styles.scss`
+- Component styles use `styleUrl` property
+
+## Important Notes
+
+1. **Data Storage:** All data is hardcoded in services (no backend/API)
+2. **Flashcard Sets:** The "All" set (id: 'set5') must always be last in the array
+3. **Route Params:** Games always receive `setId` as a route parameter
+4. **Error Handling:** If `setId` is invalid, redirect to home (`/`)
+5. **Game Images:** Place game images in `public/images/games/` directory
+6. **Standalone Components:** Never use NgModules - all components are standalone
+
+## When Making Changes
+
+- **Adding flashcards:** Modify `FlashcardService.flashcards` array
+- **Adding sets:** Modify `FlashcardService.flashcardSets` array
+- **Adding games:** Create new component in `games/` folder, add route, add to game selector
+- **Adding prizes:** Modify `PrizeService.prizes` array
+- **Changing routes:** Update `app.routes.ts`
+- **Adding components:** Create in `components/` folder, ensure standalone, use `fg-` prefix
+

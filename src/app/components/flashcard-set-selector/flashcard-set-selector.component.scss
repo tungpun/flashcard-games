@@ -1,15 +1,59 @@
 .flashcard-set-selector-container {
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-top: 5rem;
 
-  h1 {
+  .header-section {
     text-align: center;
-    color: #4a90e2;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
+    margin-bottom: 3rem;
+
+    h1 {
+      color: #2c3e50;
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .instruction {
+      color: #5a6c7d;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .selection-counter {
+      display: inline-block;
+      margin-top: 0.5rem;
+
+      .counter-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        animation: slideIn 0.3s ease-out;
+      }
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -42,54 +86,189 @@
 
 .sets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
   padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 .set-card {
-  border: none;
-  border-radius: 20px;
+  border: 4px solid transparent;
+  border-radius: 24px;
   padding: 2rem;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  min-height: 200px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-clip: padding-box;
+
+  // Add a subtle overlay for depth
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &::before {
+      opacity: 1;
+    }
   }
 
   &:active {
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(1.01);
   }
 
-  h2 {
-    font-size: 2rem;
-    margin: 0 0 0.5rem 0;
-    font-weight: bold;
+  &.selected {
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.2);
+    transform: translateY(-6px) scale(1.03);
+    animation: pulse 2s ease-in-out infinite;
+
+    &::before {
+      opacity: 1;
+    }
   }
 
-  p {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-    opacity: 0.9;
+  .checkbox-wrapper {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
   }
 
-  .card-count {
-    margin-top: 1rem;
-    font-size: 1rem;
-    opacity: 0.8;
-    font-weight: 500;
+  .custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+
+    &::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      color: #2c3e50;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.7);
+      transform: scale(1.1);
+    }
+  }
+
+  .custom-checkbox:checked + .checkbox-label {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.95);
+
+    &::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .set-content {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 2.2rem;
+      margin: 0 0 0.75rem 0;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.15rem;
+      margin: 0.5rem 0 1.25rem 0;
+      opacity: 0.95;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .card-count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      margin-top: auto;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .count-icon {
+        font-size: 1.2rem;
+      }
+
+      .count-text {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.3);
   }
 }
+
 
 // Nature Set - Green gradient
 .set-set1 {
@@ -194,20 +373,39 @@
 @media (max-width: 768px) {
   .flashcard-set-selector-container {
     padding: 1rem;
+    padding-top: 4rem;
 
-    h1 {
-      font-size: 2rem;
+    .header-section {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .instruction {
+        font-size: 1rem;
+      }
     }
   }
 
   .sets-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .set-card {
     padding: 1.5rem;
-    min-height: 150px;
+    min-height: 180px;
+
+    .set-content {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
   }
 
   .back-button {
@@ -215,5 +413,86 @@
     font-size: 1rem;
     top: 0.5rem;
     left: 0.5rem;
+  }
+
+  .start-game-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  position: sticky;
+  bottom: 2rem;
+  z-index: 50;
+}
+
+.start-game-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .button-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .button-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover:not(:disabled) {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+
+    &::before {
+      left: 100%;
+    }
+
+    .button-icon {
+      transform: translateX(4px);
+    }
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  &:disabled {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+    transform: none;
   }
 }
