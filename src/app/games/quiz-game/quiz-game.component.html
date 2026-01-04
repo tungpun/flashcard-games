@@ -3,8 +3,10 @@
     ← Back to Game Selection
   </button>
 
-  <div *ngIf="selectedSet && !quizComplete" class="quiz-header">
-    <h2 class="game-title">{{ selectedSet.name }}</h2>
+  <div *ngIf="selectedSets.length > 0 && !quizComplete" class="quiz-header">
+    <h2 class="game-title">
+      {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length + ' Sets') }}
+    </h2>
     <div class="quiz-stats">
       <span class="stat">Question {{ currentQuestionIndex + 1 }}/{{ questions.length }}</span>
       <span class="stat">Score: {{ score }}/{{ questions.length }}</span>
@@ -18,7 +20,7 @@
     (restart)="restartQuiz()">
   </fg-game-completion>
 
-  <div *ngIf="selectedSet && !quizComplete && getCurrentQuestion()" class="quiz-content">
+  <div *ngIf="selectedSets.length > 0 && !quizComplete && getCurrentQuestion()" class="quiz-content">
     <div class="question-image">
       <img [src]="getCurrentQuestion()!.flashcard.imageUrl" [alt]="getCurrentQuestion()!.flashcard.caption" />
     </div>

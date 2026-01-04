@@ -22,7 +22,7 @@ interface MemoryCard {
   styleUrl: './memory-game.component.scss'
 })
 export class MemoryGameComponent implements OnInit {
-  selectedSet: FlashcardSet | null = null;
+  selectedSets: FlashcardSet[] = [];
   cards: MemoryCard[] = [];
   flippedCards: MemoryCard[] = [];
   moves: number = 0;
@@ -30,6 +30,7 @@ export class MemoryGameComponent implements OnInit {
   isChecking: boolean = false;
   gameWon: boolean = false;
   gridColumns: number = 4; // Default columns
+  gameId: string = '';
 
   constructor(
     private flashcardService: FlashcardService,
@@ -39,19 +40,34 @@ export class MemoryGameComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const setId = this.route.snapshot.params['setId'];
-    if (setId) {
-      const allSets = this.flashcardService.getAllSets();
-      this.selectedSet = allSets.find(s => s.id === setId) || null;
-
-      if (this.selectedSet) {
-        this.initializeGame();
-      } else {
-        this.router.navigate(['/']);
-      }
-    } else {
+    // Get sets from query params
+    const setsParam = this.route.snapshot.queryParams['sets'];
+    if (!setsParam) {
       this.router.navigate(['/']);
+      return;
     }
+
+    // Parse comma-separated set IDs
+    const setIds = setsParam.split(',').filter((id: string) => id.trim() !== '');
+    if (setIds.length === 0) {
+      this.router.navigate(['/']);
+      return;
+    }
+
+    // Get gameId from route URL (e.g., '/games/memory' -> 'memory')
+    const urlSegments = this.route.snapshot.url;
+    this.gameId = urlSegments.length > 1 ? urlSegments[1].path : '';
+
+    // Get all sets and filter to selected ones
+    const allSets = this.flashcardService.getAllSets();
+    this.selectedSets = allSets.filter(s => setIds.includes(s.id));
+
+    if (this.selectedSets.length === 0) {
+      this.router.navigate(['/']);
+      return;
+    }
+
+    this.initializeGame();
   }
 
   calculateGridColumns(totalCards: number): number {
@@ -72,9 +88,11 @@ export class MemoryGameComponent implements OnInit {
   }
 
   initializeGame(): void {
-    if (!this.selectedSet) return;
+    if (this.selectedSets.length === 0) return;
 
-    const flashcards = this.flashcardService.getFlashcardsBySetId(this.selectedSet.id);
+    // Get flashcards from all selected sets
+    const setIds = this.selectedSets.map(s => s.id);
+    const flashcards = this.flashcardService.getFlashcardsBySetIds(setIds);
     this.cards = [];
 
     // Create pairs: one image card and one caption card for each flashcard
@@ -174,10 +192,9 @@ export class MemoryGameComponent implements OnInit {
   }
 
   goBack(): void {
-    // Navigate back to game selection for the current set
-    const setId = this.route.snapshot.params['setId'];
-    if (setId) {
-      this.router.navigate(['/sets', setId, 'select']);
+    // Navigate back to flashcard set selector for the current game
+    if (this.gameId) {
+      this.router.navigate(['/sets', this.gameId, 'select']);
     } else {
       this.router.navigate(['/']);
     }

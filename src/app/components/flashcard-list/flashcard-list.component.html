@@ -1,0 +1,14 @@
+<div class="flashcards-list-container">
+  <h1>All Flashcards</h1>
+  <div class="flashcards-grid">
+    <div
+      *ngFor="let flashcard of flashcards"
+      class="flashcard-card">
+      <img [src]="flashcard.imageUrl" [alt]="flashcard.caption" class="flashcard-image">
+      <h3 class="flashcard-caption">{{ flashcard.caption }}</h3>
+    </div>
+  </div>
+  <button class="back-button" (click)="goBack()" type="button">
+    ← Back to Home
+  </button>
+</div>

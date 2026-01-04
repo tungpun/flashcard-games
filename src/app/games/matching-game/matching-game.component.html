@@ -2,7 +2,9 @@
         <button class="back-button" (click)="goBack()" type="button">
         ← Back to Game Selection
       </button>
-  <h2 class="game-title">{{ selectedSet?.name || 'Loading...' }}</h2>
+  <h2 class="game-title">
+    {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length > 0 ? (selectedSets.length + ' Sets') : 'Loading...') }}
+  </h2>
 
   <fg-game-completion
     *ngIf="gameCompleted"
@@ -11,7 +13,7 @@
     (restart)="restartGame()">
   </fg-game-completion>
 
-  <div *ngIf="selectedSet && !gameCompleted" class="game-content">
+  <div *ngIf="selectedSets.length > 0 && !gameCompleted" class="game-content">
     <!-- Left column: Images -->
     <div class="images-column">
       <h3>Images</h3>

@@ -3,8 +3,10 @@
     ← Back to Game Selection
   </button>
 
-  <div *ngIf="selectedSet" class="game-header">
-    <h2 class="game-title">{{ selectedSet.name }}</h2>
+  <div *ngIf="selectedSets.length > 0" class="game-header">
+    <h2 class="game-title">
+      {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length + ' Sets') }}
+    </h2>
     <div class="game-stats">
       <span class="stat">Moves: {{ moves }}</span>
       <span class="stat">Pairs: {{ pairsMatched }}/{{ cards.length / 2 }}</span>
@@ -19,7 +21,7 @@
   </fg-game-completion>
 
   <div
-    *ngIf="selectedSet && !gameWon"
+    *ngIf="selectedSets.length > 0 && !gameWon"
     class="cards-grid"
     [style.grid-template-columns]="'repeat(' + gridColumns + ', 1fr)'">
     <div

@@ -23,7 +23,7 @@ interface QuizQuestion {
   styleUrl: './quiz-game.component.scss'
 })
 export class QuizGameComponent implements OnInit {
-  selectedSet: FlashcardSet | null = null;
+  selectedSets: FlashcardSet[] = [];
   questions: QuizQuestion[] = [];
   currentQuestionIndex: number = 0;
   score: number = 0;
@@ -32,6 +32,7 @@ export class QuizGameComponent implements OnInit {
   isCorrect: boolean = false;
   quizComplete: boolean = false;
   allFlashcards: Flashcard[] = [];
+  gameId: string = '';
 
   constructor(
     private flashcardService: FlashcardService,
@@ -40,25 +41,42 @@ export class QuizGameComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const setId = this.route.snapshot.params['setId'];
-    if (setId) {
-      const allSets = this.flashcardService.getAllSets();
-      this.selectedSet = allSets.find(s => s.id === setId) || null;
-
-      if (this.selectedSet) {
-        this.initializeQuiz();
-      } else {
-        this.router.navigate(['/']);
-      }
-    } else {
+    // Get sets from query params
+    const setsParam = this.route.snapshot.queryParams['sets'];
+    if (!setsParam) {
       this.router.navigate(['/']);
+      return;
     }
+
+    // Parse comma-separated set IDs
+    const setIds = setsParam.split(',').filter((id: string) => id.trim() !== '');
+    if (setIds.length === 0) {
+      this.router.navigate(['/']);
+      return;
+    }
+
+    // Get gameId from route URL (e.g., '/games/quiz' -> 'quiz')
+    const urlSegments = this.route.snapshot.url;
+    this.gameId = urlSegments.length > 1 ? urlSegments[1].path : '';
+
+    // Get all sets and filter to selected ones
+    const allSets = this.flashcardService.getAllSets();
+    this.selectedSets = allSets.filter(s => setIds.includes(s.id));
+
+    if (this.selectedSets.length === 0) {
+      this.router.navigate(['/']);
+      return;
+    }
+
+    this.initializeQuiz();
   }
 
   initializeQuiz(): void {
-    if (!this.selectedSet) return;
+    if (this.selectedSets.length === 0) return;
 
-    const flashcards = this.flashcardService.getFlashcardsBySetId(this.selectedSet.id);
+    // Get flashcards from all selected sets
+    const setIds = this.selectedSets.map(s => s.id);
+    const flashcards = this.flashcardService.getFlashcardsBySetIds(setIds);
     this.allFlashcards = this.flashcardService.getAllFlashcards();
 
     // Shuffle flashcards for random question order
@@ -160,10 +178,9 @@ export class QuizGameComponent implements OnInit {
   }
 
   goBack(): void {
-    // Navigate back to game selection for the current set
-    const setId = this.route.snapshot.params['setId'];
-    if (setId) {
-      this.router.navigate(['/sets', setId, 'select']);
+    // Navigate back to flashcard set selector for the current game
+    if (this.gameId) {
+      this.router.navigate(['/sets', this.gameId, 'select']);
     } else {
       this.router.navigate(['/']);
     }

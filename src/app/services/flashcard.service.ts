@@ -810,4 +810,27 @@ export class FlashcardService {
     }
     return this.flashcards.filter(flashcard => set.flashcardIds.includes(flashcard.id));
   }
+
+  getFlashcardsBySetIds(setIds: string[]): Flashcard[] {
+    if (!setIds || setIds.length === 0) {
+      return [];
+    }
+
+    // Use a Map to track unique flashcards by ID (for deduplication)
+    const uniqueFlashcards = new Map<string, Flashcard>();
+
+    // Get flashcards from each set
+    for (const setId of setIds) {
+      const flashcards = this.getFlashcardsBySetId(setId);
+      // Add flashcards to map (duplicates will be overwritten, keeping only one instance)
+      flashcards.forEach(flashcard => {
+        if (!uniqueFlashcards.has(flashcard.id)) {
+          uniqueFlashcards.set(flashcard.id, flashcard);
+        }
+      });
+    }
+
+    // Convert map values to array
+    return Array.from(uniqueFlashcards.values());
+  }
 }
