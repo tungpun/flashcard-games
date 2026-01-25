@@ -902,6 +902,156 @@ export class FlashcardService {
       id: '176',
       caption: 'Handbell',
       imageUrl: 'https://media.istockphoto.com/id/502526048/vector/school-bell.jpg?s=612x612&w=0&k=20&c=-ZgcPs5_ITyo7X0p53m-Xi89D0udE3-D_PBXOWz6xdg='
+    },
+    {
+      id: '177',
+      caption: 'tea',
+      imageUrl: "https://media.istockphoto.com/id/872335636/vector/cute-cartoon-cup.jpg?s=612x612&w=0&k=20&c=WdaLguERmw9xrEYqWguatyaEuIfkKPEjwdvUkgeoRrA="
+    },
+    {
+      id: '178',
+      caption: 'pea',
+      imageUrl: "https://www.shutterstock.com/image-vector/peas-pod-cartoon-600nw-2344437293.jpg"
+    },
+    {
+      id: '179',
+      caption: 'seal',
+      imageUrl: "https://static.vecteezy.com/system/resources/previews/068/808/716/non_2x/illustration-of-a-cute-seal-cartoon-design-flat-marine-animal-icon-isolated-on-white-background-perfect-for-kids-and-sea-life-visuals-vector.jpg"
+    },
+    {
+      id: '180',
+      caption: 'meal',
+      imageUrl: "https://img.freepik.com/premium-vector/cute-kawaii-lunch-box-menu-fried-rice-colorful-illustration_90661-287.jpg"
+    },
+    {
+      id: '181',
+      caption: 'leap',
+      imageUrl: "https://thumb.ac-illust.com/64/6483717a059cca29f915f150d8425c7f_t.jpeg"
+    },
+    {
+      id: '182',
+      caption: 'clean',
+      imageUrl: "https://www.shutterstock.com/image-vector/girl-mopping-floor-on-white-600nw-2162329623.jpg"
+    },
+    {
+      id: '183',
+      caption: 'stream',
+      imageUrl: "https://media.istockphoto.com/id/1411364072/vector/beautiful-forest-stream.jpg?s=612x612&w=0&k=20&c=1c622tqfso9gGpdPbQ7TojP_OBa3lu4A1NbrM5Iq780="
+    },
+    {
+      id: '184',
+      caption: 'dream',
+      imageUrl: "https://thumbs.dreamstime.com/b/girl-dreaming-whilst-sleeping-hand-drawn-picture-child-happy-thoughts-illustrated-loose-style-vector-eps-available-32518299.jpg"
+    },
+    {
+      id: '185',
+      caption: 'see',
+      imageUrl: "https://media.istockphoto.com/id/1498871358/vector/vector-illustration-of-happy-woman-holding-binocular-and-looking-far-ahead-observation.jpg?s=612x612&w=0&k=20&c=p6mDM_yWqKdPzWXvjo0yMrPPa2s-3ogX50Du4EoBiK0="
+    },
+    {
+      id: '186',
+      caption: 'meet',
+      imageUrl: "https://thumbs.dreamstime.com/b/cute-happy-kid-hand-shake-friend-agreement-background-boy-cartoon-character-children-clipart-design-friends-friendship-160885724.jpg"
+    },
+    {
+      id: '187',
+      caption: 'seed',
+      imageUrl: "https://thumbs.dreamstime.com/b/sprouting-seed-illustration-cartoon-plant-seedling-different-stages-isolated-vector-clip-art-120244234.jpg"
+    },
+    {
+      id: '188',
+      caption: 'feed',
+      imageUrl: "https://static.vecteezy.com/ti/vecteur-libre/t1/13432915-mignon-petit-garcon-nourrissant-son-chat-avec-de-la-nourriture-pour-animaux-a-la-maison-vectoriel.jpg"
+    },
+    {
+      id: '189',
+      caption: 'need',
+      imageUrl: "https://cdn.displate.com/artwork/270x380/2025-05-10/88817b11-2b95-48e3-9c4d-e0d32877c6d8.jpg"
+    },
+    {
+      id: '190',
+      caption: 'week',
+      imageUrl: "https://us.123rf.com/450wm/heebyj/heebyj1504/heebyj150400017/39180284-days-of-the-week-sticky-notes.jpg?ver=6"
+    },
+    {
+      id: '191',
+      caption: 'beet',
+      imageUrl: "https://media.istockphoto.com/id/1975450250/vector/beet-character-cartoon-plays-the-guitar-sings-joy-cute-smile-face-vegetable-beautiful-vector.jpg?s=612x612&w=0&k=20&c=a4UNNdbrNWVHIVfIn-GTAjwy5vHRoaIDI3ZcF1dXjZg="
+    },
+    {
+      id: '192',
+      caption: 'leek',
+      imageUrl: "https://i.pinimg.com/736x/c3/55/bc/c355bc0e06b0cd3be91faa218702d6fc.jpg"
+    },
+    {
+      id: '193',
+      caption: 'Clean/decorate the house',
+      imageUrl: "https://i.pinimg.com/736x/ac/d4/17/acd41793e2374d8055d5b3a4788cb57f.jpg"
+    },
+    {
+      id: '194',
+      caption: 'Make Chung cake',
+      imageUrl: "https://thumbs.dreamstime.com/b/hands-crafting-beautiful-sticky-rice-cake-lunar-new-year-holiday-person-carefully-wrapping-square-shaped-sticky-427669336.jpg"
+    },
+    {
+      id: '195',
+      caption: 'Go to the Tet market',
+      imageUrl: "https://en-cdn.nhandan.vn/images/767e7ba477f43c18c09baa99f30631291c9e6a6dbf3b5cde262f02de6bbbf6b4c0a675fcdb07abc939b4248d1c09fd61a6d473f98ea0eb1a23ddbce29a634003b21f20756843905cd7e23f056b551287/fa33584c267699e2931b4ac22e057233.jpg"
+    },
+    {
+      id: '196',
+      caption: 'Visit grandparents',
+      imageUrl: "https://img.freepik.com/premium-vector/happy-asian-girl-receiving-red-envelope-from-her-grandparents-lunar-new-year_699917-47.jpg"
+    },
+    {
+      id: '197',
+      caption: 'Meet friends',
+      imageUrl: "https://www.shutterstock.com/image-vector/cute-chinese-children-wearing-traditional-260nw-2701620615.jpg"
+    },
+    {
+      id: '198',
+      caption: 'Watch fireworks',
+      imageUrl: "https://img.freepik.com/premium-photo/asian-family-watching-fireworks-celebrating-happy-new-year-paint_303714-128.jpg"
+    },
+    {
+      id: '199',
+      caption: 'Go to the Pagoda',
+      imageUrl: "https://static.vecteezy.com/system/resources/previews/055/011/143/non_2x/happy-chinese-new-year-poster-with-cartoon-chinese-girl-holding-envelope-in-front-of-heaven-temple-and-lanterns-hang-vector.jpg"
+    },
+    {
+      id: '200',
+      caption: 'Get lucky money',
+      imageUrl: "https://media.istockphoto.com/id/1765418607/photo/chinese-new-year-tradition-for-good-luck.jpg?s=612x612&w=0&k=20&c=tV8P6oSrWKLAZlWxNrq7pdItqlCeeMk3XzIoEEjduAk="
+    },
+    {
+      id: '201',
+      caption: 'Lucky money',
+      imageUrl: 'https://media.istockphoto.com/id/1301156648/vector/hand-holding-angpao-money-on-envelope-chinese-new-year-celebrate-concept-in-cartoon.jpg?s=612x612&w=0&k=20&c=3oDrOCxr8yRVoQRGGEPuviW9_BXa7oCsec1bqs0CqDI='
+    },
+    {
+      id: '202',
+      caption: 'Chung cake',
+      imageUrl: 'https://www.shutterstock.com/image-vector/banh-tet-vietnamese-food-square-600nw-2569830947.jpg'
+    },
+    {
+      id: '203',
+      caption: 'Kumquat tree',
+      imageUrl: 'https://media.istockphoto.com/id/1283044469/vector/mandarin-tree-for-chinese-new-year.jpg?s=612x612&w=0&k=20&c=tUr2wHS3wiIr75Tj-xz26rF5I94sP91lnzzDzdcROY4='
+    },
+    {
+      id: '204',
+      caption: 'Fireworks',
+      imageUrl: 'https://cdn.tutsplus.com/cdn-cgi/image/width=600/vector/uploads/legacy/tuts/000-2011/385-fireworks-boom/final.jpg'
+    },
+    {
+      id: '205',
+      caption: 'Firecrackers',
+      imageUrl: 'https://cbx-prod.b-cdn.net/COLOURBOX52704999.jpg?width=800&height=800&quality=70'
+    },
+    {
+      id: '206',
+      caption: 'Peach blossom',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/035/262/810/non_2x/peach-blossom-flat-illustration-isolated-on-white-background-element-for-spring-lunar-new-year-chinese-new-year-concept-clip-art-for-greating-card-banner-brochure-web-sticker-vector.jpg'
     }
   ];
 
@@ -1049,6 +1199,30 @@ export class FlashcardService {
       name: 'Musical Instruments',
       description: 'Musical instruments vocabulary',
       flashcardIds: ['167', '168', '169', '170', '171', '174', '175', '176']
+    },
+    {
+      id: 'set26',
+      name: 'Long vowel: ea',
+      description: 'Words with long vowel EA sound',
+      flashcardIds: ['177', '178', '179', '180', '181', '182', '183', '184']
+    },
+    {
+      id: 'set27',
+      name: 'Long vowel: ee',
+      description: 'Words with long vowel EE sound',
+      flashcardIds: ['185', '186', '187', '188', '189', '190', '191', '192']
+    },
+    {
+      id: 'set28',
+      name: 'Tet Holiday',
+      description: 'Tet holiday activities',
+      flashcardIds: ['193', '194', '195', '196', '197', '198', '199', '200']
+    },
+    {
+      id: 'set29',
+      name: 'Tet Symbols',
+      description: 'Symbols associated with Tet holiday',
+      flashcardIds: ['201', '202', '203', '204', '205', '206']
     },
     // {
     //   id: 'set18',
