@@ -1052,6 +1052,159 @@ export class FlashcardService {
       id: '206',
       caption: 'Peach blossom',
       imageUrl: 'https://static.vecteezy.com/system/resources/previews/035/262/810/non_2x/peach-blossom-flat-illustration-isolated-on-white-background-element-for-spring-lunar-new-year-chinese-new-year-concept-clip-art-for-greating-card-banner-brochure-web-sticker-vector.jpg'
+    },
+
+    // Vowel patterns: oi, oy
+    {
+      id: '207',
+      caption: 'oink',
+      imageUrl: "https://media.istockphoto.com/id/1338098525/vector/pig-says-oink-hand-drawn-vector-illustration-cute-animal-with-lettering.jpg?s=612x612&w=0&k=20&c=Cm_z1Z7Aixw3ZVaybjZXx3G4ckp-0CPtFL9Z61F5XOI="
+    },
+    {
+      id: '208',
+      caption: 'oil',
+      imageUrl: "https://thumbs.dreamstime.com/b/vector-illustration-olive-oil-bottle-hand-drawing-66539032.jpg"
+    },
+    {
+      id: '209',
+      caption: 'soil',
+      imageUrl: "https://img.freepik.com/premium-vector/pile-ground-soil-growing-plants-vector-illustration_118339-5731.jpg"
+    },
+    {
+      id: '210',
+      caption: 'coin',
+      imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/006/607/020/small/flat-illustration-of-gold-icon-suitable-for-design-element-of-banking-business-investment-and-finance-activity-coin-for-online-payment-free-vector.jpg"
+    },
+    {
+      id: '211',
+      caption: 'boy',
+      imageUrl: "https://media.istockphoto.com/id/1241499465/vector/vector-mexican-boy-jumping-and-laughing-cartoon-character-design-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=nGEI21M6TDh9bZqC7tEbNpOfNtFrB4ZKeNIQB5CTq_g="
+    },
+    {
+      id: '212',
+      caption: 'toy',
+      imageUrl: "https://img.freepik.com/free-vector/flat-design-christmas-toy-collection_23-2148355715.jpg"
+    },
+    {
+      id: '213',
+      caption: 'joy',
+      imageUrl: "https://i.fbcd.co/products/resized/resized-750-500/wm-transparent-kids112-creative-d11e7346e8cd719a571efc711ed90420502a1af2c7a9e7f242e3d067e18ea34e.jpg"
+    },
+    {
+      id: '214',
+      caption: 'soybean',
+      imageUrl: "https://media.istockphoto.com/id/1281064398/vector/set-of-soy-bean-plant-with-ripe-pods-and-green-leaves-whole-and-half-green-and-dry-brown.jpg?s=612x612&w=0&k=20&c=SKVaaBBy_96VlQx0f2oFWNKoEQ1KNjFfpkoow0h28z4="
+    },
+
+    // Vowel patterns: ou and ow
+    {
+      id: '215',
+      caption: 'shout',
+      imageUrl: "https://img.freepik.com/premium-vector/little-boy-angry-shout-little-girl_97632-3666.jpg"
+    },
+    {
+      id: '216',
+      caption: 'pouch',
+      imageUrl: "https://thumbs.dreamstime.com/b/old-coin-pouch-full-gold-coins-cartoon-vector-illustration-279160684.jpg"
+    },
+    {
+      id: '217',
+      caption: 'pout',
+      imageUrl: "https://media.istockphoto.com/id/1366367172/vector/little-girl-is-angry-and-dissatisfied-with-a-boy.jpg?s=612x612&w=0&k=20&c=NdIlEFoHLbkhTxa_tHDaThxaGCDiA3azzkm-PaJrq1c="
+    },
+    {
+      id: '218',
+      caption: 'ground',
+      imageUrl: "https://thumbs.dreamstime.com/b/cartoon-empty-playground-vector-cute-insects-background-illustration-94729093.jpg"
+    },
+    {
+      id: '219',
+      caption: 'owl',
+      imageUrl: "https://images.squarespace-cdn.com/content/v1/5a182fa2e5dd5b3614f9907b/1528639256277-T9YU96SVAFFARCZI86AV/Tawny+owl+and+its+prey"
+    },
+    {
+      id: '220',
+      caption: 'cow',
+      imageUrl: "https://t3.ftcdn.net/jpg/00/84/09/18/360_F_84091840_8wn1lAJ7jIuYRczt4PRqrrZUoAOoPVrO.jpg"
+    },
+    {
+      id: '221',
+      caption: 'frown',
+      imageUrl: "https://www.shutterstock.com/image-vector/illustration-shows-angry-boy-black-600nw-2632544079.jpg"
+    },
+    {
+      id: '222',
+      caption: 'down',
+      imageUrl: "https://i.graphicmama.com/resources/toons/cartoon-down-arrow-character-set/site-previews/siteBigWatermarkedImages/45-holding-a-pencil(concepts).jpg"
+    },
+
+    // Letter Uu - beginning and middle sounds
+    {
+      id: '224',
+      caption: 'umbrella',
+      imageUrl: "https://drawingsof.com/wp-content/uploads/2023/11/Umbrella3.png"
+    },
+    {
+      id: '225',
+      caption: 'up',
+      imageUrl: "https://img.freepik.com/premium-vector/going-up-concept-illustration_114360-2292.jpg"
+    },
+    {
+      id: '226',
+      caption: 'under',
+      imageUrl: "https://voca-land.sgp1.cdn.digitaloceanspaces.com/0/1757652180409/befdb826.jpg"
+    },
+    {
+      id: '227',
+      caption: 'Cup',
+      imageUrl: "https://img.freepik.com/premium-vector/coffee-love-foam-with-beans-cartoon-icon_1185634-1890.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+
+    // Letter Ll - beginning and middle sounds
+    {
+      id: '228',
+      caption: 'Lion',
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1280px-Lion_waiting_in_Namibia.jpg"
+    },
+    {
+      id: '229',
+      caption: 'little',
+      imageUrl: "https://static.vecteezy.com/system/resources/previews/001/883/033/non_2x/little-finger-making-pinky-sign-vector.jpg"
+    },
+    {
+      id: '230',
+      caption: 'laugh',
+      imageUrl: "https://media.istockphoto.com/id/1171405497/vector/kids-children-laughing-together-vector.jpg?s=612x612&w=0&k=20&c=8YvBmmh2Nbu0PP_0jpW2I8U17MsaaqyVziYZKDNdy9w="
+    },
+    {
+      id: '231',
+      caption: 'leg',
+      imageUrl: "https://media.istockphoto.com/id/931734144/vector/leg-vector-in-front-view.jpg?s=612x612&w=0&k=20&c=YLYm-riT2qe2u3XQJ2m46WwKxSnW6Le4UJpLfxB4CTc="
+    },
+    {
+      id: '232',
+      caption: 'lime',
+      imageUrl: "https://t4.ftcdn.net/jpg/05/21/30/51/360_F_521305129_7qAZ0ySwXs0GqU7dQDdN3DugGeYWFq0x.jpg"
+    },
+    {
+      id: '233',
+      caption: 'plum',
+      imageUrl: "https://t4.ftcdn.net/jpg/02/65/83/25/360_F_265832557_CISNdGFGlwUasm6seZ2t0TH0qGEhXIya.jpg"
+    },
+    {
+      id: '234',
+      caption: 'fly',
+      imageUrl: "https://thumbs.dreamstime.com/b/cartoon-fly-character-waving-hello-cheerful-illustration-has-large-red-grid-patterned-eyes-smiling-gloved-395047009.jpg"
+    },
+    {
+      id: '235',
+      caption: 'to fly',
+      imageUrl: "https://thumbs.dreamstime.com/b/happy-boy-kid-play-toy-fly-plane-160957915.jpg"
+    },
+    {
+      id: '236',
+      caption: 'plane',
+      imageUrl: "https://as2.ftcdn.net/v2/jpg/01/14/28/33/1000_F_114283392_N0QIvEybkTEgx1mHCjfb0Xfq0q9mvuz9.jpg"
     }
   ];
 
@@ -1223,6 +1376,30 @@ export class FlashcardService {
       name: 'Tet Symbols',
       description: 'Symbols associated with Tet holiday',
       flashcardIds: ['201', '202', '203', '204', '205', '206']
+    },
+    {
+      id: 'set30',
+      name: 'Vowel patterns: oi, oy',
+      description: 'Words with oi and oy vowel patterns',
+      flashcardIds: ['207', '208', '209', '210', '211', '212', '213', '214']
+    },
+    {
+      id: 'set31',
+      name: 'Vowel patterns: ou and ow',
+      description: 'Words with ou and ow vowel patterns',
+      flashcardIds: ['215', '216', '217', '218', '219', '220', '221', '222']
+    },
+    {
+      id: 'set32',
+      name: 'Letter Uu',
+      description: 'Words with Uu sound (beginning and middle)',
+      flashcardIds: ['223', '224', '225', '226', '227', '2', '70']
+    },
+    {
+      id: 'set33',
+      name: 'Letter Ll',
+      description: 'Words with Ll sound (beginning and middle)',
+      flashcardIds: ['228', '229', '230', '231', '232', '233', '234', '235']
     },
     // {
     //   id: 'set18',
