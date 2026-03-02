@@ -46,7 +46,7 @@ export class FlashcardService {
     {
       id: '8',
       caption: 'Apple',
-      imageUrl: 'https://www.flashcards.com.sg/wp-content/uploads/2017/10/Slide363.jpg'
+      imageUrl: 'https://www.shutterstock.com/image-vector/cartoon-illustration-red-apple-green-600nw-2668481887.jpg'
     },
     {
       id: '9',
@@ -1205,6 +1205,245 @@ export class FlashcardService {
       id: '236',
       caption: 'plane',
       imageUrl: "https://as2.ftcdn.net/v2/jpg/01/14/28/33/1000_F_114283392_N0QIvEybkTEgx1mHCjfb0Xfq0q9mvuz9.jpg"
+    },
+
+    // Letter Bb - beginning, middle, and ending sounds
+    {
+      id: '237',
+      caption: 'Box',
+      imageUrl: 'https://www.shutterstock.com/image-vector/cute-cardboard-box-vector-illustration-600nw-2684480605.jpg'
+    },
+    {
+      id: '238',
+      caption: 'bee',
+      imageUrl: 'https://www.shutterstock.com/image-vector/flat-vector-illustration-simple-childrens-600nw-2657592787.jpg'
+    },
+    {
+      id: '239',
+      caption: 'bird',
+      imageUrl: 'https://www.shutterstock.com/image-vector/cute-little-blue-bird-good-600nw-2499877877.jpg'
+    },
+    {
+      id: '240',
+      caption: 'bus',
+      imageUrl: 'https://thumb.ac-illust.com/46/467f43de7c0ae49ec2dc2f87d6395540_t.jpeg'
+    },
+    {
+      id: '241',
+      caption: 'bag',
+      imageUrl: 'https://i.pinimg.com/474x/12/a9/42/12a942d1e0fcf7f4d52a13d87975aaab.jpg'
+    },
+    {
+      id: '242',
+      caption: 'cowboy',
+      imageUrl: 'https://www.shutterstock.com/image-vector/cute-little-cowboy-riding-horse-600nw-2628588073.jpg'
+    },
+    {
+      id: '243',
+      caption: 'web',
+      imageUrl: 'https://thumbs.dreamstime.com/b/charming-vector-illustration-cute-spider-diligently-spinning-its-web-showcasing-nature-s-intricate-design-image-419683097.jpg'
+    },
+    {
+      id: '244',
+      caption: 'crab',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKTs4A2UCp2w66oiEkmCptrDD1JRGutzY2pg&s'
+    },
+    {
+      id: '245',
+      caption: 'bib',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/022/100/096/non_2x/baby-bib-decorated-with-a-cute-elephant-in-color-doodle-style-flat-style-with-outline-hand-drawn-illustration-isolated-on-white-pastel-colors-pink-blue-beige-child-feeding-item-vector.jpg'
+    },
+
+    // Letter Jj - beginning sounds
+    {
+      id: '246',
+      caption: 'Jungle',
+      imageUrl: 'https://media.istockphoto.com/id/1436040893/vector/beautiful-jungle-waterfall.jpg?s=612x612&w=0&k=20&c=0QDETo_7vl5E3Gejf4MTVgop_okXv27HLTKsi4rXts4='
+    },
+    {
+      id: '247',
+      caption: 'jaguar',
+      imageUrl: 'https://i.fbcd.co/products/original/1-d8ba1fb15056e24fb1f3b9023cbd4b2b432d7c4a1e70bec8ffa6dc8f4ce01731.jpg'
+    },
+    {
+      id: '248',
+      caption: 'jump',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/027/161/432/non_2x/illustration-of-a-cute-girl-in-a-jump-vector.jpg'
+    },
+
+    // Letter Ww - beginning and middle sounds
+    {
+      id: '249',
+      caption: 'Watch',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWk003-lUHgy1ljEYAS_fmcyQyazE4x2tI3A&s'
+    },
+    {
+      id: '250',
+      caption: 'wolf',
+      imageUrl: 'https://thumbs.dreamstime.com/b/illustration-cute-cartoon-wolf-white-background-76092877.jpg'
+    },
+    {
+      id: '251',
+      caption: 'wig',
+      imageUrl: 'https://www.shutterstock.com/image-vector/blonde-wig-on-mannequin-isolated-600nw-2604998079.jpg'
+    },
+    {
+      id: '252',
+      caption: 'wet',
+      imageUrl: 'https://thumbs.dreamstime.com/b/unhappy-girl-under-rain-flat-vector-illustration-sad-preteen-child-bad-rainy-weather-unhappy-girl-under-rain-flat-vector-185754867.jpg'
+    },
+    {
+      id: '253',
+      caption: 'swing',
+      imageUrl: 'https://thumbs.dreamstime.com/b/happy-cute-little-kid-girl-play-swing-177080143.jpg'
+    },
+    {
+      id: '254',
+      caption: 'swan',
+      imageUrl: 'https://img.freepik.com/premium-vector/cartoon-illustration-cute-swan_29937-9860.jpg'
+    },
+
+    // Long vowel: o_e
+    {
+      id: '255',
+      caption: 'mole',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cute-brown-cartoon-mole-illustration-cute-brown-cartoon-mole-illustration-380203629.jpg'
+    },
+    {
+      id: '256',
+      caption: 'home',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/065/493/574/non_2x/cute-house-cartoon-house-character-free-vector.jpg'
+    },
+    {
+      id: '257',
+      caption: 'hole',
+      imageUrl: 'https://media.istockphoto.com/id/2155948344/vector/soil-pit-and-pile-cartoon-vector-icon.jpg?s=612x612&w=0&k=20&c=XqXnFcSU0qXu91JqYTWUnWosifpcKM7PYppatVULVhc='
+    },
+    {
+      id: '258',
+      caption: 'rope',
+      imageUrl: 'https://png.pngtree.com/png-clipart/20230630/ourmid/pngtree-rope-illustration-png-image_7369994.png'
+    },
+    {
+      id: '259',
+      caption: 'bone',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/054/025/036/non_2x/a-cute-dog-bone-icon-with-a-pink-face-free-vector.jpg'
+    },
+    {
+      id: '260',
+      caption: 'hope',
+      imageUrl: 'https://www.shutterstock.com/image-vector/little-kid-show-praying-pose-600nw-2318772437.jpg'
+    },
+    {
+      id: '261',
+      caption: 'poke',
+      imageUrl: 'https://media.istockphoto.com/id/1807980694/vector/girl-and-boy-point-fingers-at-each-other.jpg?s=612x612&w=0&k=20&c=k3tRXVvdEWA-NVjTV5AX9caHoMzU0kjwqKwDGd2gljI='
+    },
+    {
+      id: '262',
+      caption: 'stone',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlnqoCDpIL21H0DF1Gq2hKjBW3GCvllzG8XQ&s'
+    },
+
+    // Vowel pattern: oo
+    {
+      id: '263',
+      caption: 'wood',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQu-5gsRKawXXPDyLfSqOudRSYm4D-lcWVEA&s'
+    },
+    {
+      id: '264',
+      caption: 'cook',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cute-chef-cooking-icon-cartoon-smiling-pan-stove-vegetables-utensils-around-pastel-kawaii-design-403582374.jpg'
+    },
+    {
+      id: '265',
+      caption: 'foot',
+      imageUrl: 'https://img.freepik.com/free-vector/hand-drawn-foot-cartoon-illustration_23-2151086600.jpg?semt=ais_rp_progressive&w=740&q=80'
+    },
+    {
+      id: '266',
+      caption: 'scoop',
+      imageUrl: 'https://i.pinimg.com/736x/51/68/58/516858e3c0d6244597fed90cbb623c82.jpg'
+    },
+    {
+      id: '267',
+      caption: 'spoon',
+      imageUrl: 'https://img.freepik.com/free-vector/sticker-spoon-kitchenware-white-background_1308-67037.jpg?semt=ais_user_personalization&w=740&q=80'
+    },
+    {
+      id: '268',
+      caption: 'food',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/011/888/913/non_2x/fast-food-cute-doodle-free-vector.jpg'
+    },
+    {
+      id: '269',
+      caption: 'zoo',
+      imageUrl: 'https://thumbs.dreamstime.com/b/adorable-zoo-animals-wearing-sunglasses-sunny-day-illustration-ai-generated-charming-features-group-animals%E2%80%94a-lion-413541720.jpg'
+    },
+
+    // Vowel patterns: au, aw
+    {
+      id: '270',
+      caption: 'August',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ZsblU8OWxS42aqbXwCVc9sZzUtMIBJlyYw&s'
+    },
+    {
+      id: '271',
+      caption: 'lunch',
+      imageUrl: 'https://www.shutterstock.com/image-vector/orange-lunch-box-illustration-hand-260nw-2504346221.jpg'
+    },
+    {
+      id: '272',
+      caption: 'laundry',
+      imageUrl: 'https://www.shutterstock.com/image-vector/woman-busy-dirty-laundry-vector-600nw-2453362105.jpg'
+    },
+    {
+      id: '273',
+      caption: 'maul',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPZebobIXoXNYheuVQYjI06Xlw50-7bjtCw&s'
+    },
+    {
+      id: '274',
+      caption: 'hawk',
+      imageUrl: 'https://thumb.ac-illust.com/c3/c3cb95e7f257575b7f39935ce19c66da_t.jpeg'
+    },
+    {
+      id: '275',
+      caption: 'crawl',
+      imageUrl: 'https://media.istockphoto.com/id/1844317102/vector/cute-and-happy-little-black-baby-crawling-vector-illustration-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=qGQgJcIEsnKJG0PnoYAZFxXqR6PI3APru5FX8ooAhtI='
+    },
+    {
+      id: '276',
+      caption: 'paw',
+      imageUrl: 'https://media.istockphoto.com/id/1205839419/vector/paws-raised.jpg?s=612x612&w=0&k=20&c=CAO44zrxjZIKFLfZ48X0FVk41xoXKSXn49hZWaglQ94='
+    },
+    {
+      id: '277',
+      caption: 'claw',
+      imageUrl: 'https://img.freepik.com/premium-vector/tiger-claws-icon-clipart-avatar-logotype-isolated-vector-illustration_955346-957.jpg'
+    },
+
+    // Vowel pattern: ar
+    {
+      id: '278',
+      caption: 'farm',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/002/752/392/non_2x/cute-cartoon-farm-animals-illustration-vector.jpg'
+    },
+    {
+      id: '279',
+      caption: 'cart',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_cJ4jjC65yRUBSskF7X9gEII0g5TLwH-JQ&s'
+    },
+    {
+      id: '280',
+      caption: 'yard',
+      imageUrl: 'https://www.shutterstock.com/image-vector/school-teacher-cute-students-chatting-600w-2640530591.jpg'
+    },
+    {
+      id: '281',
+      caption: 'barn',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSZIgWa0y0WlwsMIehbvv5x8KFsiDFv7k_rQ&s'
     }
   ];
 
@@ -1400,6 +1639,48 @@ export class FlashcardService {
       name: 'Letter Ll',
       description: 'Words with Ll sound (beginning and middle)',
       flashcardIds: ['228', '229', '230', '231', '232', '233', '234', '235']
+    },
+    {
+      id: 'set34',
+      name: 'Letter Bb',
+      description: 'Letter name & sound intro: Bb – beginning, middle, and ending sounds',
+      flashcardIds: ['237', '238', '239', '240', '241', '138', '37', '242', '32', '243', '244', '245']
+    },
+    {
+      id: 'set35',
+      name: 'Letter Jj',
+      description: 'Letter name & sound intro: Jj – beginning sounds',
+      flashcardIds: ['246', '247', '248']
+    },
+    {
+      id: 'set36',
+      name: 'Letter Ww',
+      description: 'Letter name & sound intro: Ww – beginning and middle sounds',
+      flashcardIds: ['249', '250', '251', '243', '252', '253', '254']
+    },
+    {
+      id: 'set37',
+      name: 'Long vowel: o_e',
+      description: 'Words with long vowel O sound (silent e pattern)',
+      flashcardIds: ['255', '256', '257', '258', '259', '260', '261', '262']
+    },
+    {
+      id: 'set38',
+      name: 'Vowel pattern: oo',
+      description: 'Words with oo vowel pattern',
+      flashcardIds: ['263', '9', '264', '265', '266', '267', '268', '269']
+    },
+    {
+      id: 'set39',
+      name: 'Vowel patterns: au, aw',
+      description: 'Words with au and aw vowel patterns',
+      flashcardIds: ['270', '271', '272', '273', '274', '275', '276', '277']
+    },
+    {
+      id: 'set40',
+      name: 'Vowel pattern: ar',
+      description: 'Words with ar vowel pattern',
+      flashcardIds: ['278', '279', '280', '281']
     },
     // {
     //   id: 'set18',
