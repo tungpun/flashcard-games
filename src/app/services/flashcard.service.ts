@@ -1444,6 +1444,83 @@ export class FlashcardService {
       id: '281',
       caption: 'barn',
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSZIgWa0y0WlwsMIehbvv5x8KFsiDFv7k_rQ&s'
+    },
+
+    // Caterpillar story (The Very Hungry Caterpillar) – characters & food
+    {
+      id: '282',
+      caption: 'egg',
+      imageUrl: 'https://www.shutterstock.com/image-vector/vector-egg-character-set-cute-600nw-2497161403.jpg'
+    },
+    {
+      id: '283',
+      caption: 'caterpillar',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5ajFo1RCMxDr4zAnaGh1yEZw6IRKqr3rmg&s'
+    },
+    {
+      id: '284',
+      caption: 'cocoon',
+      imageUrl: 'https://img.freepik.com/free-vector/cartoon-illustration-caterpillar-sleeping-branch_341269-1180.jpg?w=360'
+    },
+    {
+      id: '285',
+      caption: 'butterfly',
+      imageUrl: 'https://t4.ftcdn.net/jpg/02/10/89/63/360_F_210896350_lCaO4AFuh3NB9Qn4GDJn7mn2EfBgjIUL.jpg'
+    },
+    {
+      id: '287',
+      caption: 'pear',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9-OvlpGNBsTqT6xlKDluwZRZY_xI5ZL0-DA&s'
+    },
+    {
+      id: '288',
+      caption: 'strawberry',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/016/733/285/non_2x/strawberry-cute-illustration-concept-in-cartoon-style-on-isolated-background-vector.jpg'
+    },
+    {
+      id: '289',
+      caption: 'chocolate cake',
+      imageUrl: 'https://i.pinimg.com/736x/2d/09/f4/2d09f405524fec7a1762da0fefc895e7.jpg'
+    },
+    {
+      id: '290',
+      caption: 'ice-cream cone',
+      imageUrl: 'https://i.pinimg.com/736x/34/5a/23/345a2394d37343344f334f8d3e8b069a.jpg'
+    },
+    {
+      id: '291',
+      caption: 'pickle',
+      imageUrl: 'https://thumbs.dreamstime.com/b/cartoon-pickle-character-happy-face-arms-legs-stands-against-green-background-pickle-has-cute-cheerful-386547372.jpg'
+    },
+    {
+      id: '292',
+      caption: 'slice of cheese',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/041/927/422/non_2x/cheese-slice-clip-art-cartoon-illustration-design-vector.jpg'
+    },
+    {
+      id: '293',
+      caption: 'slice of salami',
+      imageUrl: 'https://as2.ftcdn.net/jpg/03/21/07/71/1000_F_321077112_J9Gw19G4Cu3yfHphiaRm9YazOCg7Q9Ya.jpg'
+    },
+    {
+      id: '294',
+      caption: 'lollipop',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCjx6MP0f-y1-jgT1nXV9X0S_Ch3yFTPBSyA&s'
+    },
+    {
+      id: '295',
+      caption: 'piece of cherry pie',
+      imageUrl: 'https://www.shutterstock.com/image-vector/piece-cherry-pie-fruit-dessert-600nw-2376184791.jpg'
+    },
+    {
+      id: '296',
+      caption: 'sausage',
+      imageUrl: 'https://media.istockphoto.com/id/1128896178/vector/two-sausages-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=z1EN0zh4PlJpcKquDtqqifV8bs0tnT2L0ILTVH5O578='
+    },
+    {
+      id: '297',
+      caption: 'green leaf',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1mxnBfQP3B0fLvTSIbc405p70OsTrAWeSBQ&s'
     }
   ];
 
@@ -1681,6 +1758,12 @@ export class FlashcardService {
       name: 'Vowel pattern: ar',
       description: 'Words with ar vowel pattern',
       flashcardIds: ['278', '279', '280', '281']
+    },
+    {
+      id: 'set41',
+      name: 'Caterpillar story',
+      description: 'The Very Hungry Caterpillar – characters and caterpillar food',
+      flashcardIds: ['282', '283', '284', '285', '286', '8', '287', '233', '288', '148', '289', '290', '291', '292', '293', '294', '295', '296', '297']
     },
     // {
     //   id: 'set18',
