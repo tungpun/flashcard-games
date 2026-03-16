@@ -1388,10 +1388,15 @@ export class FlashcardService {
       caption: 'August',
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ZsblU8OWxS42aqbXwCVc9sZzUtMIBJlyYw&s'
     },
+    // {
+    //   id: '271',
+    //   caption: 'lunch',
+    //   imageUrl: 'https://www.shutterstock.com/image-vector/orange-lunch-box-illustration-hand-260nw-2504346221.jpg'
+    // },
     {
       id: '271',
-      caption: 'lunch',
-      imageUrl: 'https://www.shutterstock.com/image-vector/orange-lunch-box-illustration-hand-260nw-2504346221.jpg'
+      caption: 'launch',
+      imageUrl: 'https://img.freepik.com/premium-vector/rocket-launch-illustration_118339-46.jpg'
     },
     {
       id: '272',
@@ -1521,6 +1526,28 @@ export class FlashcardService {
       id: '297',
       caption: 'green leaf',
       imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1mxnBfQP3B0fLvTSIbc405p70OsTrAWeSBQ&s'
+    },
+
+    // Farm and home words (from photo set)
+    {
+      id: '298',
+      caption: 'fork',
+      imageUrl: 'https://img.pikbest.com/png-images/qianku/cartoon-style-hand-drawn-pink-cute-fork_2033369.png!sw800'
+    },
+    {
+      id: '299',
+      caption: 'corn',
+      imageUrl: 'https://img.freepik.com/premium-vector/cute-cartoon-sweet-vegetable-corn-vector-illustration_773815-136.jpg'
+    },
+    {
+      id: '300',
+      caption: 'porch',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo88SY5XhLagNOjqC8eVARNEnoxN-f3a41Og&s'
+    },
+    {
+      id: '301',
+      caption: 'north',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/026/178/385/non_2x/cute-penguin-eating-fish-with-north-pole-arctic-vector.jpg'
     }
   ];
 
@@ -1764,6 +1791,12 @@ export class FlashcardService {
       name: 'Caterpillar story',
       description: 'The Very Hungry Caterpillar – characters and caterpillar food',
       flashcardIds: ['282', '283', '284', '285', '286', '8', '287', '233', '288', '148', '289', '290', '291', '292', '293', '294', '295', '296', '297']
+    },
+    {
+      id: 'set42',
+      name: 'Vowel pattern: ar, or',
+      description: 'Vocabulary from photo set: fork, corn, barn, farm, porch, north, cart, yard',
+      flashcardIds: ['298', '299', '281', '278', '300', '301', '279', '280']
     },
     // {
     //   id: 'set18',

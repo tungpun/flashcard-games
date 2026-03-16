@@ -74,7 +74,7 @@ export class PrizeService {
     {
       id: '14',
       caption: 'Spiderman',
-      imageUrl: 'https://wibu.com.vn/wp-content/uploads/2025/02/SPIDERMAN.png'
+      imageUrl: 'https://easydrawingguides.com/wp-content/uploads/2021/02/how-to-draw-a-chibi-spider-man-featured-image-1200.png'
     },
     {
       id: '15',
