@@ -1548,6 +1548,122 @@ export class FlashcardService {
       id: '301',
       caption: 'north',
       imageUrl: 'https://static.vecteezy.com/system/resources/previews/026/178/385/non_2x/cute-penguin-eating-fish-with-north-pole-arctic-vector.jpg'
+    },
+
+    // Vowel patterns: air, are, ear
+    {
+      id: '302',
+      caption: 'airplane',
+      imageUrl: 'https://i.pinimg.com/564x/34/de/1d/34de1d8c26fce68770336743c5023cc5.jpg'
+    },
+    {
+      id: '303',
+      caption: 'fair',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe_iwKPlTvjbGGL-nW-MT_zZHTvOGnxRK6Pw&s'
+    },
+    {
+      id: '304',
+      caption: 'chair',
+      imageUrl: 'https://img.magnific.com/premium-vector/chair-clipart-cartoon-style-illustration_761413-4364.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '305',
+      caption: 'hare',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-E3he1LD4kio2rX2V7m1ugvAlbQPHAb5EkQ&s'
+    },
+    {
+      id: '306',
+      caption: 'square',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabqbtAqblyKqAJzzsEVaMQ4NNcZThUjia3Q&s'
+    },
+    {
+      id: '307',
+      caption: 'share',
+      imageUrl: 'https://thumbs.dreamstime.com/b/happy-cute-little-kid-boy-girl-sharing-food-to-friend-202346713.jpg'
+    },
+    {
+      id: '308',
+      caption: 'bear',
+      imageUrl: 'https://www.shutterstock.com/image-vector/cartoon-brown-grizzly-bear-isolated-600nw-2485523341.jpg'
+    },
+    {
+      id: '309',
+      caption: 'tear',
+      imageUrl: 'https://thumbs.dreamstime.com/b/eyes-crying-tears-cartoon-illustration-eyes-crying-tears-cartoon-illustration-vector-430184579.jpg'
+    },
+
+    // Camping
+    {
+      id: '310',
+      caption: 'tent',
+      imageUrl: 'https://img.magnific.com/premium-vector/outdoor-tourist-tent-cartoon-icon-campsite-symbol_81894-13209.jpg'
+    },
+    {
+      id: '311',
+      caption: 'torch',
+      imageUrl: 'https://st4.depositphotos.com/1742172/22540/v/450/depositphotos_225400868-stock-illustration-cartoon-doodle-burning-torch-brand.jpg'
+    },
+    {
+      id: '311b',
+      caption: 'flashlight',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQamsTfUu3_Iyszt6_CozxPNund8pbM09Hy2Q&s'
+    },
+    {
+      id: '312',
+      caption: 'map',
+      imageUrl: 'https://static.vecteezy.com/system/resources/previews/035/157/354/non_2x/cute-cartoon-map-illustration-2d-or-flat-design-style-with-ornament-on-the-map-children-style-use-for-icon-game-game-design-children-book-story-book-vector.jpg'
+    },
+    {
+      id: '313',
+      caption: 'sleeping bag',
+      imageUrl: 'https://img.freepik.com/premium-vector/young-girl-resting-inside-sleeping-bag-after-camping_98396-142148.jpg'
+    },
+    {
+      id: '314',
+      caption: 'backpack',
+      imageUrl: 'https://png.pngtree.com/png-vector/20241210/ourmid/pngtree-cute-cartoon-backpack-with-school-supplies-clipart-png-image_14652842.png'
+    },
+
+    // Long vowel: u_e
+    {
+      id: '315',
+      caption: 'mule',
+      imageUrl: 'https://cdn.vectorstock.com/i/500p/61/46/cute-baby-donkey-cartoon-walking-vector-38706146.jpg'
+    },
+    {
+      id: '316',
+      caption: 'cube',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQuwEOJxMTrI4GUebIj3xLipyaJZlGQIn5fA&s'
+    },
+    {
+      id: '317',
+      caption: 'cute',
+      imageUrl: 'https://images.playgroundai.com/fc9924ed-3c84-4682-acb9-97ac7317a860.png?c=1'
+    },
+    {
+      id: '318',
+      caption: 'mute',
+      imageUrl: 'https://thumbs.dreamstime.com/b/emoticon-cartoon-making-silence-sign-illustration-33233448.jpg'
+    },
+    {
+      id: '319',
+      caption: 'June',
+      imageUrl: 'https://thumbs.dreamstime.com/b/june-calendar-wall-funny-dogs-fun-children-s-illustration-cartoon-style-colorful-vector-background-vertical-92635915.jpg'
+    },
+    {
+      id: '320',
+      caption: 'dune',
+      imageUrl: 'https://thumbs.dreamstime.com/b/desert-dune-landscape-vector-cartoon-illustration-desert-dune-mountain-background-sahara-cartoon-minimal-sand-design-desert-dune-373375935.jpg'
+    },
+    {
+      id: '321',
+      caption: 'tube',
+      imageUrl: 'https://thumbs.dreamstime.com/b/blank-blue-cosmetic-tube-cream-gel-cartoon-vector-illustration-413479149.jpg'
+    },
+    {
+      id: '322',
+      caption: 'tune',
+      imageUrl: 'https://img.freepik.com/free-vector/doodle-cartoon-character-singer-girl-singing-with-musical-melody-symbols_1308-65839.jpg?semt=ais_hybrid&w=740&q=80'
     }
   ];
 
@@ -1797,6 +1913,24 @@ export class FlashcardService {
       name: 'Vowel pattern: ar, or',
       description: 'Vocabulary from photo set: fork, corn, barn, farm, porch, north, cart, yard',
       flashcardIds: ['298', '299', '281', '278', '300', '301', '279', '280']
+    },
+    {
+      id: 'set43',
+      name: 'Vowel patterns: air, are, ear',
+      description: 'Words with air, are, and ear vowel patterns',
+      flashcardIds: ['302', '303', '304', '305', '306', '307', '308', '287', '309']
+    },
+    {
+      id: 'set44',
+      name: 'Camping',
+      description: 'Camping vocabulary: tent, torch, flashlight, match, map, sleeping bag, backpack',
+      flashcardIds: ['310', '311', '311b', '105', '312', '313', '314']
+    },
+    {
+      id: 'set45',
+      name: 'Long vowel: u_e',
+      description: 'Words with long vowel U sound (silent e pattern)',
+      flashcardIds: ['315', '316', '317', '318', '319', '320', '321', '322']
     },
     // {
     //   id: 'set18',
