@@ -1664,6 +1664,33 @@ export class FlashcardService {
       id: '322',
       caption: 'tune',
       imageUrl: 'https://img.freepik.com/free-vector/doodle-cartoon-character-singer-girl-singing-with-musical-melody-symbols_1308-65839.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+
+    // Review short vowel a
+    {
+      id: '323',
+      caption: 'mat',
+      imageUrl: 'https://thumbs.dreamstime.com/b/purple-rolled-yoga-mat-cartoon-vector-illustration-449832685.jpg'
+    },
+    {
+      id: '324',
+      caption: 'jam',
+      imageUrl: 'https://img.magnific.com/premium-vector/strawberry-jam-cartoon-vector-icon-illustration_635131-3116.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+    {
+      id: '325',
+      caption: 'nap',
+      imageUrl: 'https://i.pinimg.com/736x/5f/60/73/5f6073418804b4f90dc65a266d70b1ce.jpg'
+    },
+    {
+      id: '326',
+      caption: 'rat',
+      imageUrl: 'https://www.shutterstock.com/image-vector/vector-illustration-cheerful-black-rat-600nw-2654474323.jpg'
+    },
+    {
+      id: '327',
+      caption: 'mad',
+      imageUrl: 'https://img.magnific.com/free-vector/flat-design-hate-emoji-illustration_23-2151007709.jpg?semt=ais_hybrid&w=740&q=80'
     }
   ];
 
@@ -1931,6 +1958,12 @@ export class FlashcardService {
       name: 'Long vowel: u_e',
       description: 'Words with long vowel U sound (silent e pattern)',
       flashcardIds: ['315', '316', '317', '318', '319', '320', '321', '322']
+    },
+    {
+      id: 'set46',
+      name: 'Review short vowel a',
+      description: 'Review vocabulary with short vowel A sound',
+      flashcardIds: ['3', '323', '324', '325', '326', '327', '312']
     },
     // {
     //   id: 'set18',
