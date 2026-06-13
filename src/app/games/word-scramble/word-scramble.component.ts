@@ -4,6 +4,7 @@ import { FlashcardService } from '../../services/flashcard.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
+import { HighlightedCaptionComponent } from '../../components/highlighted-caption/highlighted-caption.component';
 
 interface ScrambleQuestion {
   flashcard: Flashcard;
@@ -14,7 +15,7 @@ interface ScrambleQuestion {
 @Component({
   selector: 'fg-word-scramble',
   standalone: true,
-  imports: [CommonModule, GameCompletionComponent],
+  imports: [CommonModule, GameCompletionComponent, HighlightedCaptionComponent],
   templateUrl: './word-scramble.component.html',
   styleUrl: './word-scramble.component.scss'
 })
@@ -188,6 +189,10 @@ export class WordScrambleComponent implements OnInit {
 
   canCheckAnswer(): boolean {
     return this.userAnswer.length === this.questions[this.currentQuestionIndex]?.correctAnswer.length;
+  }
+
+  getHighlightPatterns(flashcardId: string): string[] | undefined {
+    return this.flashcardService.getHighlightPatternsForFlashcard(flashcardId, this.selectedSets);
   }
 
   goBack(): void {

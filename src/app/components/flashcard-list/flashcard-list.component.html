@@ -1,13 +1,32 @@
 <div class="flashcards-list-container">
   <h1>All Flashcards</h1>
-  <div class="flashcards-grid">
-    <div
-      *ngFor="let flashcard of flashcards"
-      class="flashcard-card">
-      <img [src]="flashcard.imageUrl" [alt]="flashcard.caption" class="flashcard-image">
-      <h3 class="flashcard-caption">{{ flashcard.caption }}</h3>
+
+  <section
+    *ngFor="let group of flashcardSetGroups"
+    class="set-section">
+    <div class="set-header">
+      <h2>{{ group.set.name }}</h2>
+      <p class="set-description">{{ group.set.description }}</p>
+      <span class="card-count">
+        {{ group.flashcards.length }} {{ group.flashcards.length === 1 ? 'card' : 'cards' }}
+      </span>
     </div>
-  </div>
+
+    <div class="flashcards-grid">
+      <div
+        *ngFor="let flashcard of group.flashcards"
+        class="flashcard-card">
+        <img [src]="flashcard.imageUrl" [alt]="flashcard.caption" class="flashcard-image">
+        <h3 class="flashcard-caption">
+          <fg-highlighted-caption
+            [caption]="flashcard.caption"
+            [patterns]="group.set.highlightPatterns">
+          </fg-highlighted-caption>
+        </h3>
+      </div>
+    </div>
+  </section>
+
   <button class="back-button" (click)="goBack()" type="button">
     ← Back to Home
   </button>

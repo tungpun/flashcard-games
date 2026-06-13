@@ -4,6 +4,7 @@ import { FlashcardService } from '../../services/flashcard.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
+import { HighlightedCaptionComponent } from '../../components/highlighted-caption/highlighted-caption.component';
 
 interface MemoryCard {
   id: string;
@@ -17,7 +18,7 @@ interface MemoryCard {
 @Component({
   selector: 'fg-memory-game',
   standalone: true,
-  imports: [CommonModule, GameCompletionComponent],
+  imports: [CommonModule, GameCompletionComponent, HighlightedCaptionComponent],
   templateUrl: './memory-game.component.html',
   styleUrl: './memory-game.component.scss'
 })
@@ -189,6 +190,10 @@ export class MemoryGameComponent implements OnInit {
 
   restartGame(): void {
     this.initializeGame();
+  }
+
+  getHighlightPatterns(flashcardId: string): string[] | undefined {
+    return this.flashcardService.getHighlightPatternsForFlashcard(flashcardId, this.selectedSets);
   }
 
   goBack(): void {

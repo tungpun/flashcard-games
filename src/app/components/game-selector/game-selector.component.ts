@@ -66,6 +66,24 @@ export class GameSelectorComponent {
       name: 'Word Choice',
       description: 'Select the image that matches the word',
       imagePath: 'images/games/word-choice.png'
+    },
+    {
+      id: 'slideshow',
+      name: 'Slideshow',
+      description: 'Browse flashcards one at a time with forward and back navigation',
+      imagePath: 'images/games/slideshow.png'
+    },
+    {
+      id: 'whats-missing',
+      name: "What's Missing?",
+      description: 'Remember the images, then guess which one disappeared',
+      imagePath: 'images/games/whats-missing.png'
+    },
+    {
+      id: 'bucket-sorting',
+      name: 'Bucket Sorting',
+      description: 'Drag each flashcard into the set bucket it belongs to',
+      imagePath: 'images/games/bucket-sorting.png'
     }
   ];
 

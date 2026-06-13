@@ -1,0 +1,69 @@
+<div class="bucket-sorting-container">
+  <button class="back-button" (click)="goBack()" type="button">
+    ← Back to Game Selection
+  </button>
+
+  <div *ngIf="selectedSets.length > 0 && !noEligibleCards && !gameComplete" class="game-header">
+    <h2 class="game-title">
+      {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length + ' Sets') }}
+    </h2>
+    <div class="game-stats">
+      <span class="stat">Sorted: {{ sortedCount }}/{{ totalCards }}</span>
+      <span class="stat">Mistakes: {{ mistakes }}</span>
+    </div>
+  </div>
+
+  <div *ngIf="noEligibleCards" class="error-message">
+    <p>The selected set(s) have no flashcards that belong to only one set. Choose sets with more unique cards, or fewer overlapping sets.</p>
+    <button class="action-button" (click)="goBack()" type="button">Go Back</button>
+  </div>
+
+  <fg-game-completion
+    *ngIf="gameComplete"
+    title="🎉 Game Complete! 🎉"
+    [message]="getCompletionMessage()"
+    (restart)="restartGame()">
+  </fg-game-completion>
+
+  <div *ngIf="!noEligibleCards && !gameComplete" class="game-content">
+    <div class="buckets-row">
+      <div
+        *ngFor="let set of selectedSets"
+        class="bucket"
+        cdkDropList
+        [cdkDropListData]="buckets[set.id]"
+        [cdkDropListConnectedTo]="connectedLists"
+        (cdkDropListDropped)="onDrop($event, set.id)">
+        <h3 class="bucket-label">{{ set.name }}</h3>
+        <div class="bucket-cards">
+          <div
+            *ngFor="let item of getBucketCards(set.id)"
+            class="bucket-card"
+            cdkDrag>
+            <img [src]="item.flashcard.imageUrl" [alt]="item.flashcard.caption" />
+            <span class="card-caption">{{ item.flashcard.caption }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pool-section">
+      <h3 class="pool-label">Cards to sort</h3>
+      <div
+        class="pool"
+        cdkDropList
+        [cdkDropListData]="pool"
+        [cdkDropListConnectedTo]="connectedLists"
+        (cdkDropListDropped)="onDrop($event, null)">
+        <div
+          *ngFor="let item of pool"
+          class="pool-card"
+          [class.shake]="item.shake"
+          cdkDrag>
+          <img [src]="item.flashcard.imageUrl" [alt]="item.flashcard.caption" />
+          <span class="card-caption">{{ item.flashcard.caption }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

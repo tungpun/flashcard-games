@@ -11,6 +11,9 @@ import { FillBlankComponent } from './games/fill-blank/fill-blank.component';
 import { TrueFalseComponent } from './games/true-false/true-false.component';
 import { WordSearchComponent } from './games/word-search/word-search.component';
 import { WordChoiceComponent } from './games/word-choice/word-choice.component';
+import { WhatsMissingComponent } from './games/whats-missing/whats-missing.component';
+import { SlideshowComponent } from './games/slideshow/slideshow.component';
+import { BucketSortingComponent } from './games/bucket-sorting/bucket-sorting.component';
 
 export const routes: Routes = [
   {
@@ -60,6 +63,18 @@ export const routes: Routes = [
   {
     path: 'games/word-choice',
     component: WordChoiceComponent
+  },
+  {
+    path: 'games/slideshow',
+    component: SlideshowComponent
+  },
+  {
+    path: 'games/whats-missing',
+    component: WhatsMissingComponent
+  },
+  {
+    path: 'games/bucket-sorting',
+    component: BucketSortingComponent
   },
   {
     path: '**',

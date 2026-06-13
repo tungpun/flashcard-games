@@ -1,0 +1,84 @@
+<div class="whats-missing-container">
+  <button class="back-button" (click)="goBack()" type="button">
+    ← Back to Game Selection
+  </button>
+
+  <div *ngIf="selectedSets.length > 0 && !insufficientCards && phase !== 'complete'" class="game-header">
+    <h2 class="game-title">
+      {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length + ' Sets') }}
+    </h2>
+    <div class="game-stats">
+      <span class="stat">Round {{ roundsPlayed + 1 }}</span>
+      <span *ngIf="phase === 'memorize'" class="stat countdown">{{ countdownSeconds }}s</span>
+    </div>
+  </div>
+
+  <div *ngIf="insufficientCards" class="error-message">
+    <p>Need at least 5 flashcards in the selected set(s) to play.</p>
+    <button class="action-button" (click)="goBack()" type="button">Go Back</button>
+  </div>
+
+  <fg-game-completion
+    *ngIf="phase === 'complete'"
+    title="Session Complete!"
+    [message]="getCompletionMessage()"
+    (restart)="restartGame()">
+  </fg-game-completion>
+
+  <div *ngIf="!insufficientCards && phase !== 'complete'" class="game-content">
+    <div class="image-slots-track">
+      <div class="image-slots" [class.shuffling]="phase === 'shuffling'">
+        <div
+          *ngFor="let item of getVisibleItems()"
+          class="slot-item"
+          [class.removing]="item.isRemoving"
+          [class.shuffling]="phase === 'shuffling'"
+          [style.transform]="getItemTransform(item)"
+          [style.opacity]="item.opacity"
+          [style.z-index]="item.zIndex">
+          <div class="card-image">
+            <img [src]="item.flashcard.imageUrl" [alt]="item.flashcard.caption" />
+          </div>
+          <p class="card-caption">
+            <fg-highlighted-caption
+              [caption]="item.flashcard.caption"
+              [patterns]="getHighlightPatterns(item.flashcard.id)">
+            </fg-highlighted-caption>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="phase-prompt" *ngIf="phasePrompt">{{ phasePrompt }}</p>
+
+    <div *ngIf="phase === 'revealed' && removedFlashcard" class="reveal-panel">
+      <img [src]="removedFlashcard.imageUrl" [alt]="removedFlashcard.caption" />
+      <p class="reveal-caption">
+        <fg-highlighted-caption
+          [caption]="removedFlashcard.caption"
+          [patterns]="getHighlightPatterns(removedFlashcard.id)">
+        </fg-highlighted-caption>
+      </p>
+    </div>
+
+    <div class="teacher-controls" *ngIf="phase === 'guess' || phase === 'revealed'">
+      <button
+        *ngIf="phase === 'guess'"
+        class="action-button primary"
+        (click)="revealAnswer()"
+        type="button">
+        Reveal answer
+      </button>
+      <button
+        *ngIf="phase === 'revealed'"
+        class="action-button primary"
+        (click)="nextRound()"
+        type="button">
+        Next round
+      </button>
+      <button class="action-button secondary" (click)="completeGame()" type="button">
+        Complete game
+      </button>
+    </div>
+  </div>
+</div>

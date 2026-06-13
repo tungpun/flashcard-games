@@ -49,7 +49,10 @@
           (click)="onCaptionClick(flashcard)"
           [id]="'caption-' + flashcard.id"
           type="button">
-          {{ flashcard.caption }}
+          <fg-highlighted-caption
+            [caption]="flashcard.caption"
+            [patterns]="getHighlightPatterns(flashcard.id)">
+          </fg-highlighted-caption>
         </button>
       </div>
     </div>

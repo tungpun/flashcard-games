@@ -4,6 +4,7 @@ import { FlashcardService } from '../../services/flashcard.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
+import { HighlightedCaptionComponent } from '../../components/highlighted-caption/highlighted-caption.component';
 
 interface Connection {
   flashcardId: string;
@@ -14,7 +15,7 @@ interface Connection {
 @Component({
   selector: 'fg-matching-game',
   standalone: true,
-  imports: [CommonModule, GameCompletionComponent],
+  imports: [CommonModule, GameCompletionComponent, HighlightedCaptionComponent],
   templateUrl: './matching-game.component.html',
   styleUrl: './matching-game.component.scss'
 })
@@ -223,6 +224,10 @@ export class MatchingGameComponent implements OnInit {
   isCaptionIncorrect(captionId: string): boolean {
     const connection = this.connections.find(c => c.captionId === captionId);
     return connection ? !connection.isCorrect : false;
+  }
+
+  getHighlightPatterns(flashcardId: string): string[] | undefined {
+    return this.flashcardService.getHighlightPatternsForFlashcard(flashcardId, this.selectedSets);
   }
 
   goBack(): void {

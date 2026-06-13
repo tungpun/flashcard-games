@@ -135,6 +135,21 @@
   background: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);
 }
 
+// Slideshow - Cyan gradient
+.game-slideshow {
+  background: linear-gradient(135deg, #00acc1 0%, #006064 100%);
+}
+
+// What's Missing - Amber gradient
+.game-whats-missing {
+  background: linear-gradient(135deg, #f9a825 0%, #e65100 100%);
+}
+
+// Bucket Sorting - Rose/Crimson gradient
+.game-bucket-sorting {
+  background: linear-gradient(135deg, #d81b60 0%, #880e4f 100%);
+}
+
 @media (max-width: 768px) {
   .game-selector-container {
     padding: 1rem;

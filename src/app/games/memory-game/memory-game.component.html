@@ -36,7 +36,12 @@
       </div>
       <div class="card-back">
         <img *ngIf="card.type === 'image'" [src]="card.content" [alt]="card.content" />
-        <span *ngIf="card.type === 'caption'" class="caption-text">{{ card.content }}</span>
+        <span *ngIf="card.type === 'caption'" class="caption-text">
+          <fg-highlighted-caption
+            [caption]="card.content"
+            [patterns]="getHighlightPatterns(card.flashcardId)">
+          </fg-highlighted-caption>
+        </span>
       </div>
     </div>
   </div>

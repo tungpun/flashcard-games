@@ -39,7 +39,10 @@
         [class.disabled]="showResult"
         (click)="selectAnswer(option)"
         type="button">
-        {{ option.caption }}
+        <fg-highlighted-caption
+          [caption]="option.caption"
+          [patterns]="getHighlightPatterns(option.flashcardId)">
+        </fg-highlighted-caption>
         <span *ngIf="showResult && option.isCorrect" class="result-icon">✓</span>
         <span *ngIf="showResult && selectedAnswer === option.caption && !option.isCorrect" class="result-icon">✗</span>
       </button>
@@ -48,7 +51,13 @@
     <div *ngIf="showResult" class="result-message">
       <div [class]="'message ' + (isCorrect ? 'correct' : 'incorrect')">
         <p *ngIf="isCorrect">🎉 Correct!</p>
-        <p *ngIf="!isCorrect">❌ Wrong. The correct answer is: {{ getCurrentQuestion()!.flashcard.caption }}</p>
+        <p *ngIf="!isCorrect">
+          ❌ Wrong. The correct answer is:
+          <fg-highlighted-caption
+            [caption]="getCurrentQuestion()!.flashcard.caption"
+            [patterns]="getHighlightPatterns(getCurrentQuestion()!.flashcard.id)">
+          </fg-highlighted-caption>
+        </p>
       </div>
       <button class="next-button" (click)="nextQuestion()" type="button">
         {{ currentQuestionIndex + 1 < questions.length ? 'Next Question' : 'Finish Quiz' }}

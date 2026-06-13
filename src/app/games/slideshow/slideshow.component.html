@@ -1,0 +1,58 @@
+<div class="slideshow-container">
+  <button class="back-button" (click)="goBack()" type="button">
+    ← Back to Game Selection
+  </button>
+
+  <div *ngIf="noFlashcards" class="error-message">
+    <p>No flashcards in the selected set(s).</p>
+    <button class="action-button" (click)="goBack()" type="button">Go Back</button>
+  </div>
+
+  <div *ngIf="selectedSets.length > 0 && !gameComplete && !noFlashcards" class="game-header">
+    <h2 class="game-title">
+      {{ selectedSets.length === 1 ? selectedSets[0].name : (selectedSets.length + ' Sets') }}
+    </h2>
+    <div class="game-stats">
+      <span class="stat">Card {{ currentIndex + 1 }}/{{ flashcards.length }}</span>
+    </div>
+  </div>
+
+  <fg-game-completion
+    *ngIf="gameComplete"
+    title="🎉 Slideshow Complete! 🎉"
+    [message]="getCompletionMessage()"
+    (restart)="restartGame()">
+  </fg-game-completion>
+
+  <div *ngIf="selectedSets.length > 0 && !gameComplete && !noFlashcards && getCurrentFlashcard()" class="game-content">
+    <div class="word-image">
+      <img
+        [src]="getCurrentFlashcard()!.imageUrl"
+        [alt]="getCurrentFlashcard()!.caption" />
+    </div>
+
+    <h3 class="caption">
+      <fg-highlighted-caption
+        [caption]="getCurrentFlashcard()!.caption"
+        [patterns]="getHighlightPatterns(getCurrentFlashcard()!.id)">
+      </fg-highlighted-caption>
+    </h3>
+
+    <div class="nav-buttons">
+      <button
+        class="nav-button prev-button"
+        [disabled]="!canGoPrevious"
+        (click)="goPrevious()"
+        type="button">
+        ← Previous
+      </button>
+      <button
+        class="nav-button next-button"
+        [disabled]="!canGoNext"
+        (click)="goNext()"
+        type="button">
+        Next →
+      </button>
+    </div>
+  </div>
+</div>

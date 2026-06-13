@@ -1,3 +1,7 @@
 <div class="app-container">
+  <nav *ngIf="showMainNav" class="main-nav" aria-label="Browse content">
+    <a routerLink="/flashcards" class="nav-link">Flashcards</a>
+    <a routerLink="/prizes" class="nav-link">Prizes</a>
+  </nav>
   <router-outlet></router-outlet>
 </div>

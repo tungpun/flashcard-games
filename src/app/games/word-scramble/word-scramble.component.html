@@ -72,7 +72,13 @@
       <div [class]="'message ' + (isCorrect ? 'correct' : 'incorrect')">
         <p *ngIf="isCorrect">🎉 Correct! Great job!</p>
         <p *ngIf="!isCorrect">
-          ❌ Not quite. The correct answer is: <strong>{{ getCurrentQuestion()!.correctAnswer }}</strong>
+          ❌ Not quite. The correct answer is:
+          <strong>
+            <fg-highlighted-caption
+              [caption]="getCurrentQuestion()!.correctAnswer"
+              [patterns]="getHighlightPatterns(getCurrentQuestion()!.flashcard.id)">
+            </fg-highlighted-caption>
+          </strong>
         </p>
       </div>
       <button class="next-button" (click)="nextQuestion()" type="button">

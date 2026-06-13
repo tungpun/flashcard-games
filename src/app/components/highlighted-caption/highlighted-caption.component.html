@@ -1,0 +1,8 @@
+<ng-container *ngIf="hasHighlights; else plainCaption">
+  <ng-container *ngFor="let segment of segments">
+    <span *ngIf="segment.highlight" class="caption-highlight">{{ segment.text }}</span>
+    <ng-container *ngIf="!segment.highlight">{{ segment.text }}</ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #plainCaption>{{ caption }}</ng-template>

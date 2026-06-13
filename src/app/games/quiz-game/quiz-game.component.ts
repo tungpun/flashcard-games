@@ -4,10 +4,12 @@ import { FlashcardService } from '../../services/flashcard.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
+import { HighlightedCaptionComponent } from '../../components/highlighted-caption/highlighted-caption.component';
 
 interface QuizOption {
   caption: string;
   isCorrect: boolean;
+  flashcardId: string;
 }
 
 interface QuizQuestion {
@@ -18,7 +20,7 @@ interface QuizQuestion {
 @Component({
   selector: 'fg-quiz-game',
   standalone: true,
-  imports: [CommonModule, GameCompletionComponent],
+  imports: [CommonModule, GameCompletionComponent, HighlightedCaptionComponent],
   templateUrl: './quiz-game.component.html',
   styleUrl: './quiz-game.component.scss'
 })
@@ -85,19 +87,18 @@ export class QuizGameComponent implements OnInit {
     this.questions = flashcards.map(flashcard => {
       // Create 4 options: 1 correct + 3 incorrect
       const options: QuizOption[] = [
-        { caption: flashcard.caption, isCorrect: true }
+        { caption: flashcard.caption, isCorrect: true, flashcardId: flashcard.id }
       ];
 
-      // Get incorrect options from other flashcards
-      const incorrectOptions = this.allFlashcards
-        .filter(f => f.id !== flashcard.id)
-        .map(f => f.caption);
+      const incorrectFlashcards = this.allFlashcards.filter(f => f.id !== flashcard.id);
+      this.shuffleArray(incorrectFlashcards);
 
-      this.shuffleArray(incorrectOptions);
-
-      // Add 3 incorrect options
-      for (let i = 0; i < 3 && i < incorrectOptions.length; i++) {
-        options.push({ caption: incorrectOptions[i], isCorrect: false });
+      for (let i = 0; i < 3 && i < incorrectFlashcards.length; i++) {
+        options.push({
+          caption: incorrectFlashcards[i].caption,
+          isCorrect: false,
+          flashcardId: incorrectFlashcards[i].id
+        });
       }
 
       // Shuffle the options so correct answer isn't always first
@@ -175,6 +176,10 @@ export class QuizGameComponent implements OnInit {
     }
 
     return message;
+  }
+
+  getHighlightPatterns(flashcardId: string): string[] | undefined {
+    return this.flashcardService.getHighlightPatternsForFlashcard(flashcardId, this.selectedSets);
   }
 
   goBack(): void {

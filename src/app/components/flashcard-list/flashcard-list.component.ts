@@ -2,17 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FlashcardService } from '../../services/flashcard.service';
-import { Flashcard } from '../../models';
+import { Flashcard, FlashcardSet } from '../../models';
+import { HighlightedCaptionComponent } from '../highlighted-caption/highlighted-caption.component';
+
+interface FlashcardSetGroup {
+  set: FlashcardSet;
+  flashcards: Flashcard[];
+}
 
 @Component({
   selector: 'fg-flashcard-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HighlightedCaptionComponent],
   templateUrl: './flashcard-list.component.html',
   styleUrl: './flashcard-list.component.scss'
 })
 export class FlashcardListComponent implements OnInit {
-  flashcards: Flashcard[] = [];
+  flashcardSetGroups: FlashcardSetGroup[] = [];
 
   constructor(
     private flashcardService: FlashcardService,
@@ -20,7 +26,14 @@ export class FlashcardListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.flashcards = this.flashcardService.getAllFlashcards();
+    this.flashcardSetGroups = this.flashcardService
+      .getAllSets()
+      .filter(set => set.id !== 'set5')
+      .map(set => ({
+        set,
+        flashcards: this.flashcardService.getFlashcardsBySetId(set.id)
+      }))
+      .filter(group => group.flashcards.length > 0);
   }
 
   goBack(): void {

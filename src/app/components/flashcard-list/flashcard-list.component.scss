@@ -10,8 +10,45 @@
     text-align: center;
     color: #4a90e2;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     font-weight: bold;
+  }
+}
+
+.set-section {
+  margin-bottom: 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.set-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e8eef5;
+
+  h2 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+  }
+
+  .set-description {
+    color: #5a6c7d;
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .card-count {
+    display: inline-block;
+    background: #eef4fb;
+    color: #4a90e2;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
   }
 }
 
@@ -91,6 +128,16 @@
 
     h1 {
       font-size: 2rem;
+    }
+  }
+
+  .set-header {
+    h2 {
+      font-size: 1.35rem;
+    }
+
+    .set-description {
+      font-size: 0.9rem;
     }
   }
 

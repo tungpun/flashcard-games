@@ -4,6 +4,7 @@ import { FlashcardService } from '../../services/flashcard.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
+import { HighlightedCaptionComponent } from '../../components/highlighted-caption/highlighted-caption.component';
 
 interface WordChoiceQuestion {
   word: string; // The caption to match
@@ -15,7 +16,7 @@ interface WordChoiceQuestion {
 @Component({
   selector: 'fg-word-choice',
   standalone: true,
-  imports: [CommonModule, GameCompletionComponent],
+  imports: [CommonModule, GameCompletionComponent, HighlightedCaptionComponent],
   templateUrl: './word-choice.component.html',
   styleUrl: './word-choice.component.scss'
 })
@@ -199,6 +200,10 @@ export class WordChoiceComponent implements OnInit {
   isCorrectAnswer(flashcardId: string): boolean {
     const currentQuestion = this.getCurrentQuestion();
     return currentQuestion ? flashcardId === currentQuestion.correctFlashcard.id : false;
+  }
+
+  getHighlightPatterns(flashcardId: string): string[] | undefined {
+    return this.flashcardService.getHighlightPatternsForFlashcard(flashcardId, this.selectedSets);
   }
 
   goBack(): void {

@@ -403,7 +403,7 @@ export class FlashcardService {
     {
       id: '79',
       caption: 'Paper',
-      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Various_products_made_from_paper.JPG/1200px-Various_products_made_from_paper.JPG'
+      imageUrl: 'images/flashcards/79-paper.png'
     },
     {
       id: '80',
@@ -844,7 +844,7 @@ export class FlashcardService {
     {
       id: '163',
       caption: 'Mice',
-      imageUrl: 'https://www.publicdomainpictures.net/pictures/620000/nahled/cheeky-cartoon-mouse-with-cheese.png'
+      imageUrl: 'images/flashcards/163-mice.png'
     },
     {
       id: '164',
@@ -906,7 +906,7 @@ export class FlashcardService {
     {
       id: '177',
       caption: 'tea',
-      imageUrl: "https://media.istockphoto.com/id/872335636/vector/cute-cartoon-cup.jpg?s=612x612&w=0&k=20&c=WdaLguERmw9xrEYqWguatyaEuIfkKPEjwdvUkgeoRrA="
+      imageUrl: 'images/flashcards/177-tea.png'
     },
     {
       id: '178',
@@ -1691,6 +1691,143 @@ export class FlashcardService {
       id: '327',
       caption: 'mad',
       imageUrl: 'https://img.magnific.com/free-vector/flat-design-hate-emoji-illustration_23-2151007709.jpg?semt=ais_hybrid&w=740&q=80'
+    },
+
+    // Review short vowel e
+    {
+      id: '328',
+      caption: 'hen',
+      imageUrl: 'images/flashcards/328-hen.png'
+    },
+    {
+      id: '329',
+      caption: 'pen',
+      imageUrl: 'images/flashcards/329-pen.png'
+    },
+    {
+      id: '330',
+      caption: 'ten',
+      imageUrl: 'images/flashcards/330-ten.png'
+    },
+    {
+      id: '331',
+      caption: 'men',
+      imageUrl: 'images/flashcards/331-men.png'
+    },
+    {
+      id: '332',
+      caption: 'red',
+      imageUrl: 'images/flashcards/332-red.png'
+    },
+    {
+      id: '333',
+      caption: 'pet',
+      imageUrl: 'images/flashcards/333-pet.png'
+    },
+    {
+      id: '334',
+      caption: 'end',
+      imageUrl: 'images/flashcards/334-end.png'
+    },
+    {
+      id: '335',
+      caption: 'bend',
+      imageUrl: 'images/flashcards/335-bend.png'
+    },
+    {
+      id: '336',
+      caption: 'help',
+      imageUrl: 'images/flashcards/336-help.png'
+    },
+    {
+      id: '337',
+      caption: 'vet',
+      imageUrl: 'images/flashcards/337-vet.png'
+    },
+    {
+      id: '338',
+      caption: 'rest',
+      imageUrl: 'images/flashcards/338-rest.png'
+    },
+    {
+      id: '339',
+      caption: 'rules',
+      imageUrl: 'images/flashcards/339-rules.png'
+    },
+    {
+      id: '340',
+      caption: 'be quiet',
+      imageUrl: 'images/flashcards/340-be-quiet.png'
+    },
+    {
+      id: '341',
+      caption: 'sit nicely',
+      imageUrl: 'images/flashcards/341-sit-nicely.png'
+    },
+    {
+      id: '342',
+      caption: 'be nice/kind',
+      imageUrl: 'images/flashcards/342-be-nice-kind.png'
+    },
+    {
+      id: '343',
+      caption: 'listen to the teacher',
+      imageUrl: 'images/flashcards/343-listen-to-the-teacher.png'
+    },
+    {
+      id: '344',
+      caption: 'look and listen',
+      imageUrl: 'images/flashcards/344-look-and-listen.png'
+    },
+    {
+      id: '345',
+      caption: 'speak English',
+      imageUrl: 'images/flashcards/345-speak-english.png'
+    },
+    {
+      id: '346',
+      caption: 'raise your hand',
+      imageUrl: 'images/flashcards/346-raise-your-hand.png'
+    },
+    {
+      id: '347',
+      caption: 'wait your turn',
+      imageUrl: 'images/flashcards/347-wait-your-turn.png'
+    },
+    {
+      id: '348',
+      caption: 'clean up',
+      imageUrl: 'images/flashcards/348-clean-up.png'
+    },
+    {
+      id: '349',
+      caption: 'learning corner',
+      imageUrl: 'images/flashcards/349-learning-corner.png'
+    },
+    {
+      id: '350',
+      caption: 'reading corner',
+      imageUrl: 'images/flashcards/350-reading-corner.png'
+    },
+    {
+      id: '351',
+      caption: 'building corner',
+      imageUrl: 'images/flashcards/351-building-corner.png'
+    },
+    {
+      id: '352',
+      caption: 'music corner',
+      imageUrl: 'images/flashcards/352-music-corner.png'
+    },
+    {
+      id: '353',
+      caption: 'cooking corner',
+      imageUrl: 'images/flashcards/353-cooking-corner.png'
+    },
+    {
+      id: '354',
+      caption: 'role play corner',
+      imageUrl: 'images/flashcards/354-role-play-corner.png'
     }
   ];
 
@@ -1717,13 +1854,15 @@ export class FlashcardService {
       id: 'set4',
       name: 'Diagraph CK',
       description: 'Words with CK diagraph',
-      flashcardIds: ['11', '12', '13', '14', '15', '16', '17', '18']
+      flashcardIds: ['11', '12', '13', '14', '15', '16', '17', '18'],
+      highlightPatterns: ['CK']
     },
     {
       id: 'set6',
       name: 'Short vowel O',
       description: 'Words with short vowel O sound',
-      flashcardIds: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30']
+      flashcardIds: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
+      highlightPatterns: ['O']
     },
     {
       id: 'set7',
@@ -1741,25 +1880,29 @@ export class FlashcardService {
       id: 'set9',
       name: 'Consonant pattern: NG',
       description: 'Words with NG consonant pattern',
-      flashcardIds: ['48', '49', '50', '51', '56', '57', '58', '59']
+      flashcardIds: ['48', '49', '50', '51', '56', '57', '58', '59'],
+      highlightPatterns: ['NG']
     },
     {
       id: 'set10',
       name: 'Consonant pattern: NK',
       description: 'Words with NK consonant pattern',
-      flashcardIds: ['52', '53', '54', '55', '60', '61', '62', '63']
+      flashcardIds: ['52', '53', '54', '55', '60', '61', '62', '63'],
+      highlightPatterns: ['NK']
     },
     {
       id: 'set11',
       name: 'Consonant pattern: PH',
       description: 'Words with PH consonant pattern',
-      flashcardIds: ['38', '64', '65', '66']
+      flashcardIds: ['38', '64', '65', '66'],
+      highlightPatterns: ['PH']
     },
     {
       id: 'set12',
       name: 'Short vowel U',
       description: 'Words with short vowel U sound',
-      flashcardIds: ['67', '68', '69', '70', '71', '72', '73', '74', '75', '76']
+      flashcardIds: ['67', '68', '69', '70', '71', '72', '73', '74', '75', '76'],
+      highlightPatterns: ['U']
     },
     {
       id: 'set13',
@@ -1771,67 +1914,78 @@ export class FlashcardService {
       id: 'set14',
       name: 'Consonant pattern: KN',
       description: 'Words with KN consonant pattern',
-      flashcardIds: ['98', '99', '100', '101']
+      flashcardIds: ['98', '99', '100', '101'],
+      highlightPatterns: ['KN']
     },
     {
       id: 'set15',
       name: 'Consonant pattern: TCH',
       description: 'Words with TCH consonant pattern',
-      flashcardIds: ['102', '103', '104', '105']
+      flashcardIds: ['102', '103', '104', '105'],
+      highlightPatterns: ['TCH']
     },
     {
       id: 'set16',
       name: 'Consonant pattern: MB',
       description: 'Words with MB consonant pattern',
-      flashcardIds: ['106', '107', '108', '109']
+      flashcardIds: ['106', '107', '108', '109'],
+      highlightPatterns: ['MB']
     },
     {
       id: 'set17',
       name: 'Consonant pattern: WR',
       description: 'Words with WR consonant pattern',
-      flashcardIds: ['110', '111', '112', '113']
+      flashcardIds: ['110', '111', '112', '113'],
+      highlightPatterns: ['WR']
     },
     {
       id: 'set18',
       name: 'Long Vowel AI / AY',
       description: 'Words with long vowel A sound spelled ai or ay',
-      flashcardIds: ['114', '115', '116', '117', '118', '119', '120', '121']
+      flashcardIds: ['114', '115', '116', '117', '118', '119', '120', '121'],
+      highlightPatterns: ['AI', 'AY']
     },
     {
       id: 'set19',
       name: 'Long Vowel A_E',
       description: 'Words with long vowel A sound',
-      flashcardIds: ['122', '123', '124', '125', '126', '127', '128', '129']
+      flashcardIds: ['122', '123', '124', '125', '126', '127', '128', '129'],
+      highlightPatterns: ['A', 'E']
     },
     {
       id: 'set20',
       name: 'Letter Dd',
       description: 'Words with Dd sound (beginning, middle, and ending)',
-      flashcardIds: ['130', '131', '132', '4', '16', '133', '134', '135', '136', '137', '138']
+      flashcardIds: ['130', '131', '132', '4', '16', '133', '134', '135', '136', '137', '138'],
+      highlightPatterns: ['D']
     },
     {
       id: 'set21',
       name: 'Letter Gg',
       description: 'Words with Gg sound (beginning, middle, and ending)',
-      flashcardIds: ['139', '140', '141', '142', '143', '144', '145', '68', '4']
+      flashcardIds: ['139', '140', '141', '142', '143', '144', '145', '68', '4'],
+      highlightPatterns: ['G']
     },
     {
       id: 'set22',
       name: 'Letter Oo',
       description: 'Words with Oo sound (beginning and middle)',
-      flashcardIds: ['146', '147', '148', '149', '12', '150']
+      flashcardIds: ['146', '147', '148', '149', '12', '150'],
+      highlightPatterns: ['O']
     },
     {
       id: 'set23',
       name: 'Consonant pattern: G',
       description: 'Words with G consonant pattern (hard and soft G)',
-      flashcardIds: ['151', '152', '153', '154', '155', '156', '157', '158']
+      flashcardIds: ['151', '152', '153', '154', '155', '156', '157', '158'],
+      highlightPatterns: ['G']
     },
     {
       id: 'set24',
       name: 'Consonant pattern: C',
       description: 'Words with C consonant pattern (hard and soft C)',
-      flashcardIds: ['159', '160', '161', '162', '163', '164', '165', '166']
+      flashcardIds: ['159', '160', '161', '162', '163', '164', '165', '166'],
+      highlightPatterns: ['C']
     },
     {
       id: 'set25',
@@ -1843,13 +1997,15 @@ export class FlashcardService {
       id: 'set26',
       name: 'Long vowel: ea',
       description: 'Words with long vowel EA sound',
-      flashcardIds: ['177', '178', '179', '180', '181', '182', '183', '184']
+      flashcardIds: ['177', '178', '179', '180', '181', '182', '183', '184'],
+      highlightPatterns: ['EA']
     },
     {
       id: 'set27',
       name: 'Long vowel: ee',
       description: 'Words with long vowel EE sound',
-      flashcardIds: ['185', '186', '187', '188', '189', '190', '191', '192']
+      flashcardIds: ['185', '186', '187', '188', '189', '190', '191', '192'],
+      highlightPatterns: ['EE']
     },
     {
       id: 'set28',
@@ -1867,67 +2023,78 @@ export class FlashcardService {
       id: 'set30',
       name: 'Vowel patterns: oi, oy',
       description: 'Words with oi and oy vowel patterns',
-      flashcardIds: ['207', '208', '209', '210', '211', '212', '213', '214']
+      flashcardIds: ['207', '208', '209', '210', '211', '212', '213', '214'],
+      highlightPatterns: ['OI', 'OY']
     },
     {
       id: 'set31',
       name: 'Vowel patterns: ou and ow',
       description: 'Words with ou and ow vowel patterns',
-      flashcardIds: ['215', '216', '217', '218', '219', '220', '221', '222']
+      flashcardIds: ['215', '216', '217', '218', '219', '220', '221', '222'],
+      highlightPatterns: ['OU', 'OW']
     },
     {
       id: 'set32',
       name: 'Letter Uu',
       description: 'Words with Uu sound (beginning and middle)',
-      flashcardIds: ['223', '224', '225', '226', '227', '2', '70']
+      flashcardIds: ['223', '224', '225', '226', '227', '2', '70'],
+      highlightPatterns: ['U']
     },
     {
       id: 'set33',
       name: 'Letter Ll',
       description: 'Words with Ll sound (beginning and middle)',
-      flashcardIds: ['228', '229', '230', '231', '232', '233', '234', '235']
+      flashcardIds: ['228', '229', '230', '231', '232', '233', '234', '235'],
+      highlightPatterns: ['L']
     },
     {
       id: 'set34',
       name: 'Letter Bb',
       description: 'Letter name & sound intro: Bb – beginning, middle, and ending sounds',
-      flashcardIds: ['237', '238', '239', '240', '241', '138', '37', '242', '32', '243', '244', '245']
+      flashcardIds: ['237', '238', '239', '240', '241', '138', '37', '242', '32', '243', '244', '245'],
+      highlightPatterns: ['B']
     },
     {
       id: 'set35',
       name: 'Letter Jj',
       description: 'Letter name & sound intro: Jj – beginning sounds',
-      flashcardIds: ['246', '247', '248']
+      flashcardIds: ['246', '247', '248'],
+      highlightPatterns: ['J']
     },
     {
       id: 'set36',
       name: 'Letter Ww',
       description: 'Letter name & sound intro: Ww – beginning and middle sounds',
-      flashcardIds: ['249', '250', '251', '243', '252', '253', '254']
+      flashcardIds: ['249', '250', '251', '243', '252', '253', '254'],
+      highlightPatterns: ['W']
     },
     {
       id: 'set37',
       name: 'Long vowel: o_e',
       description: 'Words with long vowel O sound (silent e pattern)',
-      flashcardIds: ['255', '256', '257', '258', '259', '260', '261', '262']
+      flashcardIds: ['255', '256', '257', '258', '259', '260', '261', '262'],
+      highlightPatterns: ['O', 'E']
     },
     {
       id: 'set38',
       name: 'Vowel pattern: oo',
       description: 'Words with oo vowel pattern',
-      flashcardIds: ['263', '9', '264', '265', '266', '267', '268', '269']
+      flashcardIds: ['263', '9', '264', '265', '266', '267', '268', '269'],
+      highlightPatterns: ['OO']
     },
     {
       id: 'set39',
       name: 'Vowel patterns: au, aw',
       description: 'Words with au and aw vowel patterns',
-      flashcardIds: ['270', '271', '272', '273', '274', '275', '276', '277']
+      flashcardIds: ['270', '271', '272', '273', '274', '275', '276', '277'],
+      highlightPatterns: ['AU', 'AW']
     },
     {
       id: 'set40',
       name: 'Vowel pattern: ar',
       description: 'Words with ar vowel pattern',
-      flashcardIds: ['278', '279', '280', '281']
+      flashcardIds: ['278', '279', '280', '281'],
+      highlightPatterns: ['AR']
     },
     {
       id: 'set41',
@@ -1939,13 +2106,15 @@ export class FlashcardService {
       id: 'set42',
       name: 'Vowel pattern: ar, or',
       description: 'Vocabulary from photo set: fork, corn, barn, farm, porch, north, cart, yard',
-      flashcardIds: ['298', '299', '281', '278', '300', '301', '279', '280']
+      flashcardIds: ['298', '299', '281', '278', '300', '301', '279', '280'],
+      highlightPatterns: ['AR', 'OR']
     },
     {
       id: 'set43',
       name: 'Vowel patterns: air, are, ear',
       description: 'Words with air, are, and ear vowel patterns',
-      flashcardIds: ['302', '303', '304', '305', '306', '307', '308', '287', '309']
+      flashcardIds: ['302', '303', '304', '305', '306', '307', '308', '287', '309'],
+      highlightPatterns: ['AIR', 'ARE', 'EAR']
     },
     {
       id: 'set44',
@@ -1957,13 +2126,28 @@ export class FlashcardService {
       id: 'set45',
       name: 'Long vowel: u_e',
       description: 'Words with long vowel U sound (silent e pattern)',
-      flashcardIds: ['315', '316', '317', '318', '319', '320', '321', '322']
+      flashcardIds: ['315', '316', '317', '318', '319', '320', '321', '322'],
+      highlightPatterns: ['U', 'E']
     },
     {
       id: 'set46',
       name: 'Review short vowel a',
       description: 'Review vocabulary with short vowel A sound',
-      flashcardIds: ['3', '323', '324', '325', '326', '327', '312']
+      flashcardIds: ['3', '323', '324', '325', '326', '327', '312'],
+      highlightPatterns: ['A']
+    },
+    {
+      id: 'set47',
+      name: 'Review short vowel e',
+      description: 'Review vocabulary with short vowel E sound',
+      flashcardIds: ['328', '329', '330', '331', '332', '252', '333', '243', '334', '137', '335', '336', '337', '338', '231'],
+      highlightPatterns: ['E']
+    },
+    {
+      id: 'set48',
+      name: 'Classroom',
+      description: 'Classroom rules and activity corner vocabulary',
+      flashcardIds: ['339', '340', '341', '342', '343', '344', '345', '346', '347', '348', '349', '350', '351', '352', '353', '354']
     },
     // {
     //   id: 'set18',
@@ -1983,8 +2167,15 @@ export class FlashcardService {
 
   constructor() { }
 
+  private normalizeFlashcard(flashcard: Flashcard): Flashcard {
+    return {
+      ...flashcard,
+      caption: flashcard.caption.toUpperCase()
+    };
+  }
+
   getAllFlashcards(): Flashcard[] {
-    return [...this.flashcards];
+    return this.flashcards.map(flashcard => this.normalizeFlashcard(flashcard));
   }
 
   getAllSets(): FlashcardSet[] {
@@ -1996,7 +2187,9 @@ export class FlashcardService {
     if (!set) {
       return [];
     }
-    return this.flashcards.filter(flashcard => set.flashcardIds.includes(flashcard.id));
+    return this.flashcards
+      .filter(flashcard => set.flashcardIds.includes(flashcard.id))
+      .map(flashcard => this.normalizeFlashcard(flashcard));
   }
 
   getFlashcardsBySetIds(setIds: string[]): Flashcard[] {
@@ -2020,5 +2213,19 @@ export class FlashcardService {
 
     // Convert map values to array
     return Array.from(uniqueFlashcards.values());
+  }
+
+  getHighlightPatternsForFlashcard(flashcardId: string, sets: FlashcardSet[]): string[] | undefined {
+    const patterns = new Set<string>();
+
+    for (const set of sets) {
+      if (!set.highlightPatterns?.length || !set.flashcardIds.includes(flashcardId)) {
+        continue;
+      }
+
+      set.highlightPatterns.forEach(pattern => patterns.add(pattern.toUpperCase()));
+    }
+
+    return patterns.size > 0 ? Array.from(patterns) : undefined;
   }
 }

@@ -34,12 +34,12 @@ export class PrizeService {
     {
       id: '6',
       caption: 'Cinnamoroll',
-      imageUrl: 'https://cdn.sanriowiki.com/2/23/Cinnamoroll.png'
+      imageUrl: 'https://cdn11.bigcommerce.com/s-89ffd/images/stencil/728x728/products/135656/487496/4550337234631_c86577c2c22ae8838e11b2178dc7babf__96693.1695266504.jpg?c=2'
     },
     {
       id: '7',
       caption: 'Kuromi',
-      imageUrl: 'https://m.media-amazon.com/images/I/31ftiZ+4zpL._SS400_.jpg'
+      imageUrl: 'https://cdn11.bigcommerce.com/s-miruu5f5ec/images/stencil/728x728/products/2021/12325/Sanrio-Kuromi-Plush-Medium-1__20045.1671057507.jpg?c=2'
     },
     {
       id: '8',
@@ -49,7 +49,7 @@ export class PrizeService {
     {
       id: '9',
       caption: 'Robot',
-      imageUrl: 'https://media.istockphoto.com/id/1927293012/vector/cute-yellow-and-blue-robot.jpg?s=612x612&w=0&k=20&c=yz-GVpHq_IRpLfFnDRhXs0GpNiJMeA0oR8eIY2KI7yY='
+      imageUrl: 'https://www.thelittlelearnerstoys.com/cdn/shop/files/robby-the-robot-interactive-toy-1.jpg?v=1762847960'
     },
     {
       id: '10',
@@ -64,7 +64,7 @@ export class PrizeService {
     {
       id: '12',
       caption: 'Slime',
-      imageUrl: 'https://m.media-amazon.com/images/I/61zNHy52lZL._AC_UF894,1000_QL80_.jpg'
+      imageUrl: 'https://www.crazyaarons.com/cdn/shop/files/CosmicMatter_Dripping.jpg?v=1775225944&width=1445'
     },
     {
       id: '13',
@@ -79,7 +79,7 @@ export class PrizeService {
     {
       id: '15',
       caption: 'LOL Doll',
-      imageUrl: 'https://image.smythstoys.com/original/mobile/243709.webp'
+      imageUrl: 'https://shop.mgae.com/cdn/shop/files/567523-Princess-Baby-Sistersx.jpg?v=1761326487&width=800'
     },
     {
       id: '16',
@@ -109,7 +109,7 @@ export class PrizeService {
     {
       id: '21',
       caption: 'Lego Set',
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_7OyOeOKsuWTSvsUODPSJGEtPr32E_F-tBw&s'
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7eD7nXRv4nNC9YadahKsD9BqhdyItjg2Itg&s'
     },
     {
       id: '22',
@@ -124,12 +124,12 @@ export class PrizeService {
     {
       id: '24',
       caption: 'Puzzle',
-      imageUrl: 'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_500/store/software/switch/70010000046736/7de12a1e2afb905cc4e62721ac8c22d313544a4e9f5a3df4920a741104442aa8'
+      imageUrl: 'https://www.arjoos.com/cdn/shop/files/Frank-Disney-Frozen-Jigsaw--Puzzle-1.jpg?v=1718021319&width=1445'
     },
     {
       id: '25',
       caption: 'Mickey Mouse',
-      imageUrl: 'https://cdn.ecommercedns.uk/files/4/247674/3/53143433/animasorc-g.jpg'
+      imageUrl: 'https://www.mykingdom.com.vn/cdn/shop/products/ag2101021_02.jpg?v=1724298294&width=600'
     },
     {
       id: '26',
@@ -155,6 +155,91 @@ export class PrizeService {
       id: '30',
       caption: 'Pickaxe',
       imageUrl: 'https://i5.walmartimages.com/seo/Minecraft-Diamond-Foam-Pickaxe-Exclusive_a8f35304-e644-45c9-84a7-1b55bb82f19f.a24c0e8dc764fb51f2d8fa3cb0a56099.jpeg'
+    },
+    {
+      id: '31',
+      caption: 'Barbie',
+      imageUrl: 'https://www.mykingdom.com.vn/cdn/shop/products/hcn46_6.jpg'
+    },
+    {
+      id: '32',
+      caption: 'Minecraft',
+      imageUrl: 'https://bizweb.dktcdn.net/thumb/grande/100/096/240/products/332889021114-1.jpg?v=1465878381727'
+    },
+    {
+      id: '34',
+      caption: 'Mermaid Doll',
+      imageUrl: 'https://m.media-amazon.com/images/I/71peXjYVrIL._AC_UF894,1000_QL80_.jpg'
+    },
+    {
+      id: '35',
+      caption: 'Donald Duck',
+      imageUrl: 'https://www.kidrobot.com/cdn/shop/products/disney-donald-duck-7-5-phunny-plush-by-kidrobot-default-title-plush-21180216737889.jpg?v=1774436055'
+    },
+    {
+      id: '36',
+      caption: 'Bratz',
+      imageUrl: 'https://media.very.ie/i/littlewoodsireland/WONUA_SQ1_0000000099_N_A_SLf?$pdp_300x400_x2$&fmt=jpg'
+    },
+    {
+      id: '37',
+      caption: 'Matcha Bubble Tea',
+      imageUrl: 'https://down-vn.img.susercontent.com/file/6c761edfe7c1456cb97fa57c32a1ac6e'
+    },
+    {
+      id: '38',
+      caption: 'Play Doh Ice Maker',
+      imageUrl: 'https://static01.galaxus.com/productimages/8/8/6/7/8/3/0/1/9/3/6/0/1/3/2/6/9/7/5/6db5b771-6fbf-49a5-97e7-b9518ac1cc97_cropped.jpg_720.jpeg'
+    },
+    {
+      id: '39',
+      caption: 'Peppa Pig Backpack',
+      imageUrl: 'https://bonbonsbabywear.co.uk/cdn/shop/files/peppapiglovekidsbackpack.png?v=1713435896'
+    },
+    {
+      id: '40',
+      caption: 'Dinosaurs with Kids Toys',
+      imageUrl: 'https://m.media-amazon.com/images/I/51OJiz1JuaL._SL500_.jpg'
+    },
+    {
+      id: '41',
+      caption: 'Squishmallow',
+      imageUrl: 'https://netjatek.hu/images/common/products/large/26/41/264155-1-squishmallows-miriam-pluche-20-cm-1742379110943674.webp'
+    },
+    {
+      id: '42',
+      caption: 'Bluey Toy',
+      imageUrl: 'https://m.media-amazon.com/images/I/71uNwW3XAaL._AC_UF894,1000_QL80_.jpg'
+    },
+    {
+      id: '43',
+      caption: 'Dinosaur Digging',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-S0_cYaIEeg0RNV6Gg4hvX3mdI87NVn2FNg&s'
+    },
+    {
+      id: '44',
+      caption: 'Dinosaur Egg',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0KfQezepOxA9J2LIT7Si2_ubng_KjBLvYg&s'
+    },
+    {
+      id: '45',
+      caption: 'Doctor Playset',
+      imageUrl: 'https://i5.walmartimages.com/seo/Battat-Mini-Medic-Doctor-Plastic-Play-Set-with-10pcs-and-Storage-Bag-Toddler-and-Preschool-Toys_bd66b768-8021-4c94-bb17-f5b6c926292a.360df755d9898fda8f879b2570b05a9c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF'
+    },
+    {
+      id: '46',
+      caption: 'Building Blocks',
+      imageUrl: 'https://kidsroar.in/cdn/shop/products/500-pieces-building-bricks-bulk-blocks-toy-big-pack-of-basic-original-imag3ayscjfqvja2_416x.webp?v=1676706200'
+    },
+    {
+      id: '47',
+      caption: 'Number Blocks',
+      imageUrl: 'https://i.etsystatic.com/23407641/r/il/a6ca66/3712890992/il_1080xN.3712890992_vqrd.jpg'
+    },
+    {
+      id: '48',
+      caption: '100 Points',
+      imageUrl: 'https://thumb.ac-illust.com/41/41e2dea8364c2f22f72cc3227c4f2af8_t.jpeg'
     }
   ];
 

@@ -3,5 +3,6 @@ export interface FlashcardSet {
   name: string;
   description: string;
   flashcardIds: string[];
+  highlightPatterns?: string[];
 }
 

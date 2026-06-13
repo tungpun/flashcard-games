@@ -23,7 +23,12 @@
   <div *ngIf="selectedSets.length > 0 && !gameComplete && getCurrentQuestion()" class="game-content">
     <div class="word-display">
       <h3 class="word-label">Which image matches this word?</h3>
-      <div class="word-text">{{ getCurrentQuestion()!.word }}</div>
+      <div class="word-text">
+        <fg-highlighted-caption
+          [caption]="getCurrentQuestion()!.word"
+          [patterns]="getHighlightPatterns(getCurrentQuestion()!.correctFlashcard.id)">
+        </fg-highlighted-caption>
+      </div>
     </div>
 
     <div class="flashcards-grid">
@@ -45,7 +50,13 @@
       <div [class]="'message ' + (isCorrect ? 'correct' : 'incorrect')">
         <p *ngIf="isCorrect">🎉 Correct! Great job!</p>
         <p *ngIf="!isCorrect">
-          ❌ Wrong. The correct answer is: <strong>{{ getCurrentQuestion()!.correctFlashcard.caption }}</strong>
+          ❌ Wrong. The correct answer is:
+          <strong>
+            <fg-highlighted-caption
+              [caption]="getCurrentQuestion()!.correctFlashcard.caption"
+              [patterns]="getHighlightPatterns(getCurrentQuestion()!.correctFlashcard.id)">
+            </fg-highlighted-caption>
+          </strong>
         </p>
       </div>
       <button class="next-button" (click)="nextQuestion()" type="button">
