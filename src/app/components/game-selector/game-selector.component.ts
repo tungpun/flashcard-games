@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { GamePlayHistoryService } from '../../services/game-play-history.service';
 
 interface Game {
   id: string;
@@ -17,8 +18,8 @@ interface Game {
   templateUrl: './game-selector.component.html',
   styleUrl: './game-selector.component.scss'
 })
-export class GameSelectorComponent {
-  games: Game[] = [
+export class GameSelectorComponent implements OnInit {
+  private readonly catalog: Game[] = [
     {
       id: 'matching',
       name: 'Matching Game',
@@ -87,19 +88,47 @@ export class GameSelectorComponent {
     }
   ];
 
+  games: Game[] = [];
+
   constructor(
-    private router: Router
+    private router: Router,
+    private gamePlayHistory: GamePlayHistoryService
   ) {}
 
+  ngOnInit(): void {
+    this.games = this.sortGamesByLastPlayed(this.catalog);
+  }
+
   selectGame(game: Game): void {
-    // Navigate to flashcard set selector with gameId
+    this.gamePlayHistory.recordGameClick(game.id);
     this.router.navigate(['/sets', game.id, 'select']);
   }
 
   goBack(): void {
-    // Already on home page, so no back navigation needed
-    // This method kept for consistency, but won't be used since we're on the home page
     this.router.navigate(['/']);
   }
 
+  private sortGamesByLastPlayed(games: Game[]): Game[] {
+    const lastPlayed = this.gamePlayHistory.getAll();
+    const catalogOrder = new Map(games.map((game, index) => [game.id, index]));
+
+    return [...games].sort((a, b) => {
+      const aTime = lastPlayed[a.id];
+      const bTime = lastPlayed[b.id];
+      const aPlayed = aTime != null;
+      const bPlayed = bTime != null;
+
+      if (aPlayed && bPlayed) {
+        return bTime - aTime;
+      }
+      if (aPlayed) {
+        return -1;
+      }
+      if (bPlayed) {
+        return 1;
+      }
+
+      return (catalogOrder.get(a.id) ?? 0) - (catalogOrder.get(b.id) ?? 0);
+    });
+  }
 }
