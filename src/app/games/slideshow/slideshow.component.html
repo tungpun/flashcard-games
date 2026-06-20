@@ -24,17 +24,18 @@
     (restart)="restartGame()">
   </fg-game-completion>
 
-  <div *ngIf="selectedSets.length > 0 && !gameComplete && !noFlashcards && getCurrentFlashcard()" class="game-content">
+  <div *ngIf="selectedSets.length > 0 && !gameComplete && !noFlashcards && currentFlashcard" class="game-content">
     <div class="word-image">
       <img
-        [src]="getCurrentFlashcard()!.imageUrl"
-        [alt]="getCurrentFlashcard()!.caption" />
+        [src]="currentFlashcard.imageUrl"
+        [alt]="currentFlashcard.caption"
+        [attr.data-slide-index]="currentIndex" />
     </div>
 
     <h3 class="caption">
       <fg-highlighted-caption
-        [caption]="getCurrentFlashcard()!.caption"
-        [patterns]="getHighlightPatterns(getCurrentFlashcard()!.id)">
+        [caption]="currentFlashcard.caption"
+        [patterns]="getHighlightPatterns(currentFlashcard.id)">
       </fg-highlighted-caption>
     </h3>
 

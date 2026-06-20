@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
 import { FlashcardSet, Flashcard } from '../../models';
 import { FlashcardService } from '../../services/flashcard.service';
 import { CommonModule } from '@angular/common';
@@ -17,6 +17,7 @@ export class SlideshowComponent implements OnInit {
   selectedSets: FlashcardSet[] = [];
   flashcards: Flashcard[] = [];
   currentIndex: number = 0;
+  currentFlashcard: Flashcard | null = null;
   gameComplete: boolean = false;
   noFlashcards: boolean = false;
   gameId: string = '';
@@ -24,7 +25,8 @@ export class SlideshowComponent implements OnInit {
   constructor(
     private flashcardService: FlashcardService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -62,13 +64,23 @@ export class SlideshowComponent implements OnInit {
     this.noFlashcards = this.flashcards.length === 0;
     this.currentIndex = 0;
     this.gameComplete = false;
+    this.syncCurrentFlashcard();
+    this.refreshView();
   }
 
-  getCurrentFlashcard(): Flashcard | null {
-    if (this.currentIndex < this.flashcards.length) {
-      return this.flashcards[this.currentIndex];
-    }
-    return null;
+  private syncCurrentFlashcard(): void {
+    this.currentFlashcard =
+      this.currentIndex < this.flashcards.length ? this.flashcards[this.currentIndex] : null;
+  }
+
+  /** Extra CD passes help embedded TV browsers repaint <img> after src changes. */
+  private refreshView(): void {
+    this.cdr.markForCheck();
+    this.cdr.detectChanges();
+    requestAnimationFrame(() => {
+      this.cdr.markForCheck();
+      this.cdr.detectChanges();
+    });
   }
 
   get canGoPrevious(): boolean {
@@ -80,9 +92,11 @@ export class SlideshowComponent implements OnInit {
   }
 
   goPrevious(): void {
-    if (this.canGoPrevious) {
-      this.currentIndex--;
-    }
+    if (!this.canGoPrevious) return;
+
+    this.currentIndex--;
+    this.syncCurrentFlashcard();
+    this.refreshView();
   }
 
   goNext(): void {
@@ -90,9 +104,12 @@ export class SlideshowComponent implements OnInit {
 
     if (this.currentIndex >= this.flashcards.length - 1) {
       this.gameComplete = true;
+      this.currentFlashcard = null;
     } else {
       this.currentIndex++;
+      this.syncCurrentFlashcard();
     }
+    this.refreshView();
   }
 
   restartGame(): void {
