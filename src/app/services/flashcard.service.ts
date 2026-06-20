@@ -1828,6 +1828,191 @@ export class FlashcardService {
       id: '354',
       caption: 'role play corner',
       imageUrl: 'images/flashcards/354-role-play-corner.png'
+    },
+
+    // Review short vowel i
+    {
+      id: '355',
+      caption: 'big',
+      imageUrl: 'images/flashcards/355-big.png'
+    },
+    {
+      id: '356',
+      caption: 'pig',
+      imageUrl: 'images/flashcards/356-pig.png'
+    },
+    {
+      id: '357',
+      caption: 'sit',
+      imageUrl: 'images/flashcards/357-sit.png'
+    },
+    {
+      id: '358',
+      caption: 'pit',
+      imageUrl: 'images/flashcards/358-pit.png'
+    },
+    {
+      id: '359',
+      caption: 'kid',
+      imageUrl: 'images/flashcards/359-kid.png'
+    },
+    {
+      id: '360',
+      caption: 'bin',
+      imageUrl: 'images/flashcards/360-bin.png'
+    },
+    {
+      id: '361',
+      caption: 'fig',
+      imageUrl: 'images/flashcards/361-fig.png'
+    },
+    {
+      id: '362',
+      caption: 'tip',
+      imageUrl: 'images/flashcards/362-tip.png'
+    },
+    {
+      id: '363',
+      caption: 'rip',
+      imageUrl: 'images/flashcards/363-rip.png'
+    },
+    {
+      id: '364',
+      caption: 'hit',
+      imageUrl: 'images/flashcards/364-hit.png'
+    },
+    {
+      id: '365',
+      caption: 'gift',
+      imageUrl: 'images/flashcards/365-gift.png'
+    },
+    {
+      id: '366',
+      caption: 'twin',
+      imageUrl: 'images/flashcards/366-twin.png'
+    },
+    {
+      id: '367',
+      caption: 'trip',
+      imageUrl: 'images/flashcards/367-trip.png'
+    },
+    {
+      id: '368',
+      caption: 'slip',
+      imageUrl: 'images/flashcards/368-slip.png'
+    },
+    {
+      id: '369',
+      caption: 'flip',
+      imageUrl: 'images/flashcards/369-flip.png'
+    },
+
+    // Learning Corner
+    {
+      id: '370',
+      caption: 'pencil',
+      imageUrl: 'images/flashcards/370-pencil.png'
+    },
+    {
+      id: '371',
+      caption: 'crayon',
+      imageUrl: 'images/flashcards/371-crayon.png'
+    },
+    {
+      id: '372',
+      caption: 'glue',
+      imageUrl: 'images/flashcards/372-glue.png'
+    },
+    {
+      id: '373',
+      caption: 'scissors',
+      imageUrl: 'images/flashcards/373-scissors.png'
+    },
+    {
+      id: '374',
+      caption: 'write the letter',
+      imageUrl: 'images/flashcards/374-write-the-letter.png'
+    },
+    {
+      id: '375',
+      caption: 'do homework',
+      imageUrl: 'images/flashcards/375-do-homework.png'
+    },
+
+    // Reading Corner
+    {
+      id: '376',
+      caption: 'bookshelf',
+      imageUrl: 'images/flashcards/376-bookshelf.png'
+    },
+    {
+      id: '377',
+      caption: 'story books',
+      imageUrl: 'images/flashcards/377-story-books.png'
+    },
+    {
+      id: '378',
+      caption: 'table',
+      imageUrl: 'images/flashcards/378-table.png'
+    },
+    {
+      id: '379',
+      caption: 'read a book',
+      imageUrl: 'images/flashcards/379-read-a-book.png'
+    },
+    {
+      id: '380',
+      caption: 'listen to the story',
+      imageUrl: 'images/flashcards/380-listen-to-the-story.png'
+    },
+    {
+      id: '381',
+      caption: 'tell the story',
+      imageUrl: 'images/flashcards/381-tell-the-story.png'
+    },
+
+    // Building Corner
+    {
+      id: '382',
+      caption: 'blocks',
+      imageUrl: 'images/flashcards/382-blocks.png'
+    },
+    {
+      id: '383',
+      caption: 'bricks',
+      imageUrl: 'images/flashcards/383-bricks.png'
+    },
+    {
+      id: '384',
+      caption: 'safety helmet',
+      imageUrl: 'images/flashcards/384-safety-helmet.png'
+    },
+    {
+      id: '385',
+      caption: 'build the house',
+      imageUrl: 'images/flashcards/385-build-the-house.png'
+    },
+    {
+      id: '386',
+      caption: 'build the bridge',
+      imageUrl: 'images/flashcards/386-build-the-bridge.png'
+    },
+
+    // Music Corner
+    {
+      id: '387',
+      caption: 'musical instruments',
+      imageUrl: 'images/flashcards/387-musical-instruments.png'
+    },
+    {
+      id: '388',
+      caption: 'play the musical instruments',
+      imageUrl: 'images/flashcards/388-play-the-musical-instruments.png'
+    },
+    {
+      id: '389',
+      caption: 'sing a song',
+      imageUrl: 'images/flashcards/389-sing-a-song.png'
     }
   ];
 
@@ -2148,6 +2333,37 @@ export class FlashcardService {
       name: 'Classroom',
       description: 'Classroom rules and activity corner vocabulary',
       flashcardIds: ['339', '340', '341', '342', '343', '344', '345', '346', '347', '348', '349', '350', '351', '352', '353', '354']
+    },
+    {
+      id: 'set49',
+      name: 'Review short vowel i',
+      description: 'Review vocabulary with short vowel I sound',
+      flashcardIds: ['355', '356', '357', '358', '359', '360', '361', '362', '136', '363', '364', '365', '366', '367', '368', '369'],
+      highlightPatterns: ['I']
+    },
+    {
+      id: 'set50',
+      name: 'Learning Corner',
+      description: 'Objects and activities in the learning corner',
+      flashcardIds: ['79', '370', '371', '372', '373', '374', '375']
+    },
+    {
+      id: 'set51',
+      name: 'Reading Corner',
+      description: 'Objects and activities in the reading corner',
+      flashcardIds: ['376', '377', '304', '378', '379', '380', '381']
+    },
+    {
+      id: 'set52',
+      name: 'Building Corner',
+      description: 'Objects and activities in the building corner',
+      flashcardIds: ['382', '383', '384', '385', '386']
+    },
+    {
+      id: 'set53',
+      name: 'Music Corner',
+      description: 'Objects and activities in the music corner',
+      flashcardIds: ['387', '388', '389']
     },
     // {
     //   id: 'set18',
