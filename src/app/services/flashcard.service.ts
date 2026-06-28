@@ -2013,6 +2013,83 @@ export class FlashcardService {
       id: '389',
       caption: 'sing a song',
       imageUrl: 'images/flashcards/389-sing-a-song.png'
+    },
+
+    // Disneyland
+    {
+      id: '390',
+      caption: 'castle',
+      imageUrl: 'images/flashcards/390-castle.png'
+    },
+    {
+      id: '391',
+      caption: 'park',
+      imageUrl: 'images/flashcards/391-park.png'
+    },
+    {
+      id: '392',
+      caption: 'princess',
+      imageUrl: 'images/flashcards/392-princess.png'
+    },
+    {
+      id: '393',
+      caption: 'prince',
+      imageUrl: 'images/flashcards/393-prince.png'
+    },
+    {
+      id: '394',
+      caption: 'fairy',
+      imageUrl: 'images/flashcards/394-fairy.png'
+    },
+    {
+      id: '395',
+      caption: 'Mickey & Minnie Mouse',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSAhNqyUvxbG9_iNWBrVKNWElQoAFnGRnEw&s'
+    },
+    {
+      id: '396',
+      caption: 'Donald Duck',
+      imageUrl: 'https://i.pinimg.com/736x/13/6c/13/136c13f7425cae5d3bf71b5bf8a41f6f.jpg'
+    },
+    {
+      id: '397',
+      caption: 'Elsa',
+      imageUrl: 'https://i.pinimg.com/564x/13/7d/1f/137d1fed5fff4104910e162fdccd1479.jpg'
+    },
+    {
+      id: '398',
+      caption: 'Anna',
+      imageUrl: 'https://i.pinimg.com/736x/87/31/34/873134247dd1b8074c4585ea402ac56c.jpg'
+    },
+    {
+      id: '399',
+      caption: 'Cinderella',
+      imageUrl: 'https://easydrawingguides.com/wp-content/uploads/2019/07/how-to-draw-cinderella-featured-image-1200.png'
+    },
+    {
+      id: '400',
+      caption: 'Moana',
+      imageUrl: 'https://cdn.displate.com/artwork/857x1200/2024-08-13/9e0a69f50a0888adf15f4cd781d710a6_16b927cc2332ca6b5515bb5141cc1e23.jpg'
+    },
+    {
+      id: '401',
+      caption: 'Judy',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7iLCJJYZJ31E9mXZ6I9Gi2UmE1sVd8lsRmQ&s'
+    },
+    {
+      id: '402',
+      caption: 'Belle',
+      imageUrl: 'https://i.pinimg.com/736x/99/65/ab/9965abc1cea322ecb6ea4f764691268d.jpg'
+    },
+    {
+      id: '403',
+      caption: 'Beast',
+      imageUrl: 'https://i.pinimg.com/474x/d3/00/c5/d300c5ad0e6079941b483ac19e7ce100.jpg'
+    },
+    {
+      id: '404',
+      caption: 'Snow White',
+      imageUrl: 'https://e7.pngegg.com/pngimages/115/558/png-clipart-snow-white-illustration-snow-white-dress-at-the-movies-cartoons.png'
     }
   ];
 
@@ -2364,6 +2441,12 @@ export class FlashcardService {
       name: 'Music Corner',
       description: 'Objects and activities in the music corner',
       flashcardIds: ['387', '388', '389']
+    },
+    {
+      id: 'set54',
+      name: 'Disneyland',
+      description: 'Disneyland places and characters vocabulary',
+      flashcardIds: ['390', '391', '392', '393', '394', '395', '396', '397', '398', '399', '400', '401', '402', '403', '404']
     },
     // {
     //   id: 'set18',
