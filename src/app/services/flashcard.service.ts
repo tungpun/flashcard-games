@@ -236,7 +236,7 @@ export class FlashcardService {
     {
       id: '46',
       caption: 'Loop',
-      imageUrl: 'https://www.publicdomainpictures.net/pictures/200000/nahled/footprints-logo-circle.jpg'
+      imageUrl: 'images/flashcards/46-loop.png'
     },
     {
       id: '47',
@@ -1443,7 +1443,7 @@ export class FlashcardService {
     {
       id: '280',
       caption: 'yard',
-      imageUrl: 'https://www.shutterstock.com/image-vector/school-teacher-cute-students-chatting-600w-2640530591.jpg'
+      imageUrl: 'images/flashcards/280-yard.png'
     },
     {
       id: '281',
