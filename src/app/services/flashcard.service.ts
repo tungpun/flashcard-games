@@ -296,7 +296,7 @@ export class FlashcardService {
     {
       id: '54',
       caption: 'Blank',
-      imageUrl: 'https://freedesignfile.com/upload/2016/12/Cartoon-school-children-with-blank-paper-vector-05.jpg'
+      imageUrl: 'images/flashcards/54-blank.png'
     },
     {
       id: '55',
@@ -881,7 +881,7 @@ export class FlashcardService {
     {
       id: '170',
       caption: 'Piano',
-      imageUrl: 'https://freedesignfile.com/image/preview/7100/keyboard-piano-cartoon-drawing-clipart.png'
+      imageUrl: 'images/flashcards/170-piano.png'
     },
     {
       id: '171',
@@ -2090,6 +2090,71 @@ export class FlashcardService {
       id: '404',
       caption: 'Snow White',
       imageUrl: 'https://e7.pngegg.com/pngimages/115/558/png-clipart-snow-white-illustration-snow-white-dress-at-the-movies-cartoons.png'
+    },
+    {
+      id: '405',
+      caption: 'stepmother',
+      imageUrl: 'https://mickeyblog.com/wp-content/uploads/2021/04/A-Wicked-Stepmothers-Side-Of-The-Story-Cinderella-Evil-Stepmother.jpg'
+    },
+    {
+      id: '406',
+      caption: 'stepsisters',
+      imageUrl: 'https://i.pinimg.com/736x/d0/32/8c/d0328c09856014a80c25bab114ce7d93.jpg'
+    },
+    {
+      id: '407',
+      caption: 'fairy Godmother',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Q8aF_SkiMM3AEkPmAn5eF-WKoGceCOBCsW2DrnRB8yJvfRn1BZ0bqtjK&s=10'
+    },
+    {
+      id: '408',
+      caption: 'pumpkin',
+      imageUrl: 'images/flashcards/408-pumpkin.png'
+    },
+    {
+      id: '409',
+      caption: 'lizard',
+      imageUrl: 'images/flashcards/409-lizard.png'
+    },
+    {
+      id: '410',
+      caption: 'mouse',
+      imageUrl: 'images/flashcards/410-mouse.png'
+    },
+    {
+      id: '411',
+      caption: 'carriage',
+      imageUrl: 'https://i.pinimg.com/564x/56/ba/a8/56baa8ed60283a1548fdf09eccd690cc.jpg'
+    },
+    {
+      id: '412',
+      caption: 'driver',
+      imageUrl: 'images/flashcards/412-driver.png'
+    },
+    {
+      id: '413',
+      caption: 'sad',
+      imageUrl: 'images/flashcards/413-sad.png'
+    },
+    {
+      id: '414',
+      caption: 'happy',
+      imageUrl: 'images/flashcards/414-happy.png'
+    },
+    {
+      id: '415',
+      caption: 'beautiful',
+      imageUrl: 'images/flashcards/415-beautiful.png'
+    },
+    {
+      id: '416',
+      caption: 'ugly',
+      imageUrl: 'images/flashcards/416-ugly.png'
+    },
+    {
+      id: '417',
+      caption: 'mean',
+      imageUrl: 'images/flashcards/417-mean.png'
     }
   ];
 
@@ -2447,6 +2512,12 @@ export class FlashcardService {
       name: 'Disneyland',
       description: 'Disneyland places and characters vocabulary',
       flashcardIds: ['390', '391', '392', '393', '394', '395', '396', '397', '398', '399', '400', '401', '402', '403', '404']
+    },
+    {
+      id: 'set55',
+      name: 'Cinderella story',
+      description: 'Cinderella story vocabulary: characters, feelings, and concepts',
+      flashcardIds: ['399', '405', '406', '407', '393', '408', '239', '409', '410', '411', '5', '412', '413', '414', '415', '416', '417']
     },
     // {
     //   id: 'set18',
