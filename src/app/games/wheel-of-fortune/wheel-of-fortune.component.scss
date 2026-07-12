@@ -1,0 +1,332 @@
+.wheel-of-fortune-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  min-height: 600px;
+}
+
+.back-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.game-title {
+  color: #4a90e2;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat {
+  padding: 0.5rem 1rem;
+  background: #e3f2fd;
+  border-radius: 10px;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  flex: 1;
+}
+
+.wheel-stage {
+  position: relative;
+  width: min(100%, 75vh);
+  max-width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointer {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 32px solid #c79100;
+  transform: translateX(-50%) rotate(0deg);
+  transform-origin: 50% 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  will-change: transform;
+
+  &.flick {
+    animation: pointer-flick 0.16s ease-out;
+  }
+}
+
+@keyframes pointer-flick {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  35% {
+    transform: translateX(-50%) rotate(-28deg);
+  }
+  65% {
+    transform: translateX(-50%) rotate(10deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+.wheel {
+  /* Tweak icon distance from rim: smaller = closer to outer edge */
+  --icon-inset: 14%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #311b92;
+  box-shadow: 0 8px 28px rgba(49, 27, 146, 0.35);
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  outline: none;
+
+  &.disabled {
+    cursor: default;
+  }
+
+  &.spinning {
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    box-shadow:
+      0 8px 28px rgba(49, 27, 146, 0.35),
+      0 0 0 3px rgba(94, 53, 177, 0.45);
+  }
+}
+
+/* Full-wheel layer rotated so its top points at the sector midline */
+.sector-spoke {
+  position: absolute;
+  inset: 0;
+  transform: rotate(var(--sector-angle));
+  pointer-events: none;
+}
+
+/* Icon centered on the spoke, near the outer rim */
+.sector-icon {
+  position: absolute;
+  left: 50%;
+  top: var(--icon-inset);
+  z-index: 1;
+  box-sizing: border-box;
+  width: clamp(36px, 11%, 72px);
+  height: clamp(36px, 11%, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* -50%/-50% centers the icon on the point; counter-rotate keeps it upright */
+  transform: translate(-50%, -50%) rotate(calc(var(--sector-angle) * -1));
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.sector-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(1.25rem, 4vw, 2.1rem);
+  line-height: 1;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.wheel-hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffe082, #ffc107 55%, #c79100);
+  border: 1px solid rgba(183, 140, 20, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  color: #555;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.action-button {
+  padding: 0.75rem 1.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.result-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(20, 10, 40, 0.72);
+  cursor: pointer;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 420px;
+  width: 100%;
+  padding: 1.75rem;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  cursor: default;
+}
+
+.result-image {
+  width: min(70vw, 280px);
+  height: min(70vw, 280px);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.result-image-action {
+  background: #f3e5f5;
+}
+
+.result-emoji {
+  font-size: clamp(4rem, 18vw, 7rem);
+  line-height: 1;
+}
+
+.result-kind {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7b1fa2;
+}
+
+.result-caption {
+  margin: 0;
+  text-align: center;
+  font-size: 1.75rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.result-hint {
+  margin: 0;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .wheel-of-fortune-container {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .back-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .game-title {
+    font-size: 1.5rem;
+  }
+
+  .wheel-stage {
+    width: min(100%, 70vh);
+  }
+
+  .result-caption {
+    font-size: 1.4rem;
+  }
+}

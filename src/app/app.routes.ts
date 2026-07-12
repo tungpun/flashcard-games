@@ -14,6 +14,7 @@ import { WordChoiceComponent } from './games/word-choice/word-choice.component';
 import { WhatsMissingComponent } from './games/whats-missing/whats-missing.component';
 import { SlideshowComponent } from './games/slideshow/slideshow.component';
 import { BucketSortingComponent } from './games/bucket-sorting/bucket-sorting.component';
+import { WheelOfFortuneComponent } from './games/wheel-of-fortune/wheel-of-fortune.component';
 
 export const routes: Routes = [
   {
@@ -75,6 +76,10 @@ export const routes: Routes = [
   {
     path: 'games/bucket-sorting',
     component: BucketSortingComponent
+  },
+  {
+    path: 'games/wheel-of-fortune',
+    component: WheelOfFortuneComponent
   },
   {
     path: '**',

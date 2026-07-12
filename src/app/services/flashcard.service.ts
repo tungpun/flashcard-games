@@ -196,7 +196,7 @@ export class FlashcardService {
     {
       id: '38',
       caption: 'Smartphone',
-      imageUrl: 'https://images-cdn.ubuy.co.in/634d031dba8fe623b47893cc-smart-phone-android-8-1-smartphone-hd.jpg'
+      imageUrl: 'images/flashcards/38-smartphone.png'
     },
     {
       id: '39',

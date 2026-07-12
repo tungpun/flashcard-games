@@ -85,6 +85,12 @@ export class GameSelectorComponent implements OnInit {
       name: 'Bucket Sorting',
       description: 'Drag each flashcard into the set bucket it belongs to',
       imagePath: 'images/games/bucket-sorting.png'
+    },
+    {
+      id: 'wheel-of-fortune',
+      name: 'Wheel of Fortune',
+      description: 'Spin the wheel to land on a random flashcard',
+      imagePath: 'images/games/wheel-of-fortune.png'
     }
   ];
 

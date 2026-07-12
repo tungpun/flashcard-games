@@ -53,7 +53,8 @@ describe('GameSelectorComponent', () => {
       'word-choice',
       'slideshow',
       'whats-missing',
-      'bucket-sorting'
+      'bucket-sorting',
+      'wheel-of-fortune'
     ]);
   });
 
