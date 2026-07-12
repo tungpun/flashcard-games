@@ -2155,6 +2155,41 @@ export class FlashcardService {
       id: '417',
       caption: 'mean',
       imageUrl: 'images/flashcards/417-mean.png'
+    },
+    {
+      id: '418',
+      caption: 'Pinocchio',
+      imageUrl: 'https://www.shutterstock.com/image-vector/picture-pinocchios-hand-smiling-260nw-2490410481.jpg'
+    },
+    {
+      id: '419',
+      caption: 'fox',
+      imageUrl: 'images/flashcards/419-fox.png'
+    },
+    {
+      id: '420',
+      caption: 'donkey',
+      imageUrl: 'images/flashcards/420-donkey.png'
+    },
+    {
+      id: '421',
+      caption: 'sea gull',
+      imageUrl: 'images/flashcards/421-sea-gull.png'
+    },
+    {
+      id: '422',
+      caption: 'whale',
+      imageUrl: 'images/flashcards/422-whale.png'
+    },
+    {
+      id: '423',
+      caption: 'long',
+      imageUrl: 'images/flashcards/423-long.png'
+    },
+    {
+      id: '424',
+      caption: 'small',
+      imageUrl: 'images/flashcards/424-small.png'
     }
   ];
 
@@ -2518,6 +2553,12 @@ export class FlashcardService {
       name: 'Cinderella story',
       description: 'Cinderella story vocabulary: characters, feelings, and concepts',
       flashcardIds: ['399', '405', '406', '407', '393', '408', '239', '409', '410', '411', '5', '412', '413', '414', '415', '416', '417']
+    },
+    {
+      id: 'set56',
+      name: 'Pinocchio story',
+      description: 'Pinocchio story vocabulary: characters, feelings, concepts, and structure',
+      flashcardIds: ['418', '394', '419', '3', '420', '211', '421', '422', '414', '423', '424']
     },
     // {
     //   id: 'set18',
