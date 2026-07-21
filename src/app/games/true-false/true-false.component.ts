@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashcardSet, Flashcard } from '../../models';
 import { FlashcardService } from '../../services/flashcard.service';
+import { SpeechService } from '../../services/speech.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
@@ -32,6 +33,7 @@ export class TrueFalseComponent implements OnInit {
 
   constructor(
     private flashcardService: FlashcardService,
+    private speechService: SpeechService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
@@ -109,6 +111,14 @@ export class TrueFalseComponent implements OnInit {
     this.score = 0;
     this.gameComplete = false;
     this.resetCurrentQuestion();
+    this.speakCurrentQuestion();
+  }
+
+  private speakCurrentQuestion(): void {
+    const question = this.getCurrentQuestion();
+    if (question) {
+      this.speechService.speak(question.flashcard.caption);
+    }
   }
 
   resetCurrentQuestion(): void {
@@ -144,6 +154,7 @@ export class TrueFalseComponent implements OnInit {
       this.gameComplete = true;
     } else {
       this.resetCurrentQuestion();
+      this.speakCurrentQuestion();
     }
   }
 

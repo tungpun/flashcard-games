@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FlashcardSet, Flashcard } from '../../models';
 import { FlashcardService } from '../../services/flashcard.service';
+import { SpeechService } from '../../services/speech.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
@@ -54,6 +55,7 @@ export class WhatsMissingComponent implements OnInit, OnDestroy {
 
   constructor(
     private flashcardService: FlashcardService,
+    private speechService: SpeechService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
@@ -231,6 +233,9 @@ export class WhatsMissingComponent implements OnInit, OnDestroy {
   revealAnswer(): void {
     if (this.phase !== 'guess') return;
     this.phase = 'revealed';
+    if (this.removedFlashcard) {
+      this.speechService.speak(this.removedFlashcard.caption);
+    }
   }
 
   nextRound(): void {

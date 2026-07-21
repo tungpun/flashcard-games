@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FlashcardSet, Flashcard } from '../../models';
 import { FlashcardService } from '../../services/flashcard.service';
+import { SpeechService } from '../../services/speech.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
@@ -35,6 +36,7 @@ export class MemoryGameComponent implements OnInit {
 
   constructor(
     private flashcardService: FlashcardService,
+    private speechService: SpeechService,
     private route: ActivatedRoute,
     private router: Router,
     private cdr: ChangeDetectorRef
@@ -150,6 +152,9 @@ export class MemoryGameComponent implements OnInit {
 
     card.isFlipped = true;
     this.flippedCards.push(card);
+    if (card.type === 'caption') {
+      this.speechService.speak(card.content);
+    }
 
     // Check for match when 2 cards are flipped
     if (this.flippedCards.length === 2) {

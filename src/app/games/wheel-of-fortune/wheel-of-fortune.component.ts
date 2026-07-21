@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FlashcardSet, Flashcard, Prize } from '../../models';
 import { FlashcardService } from '../../services/flashcard.service';
+import { SpeechService } from '../../services/speech.service';
 import { PrizeService } from '../../services/prize.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -68,6 +69,7 @@ export class WheelOfFortuneComponent implements OnInit, OnDestroy {
 
   constructor(
     private flashcardService: FlashcardService,
+    private speechService: SpeechService,
     private prizeService: PrizeService,
     private route: ActivatedRoute,
     private router: Router
@@ -263,6 +265,7 @@ export class WheelOfFortuneComponent implements OnInit, OnDestroy {
     this.resultSector = this.sectors[this.pendingResultIndex];
     this.pendingResultIndex = null;
     this.showResult = true;
+    this.speechService.speak(this.getResultLabel(this.resultSector));
   }
 
   private startPointerFlicks(durationMs: number): void {

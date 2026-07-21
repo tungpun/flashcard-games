@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { FlashcardSet, Flashcard } from '../../models';
 import { FlashcardService } from '../../services/flashcard.service';
+import { SpeechService } from '../../services/speech.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameCompletionComponent } from '../../components/game-completion/game-completion.component';
@@ -49,6 +50,7 @@ export class WordSearchComponent implements OnInit, AfterViewInit {
 
   constructor(
     private flashcardService: FlashcardService,
+    private speechService: SpeechService,
     private route: ActivatedRoute,
     private router: Router,
     private cdr: ChangeDetectorRef
@@ -419,7 +421,7 @@ export class WordSearchComponent implements OnInit, AfterViewInit {
       if (wordPos.found) continue;
 
       if (selectedWord === wordPos.word || reversedWord === wordPos.word) {
-        // Mark word as found
+        this.speechService.speak(wordPos.word);
         wordPos.found = true;
         this.foundWords++;
 
