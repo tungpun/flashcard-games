@@ -185,7 +185,7 @@ export class FlashcardService {
     },
     {
       id: '36',
-      caption: 'Google Map',
+      caption: 'Map',
       imageUrl: 'images/flashcards/36-google-map.jpg'
     },
     {
