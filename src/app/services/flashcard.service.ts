@@ -2190,7 +2190,81 @@ export class FlashcardService {
       id: '424',
       caption: 'small',
       imageUrl: 'images/flashcards/424-small.png'
-    }
+    },
+
+    // 3-year-old vocabulary: Colors
+    { id: '500', caption: 'Red', imageUrl: 'images/flashcards/500-red.jpg' },
+    { id: '501', caption: 'Blue', imageUrl: 'images/flashcards/501-blue.jpg' },
+    { id: '502', caption: 'Green', imageUrl: 'images/flashcards/502-green.jpg' },
+    { id: '503', caption: 'Yellow', imageUrl: 'images/flashcards/503-yellow.jpg' },
+    { id: '504', caption: 'Orange', imageUrl: 'images/flashcards/504-orange.jpg' },
+    { id: '505', caption: 'Purple', imageUrl: 'images/flashcards/505-purple.jpg' },
+    { id: '506', caption: 'Pink', imageUrl: 'images/flashcards/506-pink.jpg' },
+    { id: '507', caption: 'White', imageUrl: 'images/flashcards/507-white.jpg' },
+    { id: '508', caption: 'Black', imageUrl: 'images/flashcards/508-black.jpg' },
+    { id: '509', caption: 'Brown', imageUrl: 'images/flashcards/509-brown.jpg' },
+
+    // 3-year-old vocabulary: Shapes
+    { id: '510', caption: 'Circle', imageUrl: 'images/flashcards/510-circle.jpg' },
+    { id: '511', caption: 'Square', imageUrl: 'images/flashcards/511-square.jpg' },
+    { id: '512', caption: 'Triangle', imageUrl: 'images/flashcards/512-triangle.jpg' },
+    { id: '513', caption: 'Star', imageUrl: 'images/flashcards/513-star.jpg' },
+    { id: '514', caption: 'Heart', imageUrl: 'images/flashcards/514-heart.jpg' },
+    { id: '515', caption: 'Diamond', imageUrl: 'images/flashcards/515-diamond.jpg' },
+
+    // 3-year-old vocabulary: Body parts
+    { id: '520', caption: 'Eye', imageUrl: 'images/flashcards/520-eye.jpg' },
+    { id: '521', caption: 'Nose', imageUrl: 'images/flashcards/521-nose.jpg' },
+    { id: '522', caption: 'Mouth', imageUrl: 'images/flashcards/522-mouth.jpg' },
+    { id: '523', caption: 'Ear', imageUrl: 'images/flashcards/523-ear.jpg' },
+    { id: '524', caption: 'Hand', imageUrl: 'images/flashcards/524-hand.jpg' },
+    { id: '525', caption: 'Foot', imageUrl: 'images/flashcards/525-foot.jpg' },
+    { id: '526', caption: 'Head', imageUrl: 'images/flashcards/526-head.jpg' },
+    { id: '527', caption: 'Hair', imageUrl: 'images/flashcards/527-hair.jpg' },
+    { id: '528', caption: 'Teeth', imageUrl: 'images/flashcards/528-teeth.jpg' },
+    { id: '529', caption: 'Finger', imageUrl: 'images/flashcards/529-finger.jpg' },
+
+    // 3-year-old vocabulary: Food & Drink
+    { id: '530', caption: 'Milk', imageUrl: 'images/flashcards/530-milk.jpg' },
+    { id: '531', caption: 'Bread', imageUrl: 'images/flashcards/531-bread.jpg' },
+    { id: '532', caption: 'Banana', imageUrl: 'images/flashcards/532-banana.jpg' },
+    { id: '533', caption: 'Rice', imageUrl: 'images/flashcards/533-rice.jpg' },
+    { id: '534', caption: 'Egg', imageUrl: 'images/flashcards/534-egg.jpg' },
+    { id: '535', caption: 'Water', imageUrl: 'images/flashcards/535-water.jpg' },
+    { id: '536', caption: 'Cookie', imageUrl: 'images/flashcards/536-cookie.jpg' },
+    { id: '537', caption: 'Cheese', imageUrl: 'images/flashcards/537-cheese.jpg' },
+    { id: '538', caption: 'Grape', imageUrl: 'images/flashcards/538-grape.jpg' },
+    { id: '539', caption: 'Carrot', imageUrl: 'images/flashcards/539-carrot.jpg' },
+
+    // 3-year-old vocabulary: Family
+    { id: '540', caption: 'Mom', imageUrl: 'images/flashcards/540-mom.jpg' },
+    { id: '541', caption: 'Dad', imageUrl: 'images/flashcards/541-dad.jpg' },
+    { id: '542', caption: 'Baby', imageUrl: 'images/flashcards/542-baby.jpg' },
+    { id: '543', caption: 'Sister', imageUrl: 'images/flashcards/543-sister.jpg' },
+    { id: '544', caption: 'Brother', imageUrl: 'images/flashcards/544-brother.jpg' },
+    { id: '545', caption: 'Grandma', imageUrl: 'images/flashcards/545-grandma.jpg' },
+    { id: '546', caption: 'Grandpa', imageUrl: 'images/flashcards/546-grandpa.jpg' },
+
+    // 3-year-old vocabulary: Clothes
+    { id: '550', caption: 'Hat', imageUrl: 'images/flashcards/550-hat.jpg' },
+    { id: '551', caption: 'Shoe', imageUrl: 'images/flashcards/551-shoe.jpg' },
+    { id: '552', caption: 'Shirt', imageUrl: 'images/flashcards/552-shirt.jpg' },
+    { id: '553', caption: 'Pants', imageUrl: 'images/flashcards/553-pants.jpg' },
+    { id: '554', caption: 'Socks', imageUrl: 'images/flashcards/554-socks.jpg' },
+    { id: '555', caption: 'Dress', imageUrl: 'images/flashcards/555-dress.jpg' },
+    { id: '556', caption: 'Coat', imageUrl: 'images/flashcards/556-coat.jpg' },
+
+    // 3-year-old vocabulary: Animals
+    { id: '560', caption: 'Fish', imageUrl: 'images/flashcards/560-fish.jpg' },
+    { id: '561', caption: 'Pig', imageUrl: 'images/flashcards/561-pig.jpg' },
+    { id: '562', caption: 'Cow', imageUrl: 'images/flashcards/562-cow.jpg' },
+    { id: '563', caption: 'Horse', imageUrl: 'images/flashcards/563-horse.jpg' },
+    { id: '564', caption: 'Sheep', imageUrl: 'images/flashcards/564-sheep.jpg' },
+    { id: '565', caption: 'Chicken', imageUrl: 'images/flashcards/565-chicken.jpg' },
+    { id: '566', caption: 'Rabbit', imageUrl: 'images/flashcards/566-rabbit.jpg' },
+    { id: '567', caption: 'Monkey', imageUrl: 'images/flashcards/567-monkey.jpg' },
+    { id: '568', caption: 'Bear', imageUrl: 'images/flashcards/568-bear.jpg' },
+    { id: '569', caption: 'Elephant', imageUrl: 'images/flashcards/569-elephant.jpg' }
   ];
 
   private flashcardSets: FlashcardSet[] = [
@@ -2566,6 +2640,48 @@ export class FlashcardService {
     //   description: 'Handicraft items and products',
     //   flashcardIds: ['85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97']
     // },
+    {
+      id: 'set60',
+      name: 'Colors',
+      description: 'Basic colors for 3-year-olds',
+      flashcardIds: ['500', '501', '502', '503', '504', '505', '506', '507', '508', '509']
+    },
+    {
+      id: 'set61',
+      name: 'Shapes',
+      description: 'Basic shapes for 3-year-olds',
+      flashcardIds: ['510', '511', '512', '513', '514', '515']
+    },
+    {
+      id: 'set62',
+      name: 'Body Parts',
+      description: 'Body parts vocabulary for 3-year-olds',
+      flashcardIds: ['520', '521', '522', '523', '524', '525', '526', '527', '528', '529']
+    },
+    {
+      id: 'set63',
+      name: 'Food & Drink',
+      description: 'Food and drink vocabulary for 3-year-olds',
+      flashcardIds: ['530', '531', '532', '533', '534', '535', '536', '537', '538', '539']
+    },
+    {
+      id: 'set64',
+      name: 'Family',
+      description: 'Family members vocabulary for 3-year-olds',
+      flashcardIds: ['540', '541', '542', '543', '544', '545', '546']
+    },
+    {
+      id: 'set65',
+      name: 'Clothes',
+      description: 'Clothing vocabulary for 3-year-olds',
+      flashcardIds: ['550', '551', '552', '553', '554', '555', '556']
+    },
+    {
+      id: 'set66',
+      name: 'Animals (3yo)',
+      description: 'Common animals vocabulary for 3-year-olds',
+      flashcardIds: ['560', '561', '562', '563', '564', '565', '566', '567', '568', '569']
+    },
     // always keep this last
     // always add all flashcards to this set
     {
